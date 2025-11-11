@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moteur de Séries</title>
+    <link rel="stylesheet" href="/static/css/PageAccueil.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span class="highlight">Moteur de Séries </span></h1>
+
+        <h2 class="subtitle">Nos Séries</h2>
+        <div class="series-grid" id="series-container">
+            <!-- Les cartes seront injectées ici via JS -->
+        </div>
+    </div>
+
+    <script>
+        async function loadSeries() {
+            try {
+                const response = await fetch("/data/series.json");
+                const series = await response.json();
+
+                const container = document.getElementById("series-container");
+                container.innerHTML = "";
+
+                series.forEach((s) => {
+                    const card = document.createElement("div");
+                    card.className = "serie-card fade-in";
+
+                    const img = document.createElement("img");
+                    img.src = `/static/images/posters_series/${s.image}`;
+                    img.alt = s.titre;
+
+                    const title = document.createElement("h3");
+                    title.textContent = s.titre;
+
+                    card.appendChild(img);
+                    card.appendChild(title);
+                    container.appendChild(card);
+                });
+            } catch (err) {
+                console.error("Erreur lors du chargement des séries :", err);
+            }
+        }
+
+        loadSeries();
+    </script>
+</body>
+</html>
