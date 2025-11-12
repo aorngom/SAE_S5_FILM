@@ -5,36 +5,42 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(
-    title="Moteur de Recherche de Films",
-    description="API de recherche de films par mots-clés",
+    title="Moteur de Recherche de Séries",
+    description="API de recherche de séries par mots-clés",
     version="1.0.0"
 )
 
+# Répertoire de base = backend/app/
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Chemins vers frontend
-FRONTEND_STATIC_DIR = os.path.join(BASE_DIR, "../../frontend/static")
-FRONTEND_TEMPLATES_DIR = os.path.join(BASE_DIR, "../../frontend/templates")
-FRONTEND_DATA_DIR = os.path.join(BASE_DIR, "../../frontend/data")  # <-- ici le JSON
+# Dossiers frontend
+FRONTEND_DIR = os.path.abspath(os.path.join(BASE_DIR, "../../frontend"))
+FRONTEND_STATIC_DIR = os.path.join(FRONTEND_DIR, "static")
+FRONTEND_TEMPLATES_DIR = os.path.join(FRONTEND_DIR, "templates")
 
-# Monte les dossiers static et data
+# === MONTAGES ===
+#  fichiers statiques (images, CSS, JS)
 app.mount("/static", StaticFiles(directory=FRONTEND_STATIC_DIR), name="static")
-app.mount("/data", StaticFiles(directory=FRONTEND_DATA_DIR), name="data")
 
-# Initialise les templates
+#  fichiers JSON dans static/data/
+DATA_DIR = os.path.join(FRONTEND_STATIC_DIR, "data")
+
+# templates HTML
 templates = Jinja2Templates(directory=FRONTEND_TEMPLATES_DIR)
 
-# Route racine
+# === ROUTES ===
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("PageAccueil.html", {"request": request})
 
-# Endpoint santé
 @app.get("/api/health")
 async def health_check():
     return {"status": "ok", "message": "API opérationnelle"}
 
-# Endpoint recherche (vide pour l'instant)
-@app.post("/api/search")
-async def search_films(query: str):
-    return {"query": query, "results": [], "count": 0}
+@app.get("/connexion", response_class=HTMLResponse)
+async def connexion_page(request: Request):
+    return templates.TemplateResponse("PageConnexion.html", {"request": request})
+
+@app.get("/inscription", response_class=HTMLResponse)
+async def inscription_page(request: Request):
+    return templates.TemplateResponse("PageInscription.html", {"request": request})

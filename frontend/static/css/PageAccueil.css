@@ -1,116 +1,126 @@
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
-
-body {
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #141414;
-    color: white;
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+    color: #f2f2f2;
     min-height: 100vh;
-}
-
-.container {
-    max-width: 1200px;
+    overflow-x: hidden;
+  }
+  
+  /* === CONTAINER === */
+  .container {
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 40px 20px;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: -1px;
+    padding: 60px 20px;
+  }
+  
+  /* === TITRES === */
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 800;
     text-align: center;
-}
-
-.subtitle {
+    color: #e6e6e6;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.5px;
+  }
+  
+  .subtitle {
     font-size: 1.5rem;
-    margin: 30px 0 15px 0;
-    color: #e0e0e0;
-}
-
-.highlight {
-    color: #e50914;
-    font-weight: 600;
-}
-
-.series-grid {
+    margin: 40px 0 25px 0;
+    color: #c0c0c0;
+    text-align: left;
+    border-left: 4px solid #555;
+    padding-left: 10px;
+  }
+  
+  /* === GRID === */
+  .series-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 cartes par ligne */
-    gap: 15px;
-}
-
-.serie-card {
-    background-color: #1c1c1c;
-    border-radius: 6px;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-items: center;
+  }
+  
+  /* === CARTES === */
+  .serie-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     text-align: center;
-}
-
-.serie-card img {
-    width: 170px;      /* largeur plus grande */
-    height: 255px;     /* hauteur proportionnelle */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  }
+  
+  .serie-card img {
+    width: 100%;
+    height: 260px;
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-.serie-card h3 {
-    font-size: 0.9rem;
-    color: #fff;
-    padding: 5px 0;
-}
-
-.serie-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-}
-
-/* Animation fade-in */
-.fade-in {
+    border-bottom: 2px solid #2e2e2e;
+  }
+  
+  .serie-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    padding: 10px 5px;
+  }
+  
+  /* === HOVER === */
+  .serie-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(150, 150, 150, 0.25);
+  }
+  
+  .serie-card:hover img {
+    filter: brightness(1.15);
+  }
+  
+  /* === FADE-IN ANIMATION === */
+  .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  @keyframes fadeIn {
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 1200px) {
     .series-grid {
-        grid-template-columns: repeat(5, 1fr); /* moins de cartes sur écran moyen */
+      grid-template-columns: repeat(5, 1fr);
     }
-    .serie-card img {
-        width: 150px;
-        height: 225px;
-    }
-}
-
-@media (max-width: 900px) {
+  }
+  
+  @media (max-width: 992px) {
     .series-grid {
-        grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
-    .serie-card img {
-        width: 130px;
-        height: 195px;
-    }
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 768px) {
     .series-grid {
-        grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
-    .serie-card img {
-        width: 100px;
-        height: 150px;
+  }
+  
+  @media (max-width: 576px) {
+    .series-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-}
+  }
+  

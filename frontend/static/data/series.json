@@ -1,0 +1,2838 @@
+[
+    [
+        {
+          "Id_serie": 1,
+          "titre": "24",
+          "date_sortie": "2001-11-06",
+          "description": "24 heures pour sauver la journée. L'agent Jack Bauer est sur le coup.",
+          "image": "24.jpg",
+          "genres": ["Action", "Thriller"],
+          "createurs": [{"nom": "Surnow", "prenom": "Joel"}, {"nom": "Cochran", "prenom": "Robert"}],
+          "realisateurs": [{"nom": "Cassar", "prenom": "Jon"}],
+          "acteurs": [{"nom": "Sutherland", "prenom": "Kiefer"}, {"nom": "Rajskub", "prenom": "Mary Lynn"}, {"nom": "Brown", "prenom": "Dennis"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Saison 1",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 2,
+          "titre": "90210",
+          "date_sortie": "2008-09-02",
+          "description": "Les drames adolescents et les vies glamour de Beverly Hills.",
+          "image": "90210.jpg",
+          "genres": ["Drame", "Romance"],
+          "createurs": [{"nom": "Star", "prenom": "Darren"}, {"nom": "DiLoreto", "prenom": "Jeff Judah"}],
+          "realisateurs": [{"nom": "McCullough", "prenom": "Harry"}],
+          "acteurs": [{"nom": "Stroup", "prenom": "Jessica"}, {"nom": "Grimes-Beech", "prenom": "Shenae"}, {"nom": "Lowndes", "prenom": "Jessica"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Première saison du reboot de Beverly Hills",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 3,
+          "titre": "Alias",
+          "date_sortie": "2001-09-30",
+          "description": "Sydney Bristow est un agent double pour la CIA.",
+          "image": "alias.jpg",
+          "genres": ["Action", "Espionnage", "Drame"],
+          "createurs": [{"nom": "Abrams", "prenom": "J.J."}],
+          "realisateurs": [{"nom": "Vaughn", "prenom": "Ken Olin"}],
+          "acteurs": [{"nom": "Garner", "prenom": "Jennifer"}, {"nom": "Vartan", "prenom": "Michael"}, {"nom": "Rifkin", "prenom": "Ron"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Sydney découvre le double jeu de son agence.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 4,
+          "titre": "Angel",
+          "date_sortie": "1999-10-05",
+          "description": "Un vampire avec une âme travaille comme détective privé à Los Angeles.",
+          "image": "angel.jpg",
+          "genres": ["Fantastique", "Drame"],
+          "createurs": [{"nom": "Whedon", "prenom": "Joss"}, {"nom": "Greenwalt", "prenom": "David"}],
+          "realisateurs": [{"nom": "Contner", "prenom": "James A."}],
+          "acteurs": [{"nom": "Boreanaz", "prenom": "David"}, {"nom": "Carpenter", "prenom": "Charisma"}, {"nom": "Richards", "prenom": "Alexis"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Angel combat les démons à Los Angeles.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 5,
+          "titre": "Battlestar Galactica",
+          "date_sortie": "2004-10-18",
+          "description": "Les derniers humains fuient les Cylons à travers la galaxie.",
+          "image": "battlestargalactica.jpg",
+          "genres": ["Science-Fiction", "Drame"],
+          "createurs": [{"nom": "Moore", "prenom": "Ronald D."}],
+          "realisateurs": [{"nom": "Rymer", "prenom": "Michael"}],
+          "acteurs": [{"nom": "Olivier", "prenom": "Edward James"}, {"nom": "Sackhoff", "prenom": "Katee"}, {"nom": "McDonnell", "prenom": "Mary"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les survivants humains fuient les Cylons.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Peabody Award"}]
+        },
+        {
+          "Id_serie": 6,
+          "titre": "Better Off Ted",
+          "date_sortie": "2009-03-18",
+          "description": "Comédie d'entreprise satirique et surréaliste.",
+          "image": "betteroffted.jpg",
+          "genres": ["Comédie", "Satire"],
+          "createurs": [{"nom": "Port", "prenom": "Victor Fresco"}],
+          "realisateurs": [],
+          "acteurs": [{"nom": "Harrington", "prenom": "Jay"}, {"nom": "de Rossi", "prenom": "Portia"}, {"nom": "Pallett", "prenom": "Andrea"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Série satirique sur le monde du travail.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 22}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 7,
+          "titre": "Bionic Woman",
+          "date_sortie": "2007-09-26",
+          "description": "Une femme reçoit des améliorations bioniques après un accident.",
+          "image": "bionicwoman.jpg",
+          "genres": ["Action", "Science-Fiction"],
+          "createurs": [{"nom": "Eick", "prenom": "David"}, {"nom": "Johnson", "prenom": "Kenneth"}],
+          "realisateurs": [{"nom": "Kretch", "prenom": "Michael"}],
+          "acteurs": [{"nom": "Ryan", "prenom": "Michelle"}, {"nom": "Ferrer", "prenom": "Miguel"}, {"nom": "Hale", "prenom": "Lucy"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jamie découvre ses nouveaux pouvoirs bioniques.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 8,
+          "titre": "Blade",
+          "date_sortie": "2006-06-28",
+          "description": "Le chasseur de vampires est adapté pour la télévision.",
+          "image": "blade.jpg",
+          "genres": ["Action", "Horreur"],
+          "createurs": [{"nom": "Goyer", "prenom": "David S."}],
+          "realisateurs": [{"nom": "Kawashita", "prenom": "Yuki"}],
+          "acteurs": [{"nom": "Sticky", "prenom": "Fingaz"}, {"nom": "Aoki", "prenom": "Jill"}, {"nom": "Kazan", "prenom": "Neil"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Blade combat les vampires et l'organisation Existence.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 9,
+          "titre": "Blood Ties",
+          "date_sortie": "2007-03-11",
+          "description": "Une ancienne policière aveugle rencontre un vampire détective.",
+          "image": "bloodties.jpg",
+          "genres": ["Fantastique", "Mystère"],
+          "createurs": [{"nom": "Woods", "prenom": "Peter Mohan"}],
+          "realisateurs": [{"nom": "MacDonald", "prenom": "Holly Dale"}],
+          "acteurs": [{"nom": "Myles", "prenom": "Christina Cox"}, {"nom": "Henry", "prenom": "Dylan Neal"}, {"nom": "Fitzroy", "prenom": "Kyle Schmid"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Une détective collabore avec un vampire pour résoudre des affaires.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 10,
+          "titre": "Bones",
+          "date_sortie": "2005-09-13",
+          "description": "Une anthropologue judiciaire résout des meurtres à l'aide de squelettes.",
+          "image": "bones.jpg",
+          "genres": ["Crime", "Drame"],
+          "createurs": [{"nom": "Hanson", "prenom": "Hart"}],
+          "realisateurs": [{"nom": "Millicent", "prenom": "Shelton"}],
+          "acteurs": [{"nom": "Deschanel", "prenom": "Emily"}, {"nom": "Boreanaz", "prenom": "David"}, {"nom": "Conlin", "prenom": "Tamara"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Première saison des enquêtes de Bones et Booth.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People’s Choice Award"}]
+        }
+      ],
+      [
+        {
+          "Id_serie": 11,
+          "titre": "Breaking Bad",
+          "date_sortie": "2008-01-20",
+          "description": "Un professeur de chimie se lance dans la production de méthamphétamine.",
+          "image": "breakingbad.jpg",
+          "genres": ["Drame", "Crime", "Thriller"],
+          "createurs": [{"nom": "Gilligan", "prenom": "Vince"}],
+          "realisateurs": [{"nom": "Johnson", "prenom": "Rian"}],
+          "acteurs": [{"nom": "Cranston", "prenom": "Bryan"}, {"nom": "Paul", "prenom": "Aaron"}, {"nom": "Gunn", "prenom": "Anna"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Walter White découvre le pouvoir du cristal bleu.",
+              "episodes": [
+                {"numero": 1, "duree": 47},
+                {"numero": 2, "duree": 49}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 12,
+          "titre": "Buffy",
+          "date_sortie": "1997-03-10",
+          "description": "Une jeune fille choisie pour chasser les vampires et les démons.",
+          "image": "buffy.jpg",
+          "genres": ["Fantastique", "Action", "Drame"],
+          "createurs": [{"nom": "Whedon", "prenom": "Joss"}],
+          "realisateurs": [{"nom": "Contner", "prenom": "James A."}],
+          "acteurs": [{"nom": "Gellar", "prenom": "Sarah Michelle"}, {"nom": "Hannigan", "prenom": "Alyson"}, {"nom": "Boreanaz", "prenom": "David"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Buffy Summers combat les vampires à Sunnydale.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Saturn Award"}]
+        },
+        {
+          "Id_serie": 13,
+          "titre": "Burn Notice",
+          "date_sortie": "2007-06-28",
+          "description": "Un espion récemment 'brûlé' utilise ses compétences pour aider les gens.",
+          "image": "burnnotice.jpg",
+          "genres": ["Action", "Espionnage"],
+          "createurs": [{"nom": "Nix", "prenom": "Matt"}],
+          "realisateurs": [{"nom": "Lynch", "prenom": "Tim Matheson"}],
+          "acteurs": [{"nom": "Donovan", "prenom": "Jeffrey"}, {"nom": "Gless", "prenom": "Sharon"}, {"nom": "Anwar", "prenom": "Gabrielle"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Michael Westen tente de comprendre pourquoi il a été brûlé.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 14,
+          "titre": "Californication",
+          "date_sortie": "2007-08-13",
+          "description": "Un écrivain new-yorkais s'installe à Los Angeles pour élever sa fille.",
+          "image": "californication.jpg",
+          "genres": ["Comédie", "Drame"],
+          "createurs": [{"nom": "Kapinos", "prenom": "Tom"}],
+          "realisateurs": [{"nom": "Alexander", "prenom": "David Duchovny"}],
+          "acteurs": [{"nom": "Duchovny", "prenom": "David"}, {"nom": "McElhone", "prenom": "Natascha"}, {"nom": "Adair", "prenom": "Pamela"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les aventures d’un écrivain autodestructeur à Los Angeles.",
+              "episodes": [
+                {"numero": 1, "duree": 28},
+                {"numero": 2, "duree": 27}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 15,
+          "titre": "Caprica",
+          "date_sortie": "2010-01-22",
+          "description": "Préquelle de Battlestar Galactica, explorant l'origine des Cylons.",
+          "image": "caprica.jpg",
+          "genres": ["Science-Fiction", "Drame"],
+          "createurs": [{"nom": "Moore", "prenom": "Ronald D."}, {"nom": "Eick", "prenom": "David"}],
+          "realisateurs": [{"nom": "Burton", "prenom": "Jeffrey Reiner"}],
+          "acteurs": [{"nom": "Morales", "prenom": "Esai"}, {"nom": "Stoltz", "prenom": "Eric"}, {"nom": "Tulloch", "prenom": "Alessandra"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L'origine des Cylons et la chute de Caprica.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 16,
+          "titre": "Charmed",
+          "date_sortie": "1998-10-07",
+          "description": "Trois soeurs sorcières se battent contre les forces du mal.",
+          "image": "charmed.jpg",
+          "genres": ["Fantastique", "Drame"],
+          "createurs": [{"nom": "Constance", "prenom": "M. Burge"}],
+          "realisateurs": [{"nom": "Whedon", "prenom": "James L."}],
+          "acteurs": [{"nom": "Milano", "prenom": "Alyssa"}, {"nom": "Combs", "prenom": "Holly Marie"}, {"nom": "McGowan", "prenom": "Rose"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les soeurs Halliwell découvrent leurs pouvoirs.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 17,
+          "titre": "Chuck",
+          "date_sortie": "2007-09-24",
+          "description": "Un technicien informatique devient sans le vouloir un atout pour le gouvernement.",
+          "image": "chuck.jpg",
+          "genres": ["Action", "Comédie"],
+          "createurs": [{"nom": "Fedak", "prenom": "Chris"}, {"nom": "Schwartz", "prenom": "Josh"}],
+          "realisateurs": [{"nom": "Friedman", "prenom": "McG"}],
+          "acteurs": [{"nom": "Levi", "prenom": "Zachary"}, {"nom": "Strahovski", "prenom": "Yvonne"}, {"nom": "Baldwin", "prenom": "Adam"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Chuck devient espion après avoir téléchargé des secrets.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Teen Choice Award"}]
+        },
+        {
+          "Id_serie": 18,
+          "titre": "Cold Case",
+          "date_sortie": "2003-09-28",
+          "description": "La détective Lilly Rush résout d'anciennes affaires de meurtre non résolues.",
+          "image": "coldcase.jpg",
+          "genres": ["Crime", "Drame", "Mystère"],
+          "createurs": [{"nom": "Veena", "prenom": "Sud"}],
+          "realisateurs": [{"nom": "Nutter", "prenom": "David"}],
+          "acteurs": [{"nom": "Morris", "prenom": "Kathryn"}, {"nom": "Basso", "prenom": "Danny Pino"}, {"nom": "Hines", "prenom": "John Finn"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Lilly Rush résout des affaires classées.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 19,
+          "titre": "Community",
+          "date_sortie": "2009-09-17",
+          "description": "Un groupe hétéroclite d'étudiants se lie d'amitié dans un collège communautaire.",
+          "image": "community.jpg",
+          "genres": ["Comédie", "Satire"],
+          "createurs": [{"nom": "Harmon", "prenom": "Dan"}],
+          "realisateurs": [{"nom": "Russo", "prenom": "Anthony"}],
+          "acteurs": [{"nom": "McHale", "prenom": "Joel"}, {"nom": "Chase", "prenom": "Chevy"}, {"nom": "Brie", "prenom": "Alison"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les débuts du groupe d'étude le plus chaotique du campus.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Critics' Choice TV Award"}]
+        },
+        {
+          "Id_serie": 20,
+          "titre": "Criminal Minds",
+          "date_sortie": "2005-09-22",
+          "description": "Une équipe de profileurs étudie les esprits criminels.",
+          "image": "criminalminds.jpg",
+          "genres": ["Crime", "Thriller", "Drame"],
+          "createurs": [{"nom": "Davis", "prenom": "Jeff"}],
+          "realisateurs": [{"nom": "Messer", "prenom": "Erica"}],
+          "acteurs": [{"nom": "Gubler", "prenom": "Matthew Gray"}, {"nom": "Mantegna", "prenom": "Joe"}, {"nom": "Cook", "prenom": "A.J."}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L'équipe du BAU traque des tueurs en série.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 21,
+          "titre": "Cupid",
+          "date_sortie": "2009-03-31",
+          "description": "Un homme affirme être Cupidon et essaie d'aider les couples.",
+          "image": "cupid.jpg",
+          "genres": ["Comédie", "Romance"],
+          "createurs": [{"nom": "Thomas", "prenom": "Rob"}],
+          "realisateurs": [{"nom": "Fletcher", "prenom": "Scott"}],
+          "acteurs": [{"nom": "Cannavale", "prenom": "Bobby"}, {"nom": "Myrin", "prenom": "Arden"}, {"nom": "Allen", "prenom": "Sarah Paulson"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Trevor tente de réunir des âmes sœurs à Chicago.",
+              "episodes": [
+                {"numero": 1, "duree": 40},
+                {"numero": 2, "duree": 41}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 22,
+          "titre": "Day Break",
+          "date_sortie": "2006-11-15",
+          "description": "Un détective est piégé dans une boucle temporelle où il est accusé de meurtre.",
+          "image": "daybreak.jpg",
+          "genres": ["Science-Fiction", "Thriller"],
+          "createurs": [{"nom": "Ellis", "prenom": "Paul Zbyszewski"}],
+          "realisateurs": [{"nom": "McKinnon", "prenom": "Rob Bowman"}],
+          "acteurs": [{"nom": "Diggs", "prenom": "Taye"}, {"nom": "Bean", "prenom": "Victoria Pratt"}, {"nom": "Kilpatrick", "prenom": "Meta Golding"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Brett Hopper revit la même journée en boucle.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 23,
+          "titre": "Demons",
+          "date_sortie": "2009-01-03",
+          "description": "Un adolescent découvre qu'il est le dernier descendant d'une lignée de chasseurs de démons.",
+          "image": "demons.jpg",
+          "genres": ["Fantastique", "Action"],
+          "createurs": [{"nom": "Watkins", "prenom": "Johnny Capps"}],
+          "realisateurs": [{"nom": "Harper", "prenom": "Tom"}],
+          "acteurs": [{"nom": "Parkinson", "prenom": "Christian"}, {"nom": "Keating", "prenom": "Philip Glenister"}, {"nom": "Higgins", "prenom": "Holliday Grainger"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Luke découvre son héritage de chasseur de démons.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        }
+      ],
+      [
+        {
+          "Id_serie": 24,
+          "titre": "Desperate Housewives",
+          "date_sortie": "2004-10-03",
+          "description": "Les vies secrètes de femmes au foyer vivant dans Wisteria Lane.",
+          "image": "desperatehousewives.jpg",
+          "genres": ["Drame", "Comédie", "Mystère"],
+          "createurs": [{"nom": "Cherry", "prenom": "Marc"}],
+          "realisateurs": [{"nom": "Bowman", "prenom": "Larry Shaw"}],
+          "acteurs": [{"nom": "Hatcher", "prenom": "Teri"}, {"nom": "Longoria", "prenom": "Eva"}, {"nom": "Cross", "prenom": "Marcia"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les secrets de Wisteria Lane commencent à émerger.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 25,
+          "titre": "Dexter",
+          "date_sortie": "2006-10-01",
+          "description": "Un expert judiciaire qui mène une double vie en tant que tueur en série justicier.",
+          "image": "dexter.jpg",
+          "genres": ["Thriller", "Crime", "Drame"],
+          "createurs": [{"nom": "Manos", "prenom": "James Jr."}],
+          "realisateurs": [{"nom": "Gold", "prenom": "Michael Cuesta"}],
+          "acteurs": [{"nom": "Hall", "prenom": "Michael C."}, {"nom": "Carpenter", "prenom": "Jennifer"}, {"nom": "Remar", "prenom": "James"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Dexter Morgan mène sa double vie à Miami.",
+              "episodes": [
+                {"numero": 1, "duree": 50},
+                {"numero": 2, "duree": 52}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Peabody Award"}]
+        },
+        {
+          "Id_serie": 26,
+          "titre": "Dirt",
+          "date_sortie": "2007-01-02",
+          "description": "Les coulisses et les scandales des magazines people.",
+          "image": "dirt.jpg",
+          "genres": ["Drame", "Satire", "Médias"],
+          "createurs": [{"nom": "Kane", "prenom": "Matthew"}],
+          "realisateurs": [{"nom": "Courtenay", "prenom": "Thomas"}],
+          "acteurs": [{"nom": "Cox", "prenom": "Courteney"}, {"nom": "Donovan", "prenom": "Ian"}, {"nom": "Brown", "prenom": "Alexandra"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Lucy Spiller dirige un magazine people sans pitié.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 27,
+          "titre": "Dirty Sexy Money",
+          "date_sortie": "2007-09-26",
+          "description": "Un avocat prend le rôle de conseiller juridique de la riche famille Darling.",
+          "image": "dirtysexymoney.jpg",
+          "genres": ["Drame", "Comédie"],
+          "createurs": [{"nom": "Kelley", "prenom": "Craig Wright"}],
+          "realisateurs": [{"nom": "Pollack", "prenom": "Peter Horton"}],
+          "acteurs": [{"nom": "Krause", "prenom": "Peter"}, {"nom": "Samaire", "prenom": "Armstrong"}, {"nom": "Donald", "prenom": "Sutherland"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Nick George découvre les secrets des Darling.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 28,
+          "titre": "Doctor Who",
+          "date_sortie": "2005-03-26",
+          "description": "Les aventures d'un Seigneur du Temps voyageant dans l'espace et le temps.",
+          "image": "doctorwho.jpg",
+          "genres": ["Science-Fiction", "Aventure"],
+          "createurs": [{"nom": "Davies", "prenom": "Russell T."}],
+          "realisateurs": [{"nom": "Harper", "prenom": "James Strong"}],
+          "acteurs": [{"nom": "Tennant", "prenom": "David"}, {"nom": "Piper", "prenom": "Billie"}, {"nom": "Smith", "prenom": "Matt"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Le Docteur voyage à travers le temps et l'espace avec Rose.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Award"}]
+        },
+        {
+          "Id_serie": 29,
+          "titre": "Dollhouse",
+          "date_sortie": "2009-02-13",
+          "description": "Des personnes dont la personnalité est effacée sont louées pour diverses missions.",
+          "image": "dollhouse.jpg",
+          "genres": ["Science-Fiction", "Thriller"],
+          "createurs": [{"nom": "Whedon", "prenom": "Joss"}],
+          "realisateurs": [{"nom": "Lippman", "prenom": "David Solomon"}],
+          "acteurs": [{"nom": "Dushku", "prenom": "Eliza"}, {"nom": "Acker", "prenom": "Amy"}, {"nom": "Penikett", "prenom": "Tahmoh"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Echo découvre la vérité derrière la Dollhouse.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 30,
+          "titre": "Eleventh Hour",
+          "date_sortie": "2008-10-09",
+          "description": "Un scientifique résout des problèmes scientifiques ou médicaux extrêmes.",
+          "image": "eleventhhour.jpg",
+          "genres": ["Science-Fiction", "Thriller"],
+          "createurs": [{"nom": "Greengrass", "prenom": "Mick"}],
+          "realisateurs": [{"nom": "Arkin", "prenom": "Danny Cannon"}],
+          "acteurs": [{"nom": "Sewell", "prenom": "Rufus"}, {"nom": "Jacob", "prenom": "Marley Shelton"}, {"nom": "White", "prenom": "Omar Benson"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jacob Hood enquête sur des mystères scientifiques.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 31,
+          "titre": "Entourage",
+          "date_sortie": "2004-07-18",
+          "description": "Un jeune acteur prometteur et ses amis vivent à Hollywood.",
+          "image": "entourage.jpg",
+          "genres": ["Comédie", "Drame"],
+          "createurs": [{"nom": "Ellin", "prenom": "Doug"}],
+          "realisateurs": [{"nom": "Gordon", "prenom": "Julian Farino"}],
+          "acteurs": [{"nom": "Grenier", "prenom": "Adrian"}, {"nom": "Piven", "prenom": "Jeremy"}, {"nom": "Connolly", "prenom": "Kevin"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Vincent Chase s'installe à Hollywood avec ses amis.",
+              "episodes": [
+                {"numero": 1, "duree": 28},
+                {"numero": 2, "duree": 29}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 32,
+          "titre": "Eureka",
+          "date_sortie": "2006-07-18",
+          "description": "La ville d'Eureka, refuge pour les plus grands esprits scientifiques.",
+          "image": "eureka.jpg",
+          "genres": ["Science-Fiction", "Comédie"],
+          "createurs": [{"nom": "Paglia", "prenom": "Jaime"}, {"nom": "Silverman", "prenom": "Andrew Cosby"}],
+          "realisateurs": [{"nom": "Wright", "prenom": "Michael Lange"}],
+          "acteurs": [{"nom": "Quinn", "prenom": "Colin Ferguson"}, {"nom": "Parker", "prenom": "Salli Richardson"}, {"nom": "Smith", "prenom": "Joe Morton"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jack Carter découvre les secrets d’Eureka.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 33,
+          "titre": "Extras",
+          "date_sortie": "2005-07-21",
+          "description": "Les espoirs et les épreuves de figurants cherchant la gloire.",
+          "image": "extras.jpg",
+          "genres": ["Comédie", "Satire"],
+          "createurs": [{"nom": "Gervais", "prenom": "Ricky"}, {"nom": "Merchant", "prenom": "Stephen"}],
+          "realisateurs": [{"nom": "Grieve", "prenom": "Barbara"}],
+          "acteurs": [{"nom": "Gervais", "prenom": "Ricky"}, {"nom": "Merchant", "prenom": "Stephen"}, {"nom": "Ashfield", "prenom": "Ashley Jensen"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Andy Millman rêve de devenir célèbre.",
+              "episodes": [
+                {"numero": 1, "duree": 30},
+                {"numero": 2, "duree": 31}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Award"}]
+        },
+        {
+          "Id_serie": 34,
+          "titre": "Fear Itself",
+          "date_sortie": "2008-06-05",
+          "description": "Série d'anthologie d'horreur de maîtres du genre.",
+          "image": "fearitself.jpg",
+          "genres": ["Horreur", "Thriller"],
+          "createurs": [{"nom": "Feig", "prenom": "Mick Garris"}],
+          "realisateurs": [{"nom": "Shapiro", "prenom": "John Fawcett"}],
+          "acteurs": [{"nom": "Harmon", "prenom": "Eric"}, {"nom": "Regan", "prenom": "Brandon"}, {"nom": "DeLisle", "prenom": "Mariana"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Chaque épisode raconte une histoire d'horreur indépendante.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": []
+        }
+      ],
+      [
+        {
+          "Id_serie": 35,
+          "titre": "Flash Forward",
+          "date_sortie": "2009-09-24",
+          "description": "Le monde entier est victime d'un black-out de 2 minutes et 17 secondes.",
+          "image": "flashforward.jpg",
+          "genres": ["Science-Fiction", "Mystère", "Thriller"],
+          "createurs": [{"nom": "Goyer", "prenom": "David S."}, {"nom": "Braga", "prenom": "Brannon"}],
+          "realisateurs": [{"nom": "Noyce", "prenom": "Phillip"}],
+          "acteurs": [{"nom": "Fiennes", "prenom": "Joseph"}, {"nom": "Cho", "prenom": "John"}, {"nom": "Garber", "prenom": "Victor"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les gens tentent de comprendre pourquoi ils ont vu leur futur.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 36,
+          "titre": "Flashpoint",
+          "date_sortie": "2008-07-11",
+          "description": "Une unité de la police s'occupe de situations extrêmes.",
+          "image": "flashpoint.jpg",
+          "genres": ["Action", "Drame", "Police"],
+          "createurs": [{"nom": "Ellis", "prenom": "Mark"}, {"nom": "Lang", "prenom": "Stephanie Morgenstern"}],
+          "realisateurs": [{"nom": "Cross", "prenom": "David Frazee"}],
+          "acteurs": [{"nom": "Taylor", "prenom": "David Paetkau"}, {"nom": "Johnson", "prenom": "Hugh Dillon"}, {"nom": "Fitzpatrick", "prenom": "Amy Jo"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L'équipe du SRU affronte des crises humaines et policières.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Gemini Award"}]
+        },
+        {
+          "Id_serie": 37,
+          "titre": "Flight of the Conchords",
+          "date_sortie": "2007-06-17",
+          "description": "Un duo musical néo-zélandais cherche le succès à New York.",
+          "image": "flightoftheconchords.jpg",
+          "genres": ["Comédie", "Musical"],
+          "createurs": [{"nom": "Clement", "prenom": "Jemaine"}, {"nom": "McKenzie", "prenom": "Bret"}],
+          "realisateurs": [{"nom": "Bonney", "prenom": "Troy Miller"}],
+          "acteurs": [{"nom": "Clement", "prenom": "Jemaine"}, {"nom": "McKenzie", "prenom": "Bret"}, {"nom": "Kane", "prenom": "Rhys Darby"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les débuts comiques du groupe à New York.",
+              "episodes": [
+                {"numero": 1, "duree": 28},
+                {"numero": 2, "duree": 29}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Nomination"}]
+        },
+        {
+          "Id_serie": 38,
+          "titre": "Friday Night Lights",
+          "date_sortie": "2006-10-03",
+          "description": "La vie dans une petite ville obsédée par son équipe de football.",
+          "image": "fridaynightlights.jpg",
+          "genres": ["Drame", "Sport"],
+          "createurs": [{"nom": "Berg", "prenom": "Peter"}],
+          "realisateurs": [{"nom": "Katims", "prenom": "Jeffrey"}],
+          "acteurs": [{"nom": "Chandler", "prenom": "Kyle"}, {"nom": "Britton", "prenom": "Connie"}, {"nom": "Teegarden", "prenom": "Aimee"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L’équipe des Dillon Panthers lutte pour la victoire.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Peabody Award"}]
+        },
+        {
+          "Id_serie": 39,
+          "titre": "Friends",
+          "date_sortie": "1994-09-22",
+          "description": "Les vies d'un groupe d'amis vivant à Manhattan.",
+          "image": "friends.jpg",
+          "genres": ["Comédie", "Romance"],
+          "createurs": [{"nom": "Kauffman", "prenom": "Marta"}, {"nom": "Crane", "prenom": "David"}],
+          "realisateurs": [{"nom": "Bright", "prenom": "Kevin S."}],
+          "acteurs": [{"nom": "Aniston", "prenom": "Jennifer"}, {"nom": "Cox", "prenom": "Courteney"}, {"nom": "LeBlanc", "prenom": "Matt"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les débuts du groupe d’amis au Central Perk.",
+              "episodes": [
+                {"numero": 1, "duree": 23},
+                {"numero": 2, "duree": 22}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 40,
+          "titre": "Fringe",
+          "date_sortie": "2008-09-09",
+          "description": "Une équipe du FBI enquête sur la 'science marginale'.",
+          "image": "fringe.jpg",
+          "genres": ["Science-Fiction", "Mystère", "Thriller"],
+          "createurs": [{"nom": "Abrams", "prenom": "J.J."}, {"nom": "Pinkner", "prenom": "Jeff"}],
+          "realisateurs": [{"nom": "Bowman", "prenom": "Alex Graves"}],
+          "acteurs": [{"nom": "Torv", "prenom": "Anna"}, {"nom": "Jackson", "prenom": "Joshua"}, {"nom": "Noble", "prenom": "John"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les enquêtes de la division Fringe.",
+              "episodes": [
+                {"numero": 1, "duree": 48},
+                {"numero": 2, "duree": 49}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Saturn Award"}]
+        },
+        {
+          "Id_serie": 41,
+          "titre": "Futurama",
+          "date_sortie": "1999-03-28",
+          "description": "Un livreur de pizza est cryogénisé et se réveille au 31e siècle.",
+          "image": "futurama.jpg",
+          "genres": ["Animation", "Science-Fiction", "Comédie"],
+          "createurs": [{"nom": "Groening", "prenom": "Matt"}],
+          "realisateurs": [{"nom": "Swinton", "prenom": "Peter Avanzino"}],
+          "acteurs": [{"nom": "West", "prenom": "Billy"}, {"nom": "Sagal", "prenom": "Katey"}, {"nom": "DiMaggio", "prenom": "John"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Fry découvre le monde du futur.",
+              "episodes": [
+                {"numero": 1, "duree": 23},
+                {"numero": 2, "duree": 24}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Annie Award"}]
+        },
+        {
+          "Id_serie": 42,
+          "titre": "Gary Unmarried",
+          "date_sortie": "2008-09-24",
+          "description": "Un homme divorcé essaie de jongler entre sa nouvelle vie de célibataire et ses enfants.",
+          "image": "garyunmarried.jpg",
+          "genres": ["Comédie", "Famille"],
+          "createurs": [{"nom": "Dames", "prenom": "Edye"}, {"nom": "Shynett", "prenom": "Ric Swartzlander"}],
+          "realisateurs": [{"nom": "Kirwan", "prenom": "James Burrows"}],
+          "acteurs": [{"nom": "Mohr", "prenom": "Jay"}, {"nom": "Garner", "prenom": "Paula Marshall"}, {"nom": "Simmons", "prenom": "Ryan Malgarini"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Gary tente de reconstruire sa vie après le divorce.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 43,
+          "titre": "Ghost Whisperer",
+          "date_sortie": "2005-09-23",
+          "description": "Une femme peut voir et communiquer avec les esprits des morts.",
+          "image": "ghostwhisperer.jpg",
+          "genres": ["Fantastique", "Drame", "Mystère"],
+          "createurs": [{"nom": "Conrad", "prenom": "John Gray"}],
+          "realisateurs": [{"nom": "Tannenbaum", "prenom": "Ian Sander"}],
+          "acteurs": [{"nom": "Hewitt", "prenom": "Jennifer Love"}, {"nom": "Mohr", "prenom": "Jay"}, {"nom": "Kennedy", "prenom": "Jamie"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Melinda aide les esprits à trouver la paix.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Teen Choice Award"}]
+        },
+        {
+          "Id_serie": 44,
+          "titre": "Gossip Girl",
+          "date_sortie": "2007-09-19",
+          "description": "Les vies des adolescents privilégiés de l'Upper East Side de New York.",
+          "image": "gossipgirl.jpg",
+          "genres": ["Drame", "Romance"],
+          "createurs": [{"nom": "Schwartz", "prenom": "Josh"}, {"nom": "Savage", "prenom": "Stephanie"}],
+          "realisateurs": [{"nom": "Bell", "prenom": "Mark Piznarski"}],
+          "acteurs": [{"nom": "Lively", "prenom": "Blake"}, {"nom": "Badgley", "prenom": "Penn"}, {"nom": "Westwick", "prenom": "Ed"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Serena et Blair naviguent dans les intrigues du lycée de Manhattan.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Teen Choice Award"}]
+        },
+        {
+          "Id_serie": 45,
+          "titre": "Greek",
+          "date_sortie": "2007-07-09",
+          "description": "La vie de fraternité et de sororité à l'université.",
+          "image": "greek.jpg",
+          "genres": ["Comédie", "Drame"],
+          "createurs": [{"nom": "White", "prenom": "Patrick Sean"}],
+          "realisateurs": [{"nom": "Piznarski", "prenom": "Michael Lange"}],
+          "acteurs": [{"nom": "Zachar", "prenom": "Jacob"}, {"nom": "Foster", "prenom": "Spencer Grammer"}, {"nom": "Setton", "prenom": "Amber"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les débuts des étudiants dans la vie universitaire grecque.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        }
+      ],
+      [
+        {
+          "Id_serie": 46,
+          "titre": "Grey's Anatomy",
+          "date_sortie": "2005-03-27",
+          "description": "Les vies de chirurgiens stagiaires et résidents à Seattle.",
+          "image": "greysanatomy.jpg",
+          "genres": ["Drame", "Médical", "Romance"],
+          "createurs": [{"nom": "Rhimes", "prenom": "Shonda"}],
+          "realisateurs": [{"nom": "Smith", "prenom": "Peter Horton"}],
+          "acteurs": [{"nom": "Pompeo", "prenom": "Ellen"}, {"nom": "Dempsey", "prenom": "Patrick"}, {"nom": "Oh", "prenom": "Sandra"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les débuts de Meredith Grey à l’hôpital de Seattle Grace.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 47,
+          "titre": "Heroes",
+          "date_sortie": "2006-09-25",
+          "description": "Des gens ordinaires découvrent qu'ils ont des capacités extraordinaires.",
+          "image": "heroes.jpg",
+          "genres": ["Science-Fiction", "Drame", "Aventure"],
+          "createurs": [{"nom": "Kring", "prenom": "Tim"}],
+          "realisateurs": [{"nom": "Beeman", "prenom": "Greg"}],
+          "acteurs": [{"nom": "Ventimiglia", "prenom": "Milo"}, {"nom": "Panettiere", "prenom": "Hayden"}, {"nom": "Oka", "prenom": "Masi"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Des individus aux quatre coins du monde développent des pouvoirs.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 48,
+          "titre": "House",
+          "date_sortie": "2004-11-16",
+          "description": "Le Dr Gregory House diagnostique des maladies mystérieuses.",
+          "image": "house.jpg",
+          "genres": ["Drame", "Médical", "Mystère"],
+          "createurs": [{"nom": "Shore", "prenom": "David"}],
+          "realisateurs": [{"nom": "Yaitanes", "prenom": "Greg"}],
+          "acteurs": [{"nom": "Laurie", "prenom": "Hugh"}, {"nom": "Spencer", "prenom": "Robert"}, {"nom": "Morrison", "prenom": "Jennifer"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Le Dr House résout des cas médicaux complexes.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 49,
+          "titre": "How I Met Your Mother",
+          "date_sortie": "2005-09-19",
+          "description": "Ted Mosby raconte à ses enfants comment il a rencontré leur mère.",
+          "image": "howimetyourmother.jpg",
+          "genres": ["Comédie", "Romance"],
+          "createurs": [{"nom": "Bays", "prenom": "Carter"}, {"nom": "Thomas", "prenom": "Craig"}],
+          "realisateurs": [{"nom": "Fryman", "prenom": "Pamela"}],
+          "acteurs": [{"nom": "Radnor", "prenom": "Josh"}, {"nom": "Segel", "prenom": "Jason"}, {"nom": "Hannigan", "prenom": "Alyson"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Ted commence à raconter son histoire d’amour à ses enfants.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 50,
+          "titre": "In Treatment",
+          "date_sortie": "2008-01-28",
+          "description": "Un psychothérapeute reçoit ses patients et consulte son superviseur.",
+          "image": "intreatment.jpg",
+          "genres": ["Drame", "Psychologique"],
+          "createurs": [{"nom": "Gideon", "prenom": "Leven"}],
+          "realisateurs": [{"nom": "Horovitz", "prenom": "Paris Barclay"}],
+          "acteurs": [{"nom": "Byrne", "prenom": "Gabriel"}, {"nom": "Wiig", "prenom": "Dianne"}, {"nom": "Mortimer", "prenom": "Hope Davis"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Chaque épisode explore une séance de thérapie.",
+              "episodes": [
+                {"numero": 1, "duree": 28},
+                {"numero": 2, "duree": 29}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 51,
+          "titre": "Invasion",
+          "date_sortie": "2005-09-21",
+          "description": "Des phénomènes étranges se produisent après un ouragan en Floride.",
+          "image": "invasion.jpg",
+          "genres": ["Science-Fiction", "Drame", "Mystère"],
+          "createurs": [{"nom": "Rodriguez", "prenom": "Shaun Cassidy"}],
+          "realisateurs": [{"nom": "Little", "prenom": "Thomas Y."}],
+          "acteurs": [{"nom": "Mathews", "prenom": "Eddie Cibrian"}, {"nom": "Underwood", "prenom": "William Fichtner"}, {"nom": "Henderson", "prenom": "Lisa Sheridan"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Une communauté est changée à jamais après un ouragan mystérieux.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 52,
+          "titre": "Jake 2.0",
+          "date_sortie": "2003-09-10",
+          "description": "Un technicien informatique est doté de nanobots qui le rendent surhumain.",
+          "image": "jake.jpg",
+          "genres": ["Science-Fiction", "Action"],
+          "createurs": [{"nom": "Camp", "prenom": "Silvio Horta"}],
+          "realisateurs": [{"nom": "Kretch", "prenom": "Michael Grossman"}],
+          "acteurs": [{"nom": "Brooks", "prenom": "Christopher Gorham"}, {"nom": "McMahon", "prenom": "Keegan Connor"}, {"nom": "Jones", "prenom": "Judith Scott"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jake découvre ses nouvelles capacités.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 53,
+          "titre": "Jekyll",
+          "date_sortie": "2007-06-16",
+          "description": "Une suite moderne de l'histoire de Dr Jekyll et Mr Hyde.",
+          "image": "jekyll.jpg",
+          "genres": ["Thriller", "Drame", "Mystère"],
+          "createurs": [{"nom": "Moffat", "prenom": "Steven"}],
+          "realisateurs": [{"nom": "Harrison", "prenom": "Douglas Mackinnon"}],
+          "acteurs": [{"nom": "Nesbitt", "prenom": "James"}, {"nom": "Miller", "prenom": "Gina Bellman"}, {"nom": "Scott", "prenom": "Denis Lawson"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Le Dr Jackman lutte contre son alter ego violent.",
+              "episodes": [
+                {"numero": 1, "duree": 58},
+                {"numero": 2, "duree": 59}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Nomination"}]
+        },
+        {
+          "Id_serie": 54,
+          "titre": "Jericho",
+          "date_sortie": "2006-09-20",
+          "description": "Les habitants d'une petite ville doivent reconstruire leur vie après des attaques nucléaires.",
+          "image": "jericho.jpg",
+          "genres": ["Drame", "Thriller", "Post-Apocalyptique"],
+          "createurs": [{"nom": "Thomsen", "prenom": "Stephen Chbosky"}],
+          "realisateurs": [{"nom": "Steinberg", "prenom": "Jon Turteltaub"}],
+          "acteurs": [{"nom": "Ulrich", "prenom": "Skeet"}, {"nom": "Hutton", "prenom": "Pamela Reed"}, {"nom": "Guzmán", "prenom": "Lennie James"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jericho tente de survivre après des explosions nucléaires.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 55,
+          "titre": "John from Cincinnati",
+          "date_sortie": "2007-06-10",
+          "description": "L'arrivée d'un étrange jeune homme perturbe une famille de surfeurs.",
+          "image": "johnfromcincinnati.jpg",
+          "genres": ["Drame", "Fantastique"],
+          "createurs": [{"nom": "Milch", "prenom": "David"}, {"nom": "Dorn", "prenom": "Kem Nunn"}],
+          "realisateurs": [{"nom": "Kurtz", "prenom": "Mark Tinker"}],
+          "acteurs": [{"nom": "Perry", "prenom": "Austin Nichols"}, {"nom": "Brown", "prenom": "Bruce Greenwood"}, {"nom": "Hanson", "prenom": "Rebecca De Mornay"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "La famille Yost fait face à des événements surnaturels.",
+              "episodes": [
+                {"numero": 1, "duree": 47},
+                {"numero": 2, "duree": 48}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 56,
+          "titre": "Journeyman",
+          "date_sortie": "2007-09-24",
+          "description": "Un homme voyage involontairement dans le temps pour corriger le passé.",
+          "image": "journeyman.jpg",
+          "genres": ["Science-Fiction", "Drame"],
+          "createurs": [{"nom": "Gibson", "prenom": "Kevin Falls"}],
+          "realisateurs": [{"nom": "Noyce", "prenom": "Alex Graves"}],
+          "acteurs": [{"nom": "McKidd", "prenom": "Kevin"}, {"nom": "Lenz", "prenom": "Moon Bloodgood"}, {"nom": "Ramsey", "prenom": "Reed Diamond"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Dan Vassar découvre qu’il peut voyager dans le temps.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 57,
+          "titre": "Knight Rider",
+          "date_sortie": "2008-09-24",
+          "description": "Un agent et sa voiture parlante et avancée luttent contre le crime.",
+          "image": "knightrider.jpg",
+          "genres": ["Action", "Science-Fiction"],
+          "createurs": [{"nom": "Larson", "prenom": "Glen A."}],
+          "realisateurs": [{"nom": "Freeman", "prenom": "Steve Shill"}],
+          "acteurs": [{"nom": "Bruening", "prenom": "Justin"}, {"nom": "Russo", "prenom": "Deanna"}, {"nom": "Trinneer", "prenom": "Scott"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L’héritier de KITT reprend le flambeau.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 58,
+          "titre": "Kyle XY",
+          "date_sortie": "2006-06-26",
+          "description": "Un adolescent sans nombril est trouvé et adopté.",
+          "image": "kylexy.jpg",
+          "genres": ["Science-Fiction", "Drame"],
+          "createurs": [{"nom": "Weiss", "prenom": "Eric Bress"}],
+          "realisateurs": [{"nom": "Cox", "prenom": "Michael Robison"}],
+          "acteurs": [{"nom": "Dallas", "prenom": "Matt"}, {"nom": "Trager", "prenom": "Marguerite MacIntyre"}, {"nom": "Tom", "prenom": "Bruce Thomas"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Kyle découvre sa véritable identité.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 59,
+          "titre": "Legend of the Seeker",
+          "date_sortie": "2008-11-01",
+          "description": "Un jeune homme découvre qu'il est le Seeker et doit sauver le monde.",
+          "image": "legendoftheseeker.jpg",
+          "genres": ["Fantastique", "Aventure"],
+          "createurs": [{"nom": "Tapert", "prenom": "Sam"}, {"nom": "Raimi", "prenom": "Rob"}],
+          "realisateurs": [{"nom": "Orchard", "prenom": "Mark Beesley"}],
+          "acteurs": [{"nom": "Horowitz", "prenom": "Craig"}, {"nom": "Regan", "prenom": "Bridget"}, {"nom": "Spence", "prenom": "Bruce"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Richard Cypher apprend qu’il est le Seeker légendaire.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Leo Award"}]
+        },
+        {
+          "Id_serie": 60,
+          "titre": "Leverage",
+          "date_sortie": "2008-12-07",
+          "description": "Une équipe de voleurs aide les victimes que la loi ne peut pas protéger.",
+          "image": "leverage.jpg",
+          "genres": ["Action", "Comédie", "Thriller"],
+          "createurs": [{"nom": "Rogers", "prenom": "John"}, {"nom": "Downey", "prenom": "Chris"}],
+          "realisateurs": [{"nom": "Behring", "prenom": "Dean Devlin"}],
+          "acteurs": [{"nom": "Hutton", "prenom": "Timothy"}, {"nom": "Bellman", "prenom": "Gina"}, {"nom": "Kane", "prenom": "Christian"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Des anciens escrocs utilisent leurs talents pour faire justice.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Saturn Award"}]
+        }
+      ],
+      [
+        {
+          "Id_serie": 61,
+          "titre": "Lie To Me",
+          "date_sortie": "2009-01-21",
+          "description": "Un expert en détection de mensonges aide les autorités à résoudre des crimes.",
+          "image": "lietonme.jpg",
+          "genres": ["Drame", "Police", "Psychologique"],
+          "createurs": [{"nom": "Baum", "prenom": "Samuel"}, {"nom": "Levenson", "prenom": "Samuel Baum"}],
+          "realisateurs": [{"nom": "Gibson", "prenom": "Daniel Sackheim"}],
+          "acteurs": [{"nom": "Roth", "prenom": "Tim"}, {"nom": "Williams", "prenom": "Kelli"}, {"nom": "Monaghan", "prenom": "Monica"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Le Dr Lightman aide la police grâce à la science du mensonge.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Nomination"}]
+        },
+        {
+          "Id_serie": 62,
+          "titre": "Life",
+          "date_sortie": "2007-09-26",
+          "description": "Un détective est innocenté et revient à la police avec une nouvelle philosophie.",
+          "image": "life.jpg",
+          "genres": ["Drame", "Police", "Thriller"],
+          "createurs": [{"nom": "Rand", "prenom": "Rand Ravich"}],
+          "realisateurs": [{"nom": "Anderson", "prenom": "David Semel"}],
+          "acteurs": [{"nom": "Lewis", "prenom": "Damian"}, {"nom": "Arden", "prenom": "Sarah Shahi"}, {"nom": "Williams", "prenom": "Adam Arkin"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Charlie Crews reprend du service après des années d'emprisonnement injuste.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 63,
+          "titre": "Lost",
+          "date_sortie": "2004-09-22",
+          "description": "Les survivants d'un accident d'avion sont bloqués sur une île mystérieuse.",
+          "image": "lost.jpg",
+          "genres": ["Aventure", "Mystère", "Drame"],
+          "createurs": [{"nom": "Abrams", "prenom": "J.J."}, {"nom": "Lindelof", "prenom": "Damon"}],
+          "realisateurs": [{"nom": "Bender", "prenom": "Jack"}],
+          "acteurs": [{"nom": "Fox", "prenom": "Matthew"}, {"nom": "Lilly", "prenom": "Evangeline"}, {"nom": "Holloway", "prenom": "Josh"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les survivants du vol Oceanic 815 découvrent les mystères de l'île.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 64,
+          "titre": "Mad Men",
+          "date_sortie": "2007-07-19",
+          "description": "Les vies des hommes travaillant dans une agence de publicité à New York dans les années 60.",
+          "image": "madmen.jpg",
+          "genres": ["Drame", "Historique"],
+          "createurs": [{"nom": "Weiner", "prenom": "Matthew"}],
+          "realisateurs": [{"nom": "Jones", "prenom": "Alan Taylor"}],
+          "acteurs": [{"nom": "Hamm", "prenom": "Jon"}, {"nom": "Moss", "prenom": "Elisabeth"}, {"nom": "Hendricks", "prenom": "Christina"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Don Draper navigue dans la vie publicitaire des années 60.",
+              "episodes": [
+                {"numero": 1, "duree": 47},
+                {"numero": 2, "duree": 48}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 65,
+          "titre": "Masters of Sci Fi",
+          "date_sortie": "2007-08-04",
+          "description": "Série d'anthologie de science-fiction.",
+          "image": "mastersofscifi.jpg",
+          "genres": ["Science-Fiction", "Anthologie"],
+          "createurs": [{"nom": "Harlan", "prenom": "Ellison"}],
+          "realisateurs": [{"nom": "Donnelly", "prenom": "Mark Rydell"}],
+          "acteurs": [{"nom": "Garber", "prenom": "Victor"}, {"nom": "Weaver", "prenom": "Sam"}, {"nom": "Keeslar", "prenom": "Brian"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Des épisodes indépendants inspirés des plus grands auteurs de SF.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 66,
+          "titre": "Medium",
+          "date_sortie": "2005-01-03",
+          "description": "Une femme médium utilise ses capacités pour aider le procureur de district.",
+          "image": "medium.jpg",
+          "genres": ["Drame", "Fantastique", "Police"],
+          "createurs": [{"nom": "Carlucci", "prenom": "Glenn Gordon"}],
+          "realisateurs": [{"nom": "Alpert", "prenom": "Larry Teng"}],
+          "acteurs": [{"nom": "Arquette", "prenom": "Patricia"}, {"nom": "Weber", "prenom": "Jake"}, {"nom": "Duball", "prenom": "Maria Lark"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Allison Dubois aide la justice grâce à ses visions.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 67,
+          "titre": "Melrose Place",
+          "date_sortie": "2009-09-08",
+          "description": "Les résidents d'un complexe d'appartements de Los Angeles vivent des drames et des romances.",
+          "image": "melroseplace.jpg",
+          "genres": ["Drame", "Romance"],
+          "createurs": [{"nom": "Rosen", "prenom": "Todd Slavkin"}],
+          "realisateurs": [{"nom": "Horton", "prenom": "Davis Guggenheim"}],
+          "acteurs": [{"nom": "Ashby", "prenom": "Katie Cassidy"}, {"nom": "Tuck", "prenom": "Colin Egglesfield"}, {"nom": "Shaw", "prenom": "Jessica Lucas"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Une nouvelle génération à Melrose Place.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 68,
+          "titre": "Mental",
+          "date_sortie": "2009-05-26",
+          "description": "Un psychiatre dirige une unité psychiatrique.",
+          "image": "mental.jpg",
+          "genres": ["Drame", "Psychologique"],
+          "createurs": [{"nom": "Stone", "prenom": "Dan Levine"}],
+          "realisateurs": [{"nom": "Wilson", "prenom": "Guy Norman Bee"}],
+          "acteurs": [{"nom": "Cumming", "prenom": "Chris Vance"}, {"nom": "Baker", "prenom": "Annabella Sciorra"}, {"nom": "Hill", "prenom": "Marisa Ramirez"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jack Gallagher applique des méthodes peu conventionnelles.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 69,
+          "titre": "Merlin",
+          "date_sortie": "2008-09-20",
+          "description": "Les jeunes années de Merlin et du Prince Arthur.",
+          "image": "merlin.jpg",
+          "genres": ["Fantastique", "Aventure"],
+          "createurs": [{"nom": "Jones", "prenom": "Julian"}, {"nom": "Capps", "prenom": "Johnny"}],
+          "realisateurs": [{"nom": "Dowling", "prenom": "James Hawes"}],
+          "acteurs": [{"nom": "Morgan", "prenom": "Colin"}, {"nom": "Coulby", "prenom": "Angel"}, {"nom": "Head", "prenom": "Anthony"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Merlin arrive à Camelot pour servir le prince Arthur.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Award"}]
+        },
+        {
+          "Id_serie": 70,
+          "titre": "Moonlight",
+          "date_sortie": "2007-09-28",
+          "description": "Un détective privé vampire tombe amoureux d'une mortelle.",
+          "image": "moonlight.jpg",
+          "genres": ["Fantastique", "Romance", "Thriller"],
+          "createurs": [{"nom": "Harkness", "prenom": "Ron Koslow"}],
+          "realisateurs": [{"nom": "Morris", "prenom": "David Barrett"}],
+          "acteurs": [{"nom": "O'Loughlin", "prenom": "Alex"}, {"nom": "Myles", "prenom": "Sophia"}, {"nom": "Fehr", "prenom": "Jason"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Mick St. John tente de concilier immortalité et humanité.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 71,
+          "titre": "My Name Is Earl",
+          "date_sortie": "2005-09-20",
+          "description": "Un homme essaie de compenser toutes ses mauvaises actions après avoir gagné à la loterie.",
+          "image": "mynameisearl.jpg",
+          "genres": ["Comédie", "Drame"],
+          "createurs": [{"nom": "Garcia", "prenom": "Greg"}],
+          "realisateurs": [{"nom": "Todorov", "prenom": "Marc Buckland"}],
+          "acteurs": [{"nom": "Lee", "prenom": "Jason"}, {"nom": "Suplee", "prenom": "Ethan"}, {"nom": "Pressly", "prenom": "Jaime"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Earl Hickey décide de réparer ses erreurs passées.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 72,
+          "titre": "NCIS",
+          "date_sortie": "2003-09-23",
+          "description": "L'équipe du Naval Criminal Investigative Service de Washington.",
+          "image": "ncis.jpg",
+          "genres": ["Police", "Action"],
+          "createurs": [{"nom": "Bellisario", "prenom": "Donald P."}],
+          "realisateurs": [{"nom": "Carpenter", "prenom": "Dennis Smith"}],
+          "acteurs": [{"nom": "Harmon", "prenom": "Mark"}, {"nom": "Weatherly", "prenom": "Michael"}, {"nom": "Pauley", "prenom": "Perrette"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L’équipe Gibbs enquête sur les affaires militaires.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 73,
+          "titre": "NCIS Los Angeles",
+          "date_sortie": "2009-09-22",
+          "description": "L'équipe de l'NCIS basée à Los Angeles.",
+          "image": "ncis losangeles.jpg",
+          "genres": ["Action", "Police"],
+          "createurs": [{"nom": "Donovan", "prenom": "Shane Brennan"}],
+          "realisateurs": [{"nom": "Freeman", "prenom": "Tony Wharmby"}],
+          "acteurs": [{"nom": "O'Donnell", "prenom": "Chris"}, {"nom": "Cool", "prenom": "LL"}, {"nom": "Foa", "prenom": "Barrett"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les agents G. Callen et Sam Hanna traquent les menaces à L.A.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 74,
+          "titre": "Nip/Tuck",
+          "date_sortie": "2003-07-22",
+          "description": "Deux chirurgiens plasticiens gèrent leur cabinet et leur vie privée à Miami.",
+          "image": "niptuck.jpg",
+          "genres": ["Drame", "Médical"],
+          "createurs": [{"nom": "Murphy", "prenom": "Ryan"}],
+          "realisateurs": [{"nom": "Roth", "prenom": "Charles Haid"}],
+          "acteurs": [{"nom": "Walsh", "prenom": "Dylan"}, {"nom": "McMahon", "prenom": "Julian"}, {"nom": "Richardson", "prenom": "Joely"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Deux chirurgiens s’attaquent à la beauté et à leurs démons intérieurs.",
+              "episodes": [
+                {"numero": 1, "duree": 46},
+                {"numero": 2, "duree": 47}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 75,
+          "titre": "One Tree Hill",
+          "date_sortie": "2003-09-23",
+          "description": "Les vies de deux demi-frères et de leurs amis dans une ville de Caroline du Nord.",
+          "image": "onetreehill.jpg",
+          "genres": ["Drame", "Romance"],
+          "createurs": [{"nom": "Schwahn", "prenom": "Mark"}],
+          "realisateurs": [{"nom": "Monroe", "prenom": "Greg Prange"}],
+          "acteurs": [{"nom": "Murray", "prenom": "Chad Michael"}, {"nom": "Burton", "prenom": "Hilarie"}, {"nom": "Bush", "prenom": "Sophia"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Lucas et Nathan Scott s'affrontent sur et en dehors du terrain de basket.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Teen Choice Award"}]
+        }
+      ],
+      [
+        {
+          "Id_serie": 76,
+          "titre": "Oz",
+          "date_sortie": "1997-07-12",
+          "description": "Les détenus d'une unité expérimentale d'une prison de sécurité maximale.",
+          "image": "oz.jpg",
+          "genres": ["Drame", "Crime"],
+          "createurs": [{"nom": "Fontana", "prenom": "Tom"}],
+          "realisateurs": [{"nom": "Winter", "prenom": "Adam Bernstein"}],
+          "acteurs": [{"nom": "Simmons", "prenom": "J.K."}, {"nom": "Tergesen", "prenom": "Lee"}, {"nom": "Walker", "prenom": "Ernie Hudson"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les luttes de pouvoir et de survie dans la prison d’Oz.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Nomination"}]
+        },
+        {
+          "Id_serie": 77,
+          "titre": "Painkiller Jane",
+          "date_sortie": "2007-04-13",
+          "description": "Une femme développe des pouvoirs d'auto-guérison et lutte contre le paranormal.",
+          "image": "painkillerjane.jpg",
+          "genres": ["Action", "Science-Fiction"],
+          "createurs": [{"nom": "Moore", "prenom": "Gil Grant"}],
+          "realisateurs": [{"nom": "Sutherland", "prenom": "Nick Copus"}],
+          "acteurs": [{"nom": "Harmon", "prenom": "Kristanna Loken"}, {"nom": "Moore", "prenom": "Noah Danby"}, {"nom": "Quinn", "prenom": "Rob Stewart"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jane découvre son pouvoir et rejoint une agence secrète.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 78,
+          "titre": "Primeval",
+          "date_sortie": "2007-02-10",
+          "description": "Des anomalies temporelles font apparaître des créatures préhistoriques dans le présent.",
+          "image": "primeval.jpg",
+          "genres": ["Science-Fiction", "Aventure"],
+          "createurs": [{"nom": "Haines", "prenom": "Tim"}, {"nom": "Overman", "prenom": "Adrian"}],
+          "realisateurs": [{"nom": "Hawes", "prenom": "Jamie Payne"}],
+          "acteurs": [{"nom": "Spears", "prenom": "Douglas Henshall"}, {"nom": "Brown", "prenom": "Lucy"}, {"nom": "Potts", "prenom": "Andrew Lee"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Une équipe scientifique étudie les anomalies du temps.",
+              "episodes": [
+                {"numero": 1, "duree": 46},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Award"}]
+        },
+        {
+          "Id_serie": 79,
+          "titre": "Prison Break",
+          "date_sortie": "2005-08-29",
+          "description": "Un homme se fait emprisonner pour aider son frère à s'échapper du couloir de la mort.",
+          "image": "prisonbreak.jpg",
+          "genres": ["Thriller", "Action", "Drame"],
+          "createurs": [{"nom": "Scheuring", "prenom": "Paul"}],
+          "realisateurs": [{"nom": "Gibson", "prenom": "Bobby Roth"}],
+          "acteurs": [{"nom": "Miller", "prenom": "Wentworth"}, {"nom": "Purcell", "prenom": "Dominic"}, {"nom": "Callies", "prenom": "Sarah Wayne"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Michael Scofield planifie l’évasion de son frère.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 80,
+          "titre": "Private Practice",
+          "date_sortie": "2007-09-26",
+          "description": "La Dr Addison Montgomery quitte Seattle pour un cabinet privé à Los Angeles.",
+          "image": "privatepractice.jpg",
+          "genres": ["Drame", "Médical"],
+          "createurs": [{"nom": "Rhimes", "prenom": "Shonda"}],
+          "realisateurs": [{"nom": "Gross", "prenom": "Mark Tinker"}],
+          "acteurs": [{"nom": "Walsh", "prenom": "Kate"}, {"nom": "Diggs", "prenom": "Taye"}, {"nom": "Brenneman", "prenom": "Amy"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Addison découvre une nouvelle vie à Los Angeles.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 81,
+          "titre": "Psych",
+          "date_sortie": "2006-07-07",
+          "description": "Un consultant de la police prétend être un médium pour résoudre des crimes.",
+          "image": "psych.jpg",
+          "genres": ["Comédie", "Police"],
+          "createurs": [{"nom": "Franks", "prenom": "Steve"}],
+          "realisateurs": [{"nom": "Stark", "prenom": "Mel Damski"}],
+          "acteurs": [{"nom": "Hill", "prenom": "Dulé"}, {"nom": "Roday", "prenom": "James"}, {"nom": "Nelson", "prenom": "Corbin"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Shawn Spencer résout des affaires grâce à ses talents d’observation.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 82,
+          "titre": "Pushing Daisies",
+          "date_sortie": "2007-10-03",
+          "description": "Un homme a le pouvoir de ramener les morts à la vie avec un toucher.",
+          "image": "pushingdaisies.jpg",
+          "genres": ["Fantastique", "Comédie", "Romance"],
+          "createurs": [{"nom": "Fuller", "prenom": "Bryan"}],
+          "realisateurs": [{"nom": "Harris", "prenom": "Barry Sonnenfeld"}],
+          "acteurs": [{"nom": "Pace", "prenom": "Lee"}, {"nom": "Friel", "prenom": "Anna"}, {"nom": "McBride", "prenom": "Chi"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Ned résout des crimes en ressuscitant les morts.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 83,
+          "titre": "Raines",
+          "date_sortie": "2007-03-09",
+          "description": "Un détective parle aux victimes de meurtre décédées.",
+          "image": "raines.jpg",
+          "genres": ["Police", "Fantastique", "Drame"],
+          "createurs": [{"nom": "Goodman", "prenom": "Graham Yost"}],
+          "realisateurs": [{"nom": "Taylor", "prenom": "Jon Avnet"}],
+          "acteurs": [{"nom": "Goldblum", "prenom": "Jeff"}, {"nom": "Pounder", "prenom": "CCH"}, {"nom": "Jones", "prenom": "Matt Craven"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Le détective Raines résout des affaires avec des visions des victimes.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 84,
+          "titre": "Reaper",
+          "date_sortie": "2007-09-25",
+          "description": "Un jeune homme découvre que ses parents ont vendu son âme au Diable.",
+          "image": "reaper.jpg",
+          "genres": ["Comédie", "Fantastique", "Aventure"],
+          "createurs": [{"nom": "Fergus", "prenom": "Michele"}, {"nom": "Ostby", "prenom": "Tara"}],
+          "realisateurs": [{"nom": "Klein", "prenom": "Kevin Smith"}],
+          "acteurs": [{"nom": "Labine", "prenom": "Tyler"}, {"nom": "Wise", "prenom": "Ray"}, {"nom": "Harrison", "prenom": "Missy Peregrym"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Sam découvre qu’il doit capturer les âmes échappées de l’Enfer.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 85,
+          "titre": "Robin Hood",
+          "date_sortie": "2006-10-07",
+          "description": "La légende de Robin des Bois et de ses Merry Men.",
+          "image": "robinhood.jpg",
+          "genres": ["Aventure", "Historique"],
+          "createurs": [{"nom": "Jones", "prenom": "Dominic Minghella"}],
+          "realisateurs": [{"nom": "Hood", "prenom": "John McKay"}],
+          "acteurs": [{"nom": "Armstrong", "prenom": "Jonas"}, {"nom": "Griffiths", "prenom": "Lucy"}, {"nom": "McShera", "prenom": "Keith Allen"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Robin revient de Croisade pour défendre Nottingham.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Award"}]
+        },
+        {
+          "Id_serie": 86,
+          "titre": "Rome",
+          "date_sortie": "2005-08-28",
+          "description": "La vie de deux soldats pendant la transition de la République à l'Empire romain.",
+          "image": "rome.jpg",
+          "genres": ["Historique", "Drame", "Guerre"],
+          "createurs": [{"nom": "Milius", "prenom": "John"}, {"nom": "Heller", "prenom": "Bruno"}],
+          "realisateurs": [{"nom": "Paterson", "prenom": "Michael Apted"}],
+          "acteurs": [{"nom": "Stevenson", "prenom": "Ray"}, {"nom": "Purefoy", "prenom": "James"}, {"nom": "McKidd", "prenom": "Kevin"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les destins croisés de deux soldats romains à l’aube de l’Empire.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 87,
+          "titre": "Samantha Who?",
+          "date_sortie": "2007-10-15",
+          "description": "Une femme se réveille avec une amnésie et découvre qu'elle était une mauvaise personne.",
+          "image": "samanthawho.jpg",
+          "genres": ["Comédie", "Romance"],
+          "createurs": [{"nom": "Cassidy", "prenom": "Cecelia Ahern"}],
+          "realisateurs": [{"nom": "Daniels", "prenom": "Todd Holland"}],
+          "acteurs": [{"nom": "Applegate", "prenom": "Christina"}, {"nom": "Smart", "prenom": "Jean"}, {"nom": "Armisen", "prenom": "Barry Watson"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Samantha tente de devenir une meilleure personne après son amnésie.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 88,
+          "titre": "Sanctuary",
+          "date_sortie": "2008-10-03",
+          "description": "Un médecin rassemble des créatures et des personnes surnaturelles.",
+          "image": "sanctuary.jpg",
+          "genres": ["Fantastique", "Science-Fiction"],
+          "createurs": [{"nom": "Wood", "prenom": "Damian Kindler"}],
+          "realisateurs": [{"nom": "Martin", "prenom": "Martin Wood"}],
+          "acteurs": [{"nom": "Tapping", "prenom": "Amanda"}, {"nom": "Dunne", "prenom": "Robin"}, {"nom": "Robbins", "prenom": "Ryan"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Helen Magnus explore le monde des créatures anormales.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 89,
+          "titre": "Scrubs",
+          "date_sortie": "2001-10-02",
+          "description": "La vie de nouveaux médecins et leur apprentissage dans un hôpital.",
+          "image": "scrubs.jpg",
+          "genres": ["Comédie", "Médical"],
+          "createurs": [{"nom": "Lawrence", "prenom": "Bill"}],
+          "realisateurs": [{"nom": "Finneran", "prenom": "Adam Bernstein"}],
+          "acteurs": [{"nom": "Braff", "prenom": "Zach"}, {"nom": "Faison", "prenom": "Donald"}, {"nom": "Reyes", "prenom": "Judy"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "J.D. apprend la médecine et la vie à l’hôpital Sacred Heart.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Peabody Award"}]
+        },
+        {
+          "Id_serie": 90,
+          "titre": "Sex and the City",
+          "date_sortie": "1998-06-06",
+          "description": "Les chroniques sexuelles et amoureuses de quatre amies à New York.",
+          "image": "sexandthecity.jpg",
+          "genres": ["Comédie", "Romance"],
+          "createurs": [{"nom": "Star", "prenom": "Darren"}],
+          "realisateurs": [{"nom": "Nixon", "prenom": "Michael Patrick King"}],
+          "acteurs": [{"nom": "Parker", "prenom": "Sarah Jessica"}, {"nom": "Cattrall", "prenom": "Kim"}, {"nom": "Davis", "prenom": "Kristin"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Carrie Bradshaw explore les relations modernes à Manhattan.",
+              "episodes": [
+                {"numero": 1, "duree": 25},
+                {"numero": 2, "duree": 25}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        }
+      ],
+      [
+        {
+          "Id_serie": 91,
+          "titre": "Six Feet Under",
+          "date_sortie": "2001-06-03",
+          "description": "La vie d'une famille qui dirige une entreprise de pompes funèbres.",
+          "image": "sixfeetunder.jpg",
+          "genres": ["Drame", "Psychologique"],
+          "createurs": [{"nom": "Ball", "prenom": "Alan"}],
+          "realisateurs": [{"nom": "Hall", "prenom": "Alan Poul"}],
+          "acteurs": [{"nom": "Hall", "prenom": "Michael C."}, {"nom": "Petersen", "prenom": "Peter Krause"}, {"nom": "Ambrose", "prenom": "Lauren"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "La famille Fisher fait face à la mort et aux secrets.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 92,
+          "titre": "Skins",
+          "date_sortie": "2007-01-25",
+          "description": "La vie d'un groupe d'adolescents à Bristol, en Angleterre.",
+          "image": "skins.jpg",
+          "genres": ["Drame", "Adolescence"],
+          "createurs": [{"nom": "Elsley", "prenom": "Bryan"}, {"nom": "Moffat", "prenom": "Jamie Brittain"}],
+          "realisateurs": [{"nom": "Strong", "prenom": "Charles Martin"}],
+          "acteurs": [{"nom": "Stokely", "prenom": "Kaya Scodelario"}, {"nom": "Hoult", "prenom": "Nicholas"}, {"nom": "Bailey", "prenom": "Dev Patel"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Un regard cru sur la jeunesse britannique moderne.",
+              "episodes": [
+                {"numero": 1, "duree": 46},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Award"}]
+        },
+        {
+          "Id_serie": 93,
+          "titre": "Smallville",
+          "date_sortie": "2001-10-16",
+          "description": "Les jeunes années de Clark Kent, avant qu'il ne devienne Superman.",
+          "image": "smallville.jpg",
+          "genres": ["Fantastique", "Action", "Drame"],
+          "createurs": [{"nom": "Millar", "prenom": "Alfred"}, {"nom": "Gough", "prenom": "Miles"}],
+          "realisateurs": [{"nom": "Beeman", "prenom": "Greg"}],
+          "acteurs": [{"nom": "Welling", "prenom": "Tom"}, {"nom": "Kreuk", "prenom": "Kristin"}, {"nom": "Rosenbaum", "prenom": "Michael"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Clark Kent découvre ses pouvoirs et son destin.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 94,
+          "titre": "Sons of Anarchy",
+          "date_sortie": "2008-09-03",
+          "description": "La vie d'un club de motards hors-la-loi.",
+          "image": "sonsofanarchy.jpg",
+          "genres": ["Action", "Drame", "Crime"],
+          "createurs": [{"nom": "Sutter", "prenom": "Kurt"}],
+          "realisateurs": [{"nom": "Sagal", "prenom": "Paris Barclay"}],
+          "acteurs": [{"nom": "Hunnam", "prenom": "Charlie"}, {"nom": "Sagal", "prenom": "Katey"}, {"nom": "Perlman", "prenom": "Ron"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jax Teller remet en question les valeurs du club SAMCRO.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 95,
+          "titre": "South Park",
+          "date_sortie": "1997-08-13",
+          "description": "Les aventures satiriques et surréalistes de quatre enfants.",
+          "image": "southpark.jpg",
+          "genres": ["Animation", "Comédie", "Satire"],
+          "createurs": [{"nom": "Parker", "prenom": "Trey"}, {"nom": "Stone", "prenom": "Matt"}],
+          "realisateurs": [{"nom": "Howell", "prenom": "Eric Stough"}],
+          "acteurs": [{"nom": "Parker", "prenom": "Trey"}, {"nom": "Stone", "prenom": "Matt"}, {"nom": "Kimsey", "prenom": "Mona Marshall"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Cartman et ses amis affrontent le monde absurde de South Park.",
+              "episodes": [
+                {"numero": 1, "duree": 23},
+                {"numero": 2, "duree": 22}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 96,
+          "titre": "Spaced",
+          "date_sortie": "1999-09-24",
+          "description": "Deux colocataires tentent de mener une vie normale tout en étant un peu étranges.",
+          "image": "spaced.jpg",
+          "genres": ["Comédie", "Pop culture"],
+          "createurs": [{"nom": "Pegg", "prenom": "Simon"}, {"nom": "Stevenson", "prenom": "Jessica Hynes"}],
+          "realisateurs": [{"nom": "Wright", "prenom": "Edgar"}],
+          "acteurs": [{"nom": "Pegg", "prenom": "Simon"}, {"nom": "Hynes", "prenom": "Jessica"}, {"nom": "Frost", "prenom": "Nick"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Tim et Daisy partagent un appartement plein d'imagination.",
+              "episodes": [
+                {"numero": 1, "duree": 25},
+                {"numero": 2, "duree": 26}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "British Comedy Award"}]
+        },
+        {
+          "Id_serie": 97,
+          "titre": "Stargate Atlantis",
+          "date_sortie": "2004-07-16",
+          "description": "Une équipe internationale explore la cité perdue d'Atlantis.",
+          "image": "stargateatlantis.jpg",
+          "genres": ["Science-Fiction", "Aventure"],
+          "createurs": [{"nom": "Wright", "prenom": "Brad"}, {"nom": "Cooper", "prenom": "Robert C."}],
+          "realisateurs": [{"nom": "Wood", "prenom": "Martin"}],
+          "acteurs": [{"nom": "Flanigan", "prenom": "Joe"}, {"nom": "Torri", "prenom": "Higginson"}, {"nom": "McGillion", "prenom": "Paul"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L'équipe découvre la cité légendaire d'Atlantis dans la galaxie de Pégase.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Gemini Award"}]
+        },
+        {
+          "Id_serie": 98,
+          "titre": "Stargate SG1",
+          "date_sortie": "1997-07-27",
+          "description": "Une équipe militaire voyage à travers l'univers via le Stargate.",
+          "image": "stargatesg1.jpg",
+          "genres": ["Science-Fiction", "Aventure", "Action"],
+          "createurs": [{"nom": "Glassner", "prenom": "Jonathan"}, {"nom": "Wright", "prenom": "Brad"}],
+          "realisateurs": [{"nom": "Wood", "prenom": "Martin"}],
+          "acteurs": [{"nom": "Anderson", "prenom": "Richard Dean"}, {"nom": "Shanks", "prenom": "Michael"}, {"nom": "Tapping", "prenom": "Amanda"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Le SG-1 explore de nouveaux mondes à travers la porte des étoiles.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Saturn Award"}]
+        },
+        {
+          "Id_serie": 99,
+          "titre": "Stargate Universe",
+          "date_sortie": "2009-10-02",
+          "description": "Une équipe se retrouve piégée à bord d'un vaisseau ancien, voyageant à travers l'univers.",
+          "image": "stargateuniverse.jpg",
+          "genres": ["Science-Fiction", "Drame"],
+          "createurs": [{"nom": "Wright", "prenom": "Brad"}, {"nom": "Cooper", "prenom": "Robert C."}],
+          "realisateurs": [{"nom": "Kinch", "prenom": "Andy Mikita"}],
+          "acteurs": [{"nom": "Carlyle", "prenom": "Robert"}, {"nom": "Smith", "prenom": "Louis Ferreira"}, {"nom": "Levesque", "prenom": "Alaina Huffman"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les survivants du projet Destiny cherchent un moyen de rentrer sur Terre.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 100,
+          "titre": "Supernatural",
+          "date_sortie": "2005-09-13",
+          "description": "Deux frères chassent des démons, des fantômes et d'autres créatures surnaturelles.",
+          "image": "supernatural.jpg",
+          "genres": ["Fantastique", "Horreur", "Drame"],
+          "createurs": [{"nom": "Kripke", "prenom": "Eric"}],
+          "realisateurs": [{"nom": "Singer", "prenom": "Phil"}],
+          "acteurs": [{"nom": "Padalecki", "prenom": "Jared"}, {"nom": "Ackles", "prenom": "Jensen"}, {"nom": "Collins", "prenom": "Misha"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Sam et Dean Winchester poursuivent le mal à travers les États-Unis.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 101,
+          "titre": "Swingtown",
+          "date_sortie": "2008-06-12",
+          "description": "La vie de trois familles de banlieue explorant de nouvelles libertés sociales dans les années 70.",
+          "image": "swingtown.jpg",
+          "genres": ["Drame", "Historique"],
+          "createurs": [{"nom": "Harmon", "prenom": "Mike Kelley"}],
+          "realisateurs": [{"nom": "McCarthy", "prenom": "Alan Poul"}],
+          "acteurs": [{"nom": "Lane", "prenom": "Grant Show"}, {"nom": "Mol", "prenom": "Molly Parker"}, {"nom": "Ginnifer", "prenom": "Lana Parrilla"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Dans les années 70, trois couples redéfinissent leur vision de l’amour et du mariage.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 102,
+          "titre": "The 4400",
+          "date_sortie": "2004-07-11",
+          "description": "4400 personnes disparues réapparaissent soudainement avec de nouvelles capacités.",
+          "image": "the4400.jpg",
+          "genres": ["Science-Fiction", "Mystère"],
+          "createurs": [{"nom": "Greene", "prenom": "René Echevarria"}],
+          "realisateurs": [{"nom": "Hughes", "prenom": "Nick Copus"}],
+          "acteurs": [{"nom": "McKenzie", "prenom": "Joel Gretsch"}, {"nom": "Allen", "prenom": "Jacqueline McKenzie"}, {"nom": "Clarkson", "prenom": "Patrick Flueger"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les 4400 tentent de comprendre leurs dons et leur mission.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 103,
+          "titre": "The Big Bang Theory",
+          "date_sortie": "2007-09-24",
+          "description": "Quatre scientifiques geeks et leur voisine actrice en herbe.",
+          "image": "thebigbangtheory.jpg",
+          "genres": ["Comédie"],
+          "createurs": [{"nom": "Lorre", "prenom": "Chuck"}, {"nom": "Prady", "prenom": "Bill"}],
+          "realisateurs": [{"nom": "Burditt", "prenom": "Mark Cendrowski"}],
+          "acteurs": [{"nom": "Parsons", "prenom": "Jim"}, {"nom": "Galecki", "prenom": "Johnny"}, {"nom": "Cuoco", "prenom": "Kaley"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Sheldon et Leonard rencontrent leur nouvelle voisine Penny.",
+              "episodes": [
+                {"numero": 1, "duree": 22},
+                {"numero": 2, "duree": 23}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 104,
+          "titre": "The Black Donnellys",
+          "date_sortie": "2007-02-26",
+          "description": "Quatre frères irlandais-américains impliqués dans le crime organisé.",
+          "image": "theblackdonnellys.jpg",
+          "genres": ["Drame", "Crime"],
+          "createurs": [{"nom": "Haggis", "prenom": "Paul"}, {"nom": "Moresco", "prenom": "Robert"}],
+          "realisateurs": [{"nom": "Bender", "prenom": "Bobby"}],
+          "acteurs": [{"nom": "Tucker", "prenom": "Jonathan"}, {"nom": "Kirby", "prenom": "Tom Guiry"}, {"nom": "Green", "prenom": "Olivia Wilde"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les Donnellys tentent de protéger leur famille dans un monde dangereux.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 105,
+          "titre": "The Kill Point",
+          "date_sortie": "2007-07-22",
+          "description": "Des anciens soldats braqueurs de banque se retrouvent dans une impasse.",
+          "image": "thekillpoint.jpg",
+          "genres": ["Thriller", "Action"],
+          "createurs": [{"nom": "Orman", "prenom": "James DeMonaco"}],
+          "realisateurs": [{"nom": "Whitmore", "prenom": "Steve Shill"}],
+          "acteurs": [{"nom": "Leguizamo", "prenom": "John"}, {"nom": "Simmons", "prenom": "Donnie Wahlberg"}, {"nom": "Richards", "prenom": "Michael Hyatt"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Un braquage tourne mal et se transforme en prise d’otages.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        }
+      ],
+      [
+        {
+          "Id_serie": 106,
+          "titre": "The Lost Room",
+          "date_sortie": "2006-12-16",
+          "description": "Un détective recherche des objets d'une chambre de motel aux pouvoirs étranges.",
+          "image": "thelostroom.jpg",
+          "genres": ["Science-Fiction", "Mystère"],
+          "createurs": [{"nom": "Grillo", "prenom": "Christopher Leone"}],
+          "realisateurs": [{"nom": "Leone", "prenom": "Craig R. Baxley"}],
+          "acteurs": [{"nom": "Krause", "prenom": "Peter"}, {"nom": "Margulies", "prenom": "Julianna"}, {"nom": "Beach", "prenom": "Kevin Pollak"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Joe Miller découvre les mystères des objets du motel.",
+              "episodes": [
+                {"numero": 1, "duree": 90},
+                {"numero": 2, "duree": 89}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Nomination"}]
+        },
+        {
+          "Id_serie": 107,
+          "titre": "The Mentalist",
+          "date_sortie": "2008-09-23",
+          "description": "Un 'mentaliste' utilise ses compétences d'observation pour résoudre des crimes.",
+          "image": "thementalist.jpg",
+          "genres": ["Police", "Drame", "Psychologique"],
+          "createurs": [{"nom": "Heller", "prenom": "Bruno"}],
+          "realisateurs": [{"nom": "Smith", "prenom": "Chris Long"}],
+          "acteurs": [{"nom": "Baker", "prenom": "Simon"}, {"nom": "Tunney", "prenom": "Robin"}, {"nom": "Kang", "prenom": "Tim"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Patrick Jane collabore avec le CBI pour attraper Red John.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "People's Choice Award"}]
+        },
+        {
+          "Id_serie": 108,
+          "titre": "The Nine",
+          "date_sortie": "2006-10-04",
+          "description": "Neuf survivants d'un braquage de banque tentent de reprendre leur vie.",
+          "image": "thenine.jpg",
+          "genres": ["Drame", "Thriller"],
+          "createurs": [{"nom": "McCormack", "prenom": "Hank Steinberg"}],
+          "realisateurs": [{"nom": "Levin", "prenom": "Alex Graves"}],
+          "acteurs": [{"nom": "Pope", "prenom": "Kim Raver"}, {"nom": "Donovan", "prenom": "Scott Wolf"}, {"nom": "Greer", "prenom": "Camille Guaty"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les secrets du braquage hantent les survivants.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 109,
+          "titre": "The OC",
+          "date_sortie": "2003-08-05",
+          "description": "Un adolescent en difficulté est accueilli dans une communauté riche.",
+          "image": "theoc.jpg",
+          "genres": ["Drame", "Romance", "Adolescence"],
+          "createurs": [{"nom": "Schwartz", "prenom": "Josh"}],
+          "realisateurs": [{"nom": "Cannon", "prenom": "Patrick Norris"}],
+          "acteurs": [{"nom": "McKenzie", "prenom": "Ben"}, {"nom": "Barton", "prenom": "Mischa"}, {"nom": "Brody", "prenom": "Adam"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Ryan Atwood découvre un nouveau monde à Newport Beach.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Teen Choice Award"}]
+        },
+        {
+          "Id_serie": 110,
+          "titre": "The Pretender",
+          "date_sortie": "1996-09-21",
+          "description": "Un génie capable d'assumer n'importe quel rôle fuit une organisation secrète.",
+          "image": "thepretender.jpg",
+          "genres": ["Thriller", "Science-Fiction", "Drame"],
+          "createurs": [{"nom": "Chase", "prenom": "Steven Long Mitchell"}],
+          "realisateurs": [{"nom": "Davis", "prenom": "Frederick King Keller"}],
+          "acteurs": [{"nom": "Weiss", "prenom": "Michael T."}, {"nom": "Parker", "prenom": "Andrea"}, {"nom": "George", "prenom": "Patrick Bauchau"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Jarod échappe au Centre et aide les autres grâce à ses dons.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 111,
+          "titre": "The Riches",
+          "date_sortie": "2007-03-12",
+          "description": "Une famille de voyageurs vole l'identité d'une famille riche après un accident.",
+          "image": "theriches.jpg",
+          "genres": ["Drame", "Comédie noire"],
+          "createurs": [{"nom": "Parker", "prenom": "Dmitry Lipkin"}],
+          "realisateurs": [{"nom": "Nelson", "prenom": "Peter O'Fallon"}],
+          "acteurs": [{"nom": "Driver", "prenom": "Minnie"}, {"nom": "Izzard", "prenom": "Eddie"}, {"nom": "Curry", "prenom": "Shannon Marie"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les Malloy s’installent dans leur nouvelle vie de riches imposteurs.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Nomination"}]
+        },
+        {
+          "Id_serie": 112,
+          "titre": "The Sarah Connor Chronicles",
+          "date_sortie": "2008-01-13",
+          "description": "Sarah Connor protège son fils John, le futur sauveur de l'humanité.",
+          "image": "thesarahconnorchronicles.jpg",
+          "genres": ["Science-Fiction", "Action"],
+          "createurs": [{"nom": "Friedman", "prenom": "Josh"}],
+          "realisateurs": [{"nom": "Miller", "prenom": "David Nutter"}],
+          "acteurs": [{"nom": "Headey", "prenom": "Lena"}, {"nom": "Dekker", "prenom": "Thomas"}, {"nom": "Glau", "prenom": "Summer"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Sarah et John luttent pour empêcher le Jugement dernier.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 113,
+          "titre": "The Shield",
+          "date_sortie": "2002-03-12",
+          "description": "Une unité de police expérimentale utilise des méthodes controversées.",
+          "image": "theshield.jpg",
+          "genres": ["Police", "Action", "Drame"],
+          "createurs": [{"nom": "Ryan", "prenom": "Shawn"}],
+          "realisateurs": [{"nom": "Taylor", "prenom": "Guy Ferland"}],
+          "acteurs": [{"nom": "Chiklis", "prenom": "Michael"}, {"nom": "Goggins", "prenom": "Walton"}, {"nom": "Dent", "prenom": "CCH Pounder"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Vic Mackey dirige une unité hors-la-loi à Farmington.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 114,
+          "titre": "The Sopranos",
+          "date_sortie": "1999-01-10",
+          "description": "La vie d'un parrain de la mafia luttant avec sa vie familiale et professionnelle.",
+          "image": "thesopranos.jpg",
+          "genres": ["Drame", "Crime"],
+          "createurs": [{"nom": "Chase", "prenom": "David"}],
+          "realisateurs": [{"nom": "Patterson", "prenom": "Tim Van Patten"}],
+          "acteurs": [{"nom": "Gandolfini", "prenom": "James"}, {"nom": "Falco", "prenom": "Edie"}, {"nom": "Sirico", "prenom": "Tony"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Tony Soprano tente d’équilibrer sa famille et son empire criminel.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 115,
+          "titre": "The Tudors",
+          "date_sortie": "2007-04-01",
+          "description": "La jeunesse du roi Henri VIII d'Angleterre.",
+          "image": "thetudors.jpg",
+          "genres": ["Historique", "Drame", "Romance"],
+          "createurs": [{"nom": "Hirst", "prenom": "Michael"}],
+          "realisateurs": [{"nom": "Moore", "prenom": "Ciaran Donnelly"}],
+          "acteurs": [{"nom": "Meyers", "prenom": "Jonathan Rhys"}, {"nom": "Dormer", "prenom": "Natalie"}, {"nom": "O'Toole", "prenom": "Henry Cavill"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Henri VIII défie Rome pour épouser Anne Boleyn.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 116,
+          "titre": "The Vampire Diaries",
+          "date_sortie": "2009-09-10",
+          "description": "Une adolescente est déchirée entre deux frères vampires.",
+          "image": "thevampirediaries.jpg",
+          "genres": ["Fantastique", "Romance", "Drame"],
+          "createurs": [{"nom": "Williamson", "prenom": "Kevin"}, {"nom": "Plec", "prenom": "Julie"}],
+          "realisateurs": [{"nom": "Tucker", "prenom": "Marcos Siega"}],
+          "acteurs": [{"nom": "Dobrev", "prenom": "Nina"}, {"nom": "Wesley", "prenom": "Paul"}, {"nom": "Somerhalder", "prenom": "Ian"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Elena découvre le monde des vampires et ses sombres secrets.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Teen Choice Award"}]
+        },
+        {
+          "Id_serie": 117,
+          "titre": "The Wire",
+          "date_sortie": "2002-06-02",
+          "description": "Une enquête policière approfondie sur le trafic de drogue à Baltimore.",
+          "image": "thewire.jpg",
+          "genres": ["Drame", "Crime", "Politique"],
+          "createurs": [{"nom": "Simon", "prenom": "David"}],
+          "realisateurs": [{"nom": "Clark", "prenom": "Joe Chappelle"}],
+          "acteurs": [{"nom": "West", "prenom": "Dominic"}, {"nom": "Elba", "prenom": "Idris"}, {"nom": "Williams", "prenom": "Michael K."}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L’unité de police de Baltimore enquête sur un réseau de drogue.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Peabody Award"}]
+        },
+        {
+          "Id_serie": 118,
+          "titre": "Torchwood",
+          "date_sortie": "2006-10-22",
+          "description": "Une équipe secrète basée au Pays de Galles enquête sur des menaces extraterrestres.",
+          "image": "torchwood.jpg",
+          "genres": ["Science-Fiction", "Action", "Aventure"],
+          "createurs": [{"nom": "Davies", "prenom": "Russell T."}],
+          "realisateurs": [{"nom": "Ford", "prenom": "Ashley Way"}],
+          "acteurs": [{"nom": "Barrowman", "prenom": "John"}, {"nom": "Myles", "prenom": "Eve"}, {"nom": "Gorman", "prenom": "Burn"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L’équipe Torchwood gère les menaces extraterrestres à Cardiff.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "BAFTA Cymru"}]
+        },
+        {
+          "Id_serie": 119,
+          "titre": "Traveler",
+          "date_sortie": "2007-05-30",
+          "description": "Deux amis sont accusés d'un attentat à la bombe après une farce.",
+          "image": "traveler.jpg",
+          "genres": ["Thriller", "Action"],
+          "createurs": [{"nom": "Pogue", "prenom": "David DiGilio"}],
+          "realisateurs": [{"nom": "Yost", "prenom": "David Nutter"}],
+          "acteurs": [{"nom": "Pyper-Ferguson", "prenom": "Matthew Bomer"}, {"nom": "Newton", "prenom": "Logan Marshall-Green"}, {"nom": "Roth", "prenom": "Aaron Stanford"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Deux étudiants fuient le FBI après avoir été piégés pour terrorisme.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 120,
+          "titre": "Tru Calling",
+          "date_sortie": "2003-10-30",
+          "description": "Une étudiante en médecine légale revit la journée pour prévenir les morts.",
+          "image": "trucalling.jpg",
+          "genres": ["Fantastique", "Drame", "Thriller"],
+          "createurs": [{"nom": "Duchovny", "prenom": "Jon Harmon Feldman"}],
+          "realisateurs": [{"nom": "Berman", "prenom": "Dan Attias"}],
+          "acteurs": [{"nom": "Dushku", "prenom": "Eliza"}, {"nom": "Watson", "prenom": "Shawn Reaves"}, {"nom": "Priestley", "prenom": "Jason"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Tru Davies découvre son don pour sauver les morts.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        }
+      ],
+      [
+        {
+          "Id_serie": 121,
+          "titre": "True Blood",
+          "date_sortie": "2008-09-07",
+          "description": "Les vampires existent et une serveuse médium tombe amoureuse de l'un d'eux.",
+          "image": "trueblood.jpg",
+          "genres": ["Fantastique", "Drame", "Romance"],
+          "createurs": [{"nom": "Ball", "prenom": "Alan"}],
+          "realisateurs": [{"nom": "Taylor", "prenom": "Daniel Minahan"}],
+          "acteurs": [{"nom": "Paquin", "prenom": "Anna"}, {"nom": "Moyer", "prenom": "Stephen"}, {"nom": "Skarsgård", "prenom": "Alexander"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Sookie Stackhouse découvre le monde des vampires en Louisiane.",
+              "episodes": [
+                {"numero": 1, "duree": 55},
+                {"numero": 2, "duree": 56}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 122,
+          "titre": "Ugly Betty",
+          "date_sortie": "2006-09-28",
+          "description": "Une jeune femme simple travaille dans un magazine de mode de luxe.",
+          "image": "uglybetty.jpg",
+          "genres": ["Comédie", "Drame"],
+          "createurs": [{"nom": "Horta", "prenom": "Silvio"}],
+          "realisateurs": [{"nom": "Winant", "prenom": "James Hayman"}],
+          "acteurs": [{"nom": "Ferrera", "prenom": "America"}, {"nom": "Newton", "prenom": "Eric Mabius"}, {"nom": "Williams", "prenom": "Vanessa"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Betty Suarez s’impose dans l’univers impitoyable de la mode.",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        },
+        {
+          "Id_serie": 123,
+          "titre": "V",
+          "date_sortie": "2009-11-03",
+          "description": "Des extraterrestres pacifiques arrivent sur Terre, mais cachent un plan sinistre.",
+          "image": "v.jpg",
+          "genres": ["Science-Fiction", "Thriller"],
+          "createurs": [{"nom": "Peters", "prenom": "Kenneth Johnson"}],
+          "realisateurs": [{"nom": "Johnson", "prenom": "Yves Simoneau"}],
+          "acteurs": [{"nom": "Baccarin", "prenom": "Morena"}, {"nom": "Mitchell", "prenom": "Elizabeth"}, {"nom": "Scott", "prenom": "Joel Gretsch"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Les humains découvrent les véritables intentions des Visiteurs.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 124,
+          "titre": "Veronica Mars",
+          "date_sortie": "2004-09-22",
+          "description": "Une lycéenne travaille comme détective privé après la mort de sa meilleure amie.",
+          "image": "veronicamars.jpg",
+          "genres": ["Police", "Drame", "Adolescence"],
+          "createurs": [{"nom": "Thomas", "prenom": "Rob"}],
+          "realisateurs": [{"nom": "Roth", "prenom": "John T. Kretchmer"}],
+          "acteurs": [{"nom": "Bell", "prenom": "Kristen"}, {"nom": "Colantoni", "prenom": "Enrico"}, {"nom": "Dohring", "prenom": "Jason"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Veronica enquête sur le meurtre de sa meilleure amie à Neptune.",
+              "episodes": [
+                {"numero": 1, "duree": 42},
+                {"numero": 2, "duree": 43}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Satellite Award"}]
+        },
+        {
+          "Id_serie": 125,
+          "titre": "Weeds",
+          "date_sortie": "2005-08-08",
+          "description": "Une mère de banlieue commence à vendre de la marijuana pour subvenir à ses besoins.",
+          "image": "weeds.jpg",
+          "genres": ["Comédie", "Drame", "Satire"],
+          "createurs": [{"nom": "Kohan", "prenom": "Jenji"}],
+          "realisateurs": [{"nom": "Tucker", "prenom": "Craig Zisk"}],
+          "acteurs": [{"nom": "Parker", "prenom": "Mary-Louise"}, {"nom": "Nealon", "prenom": "Kevin"}, {"nom": "Bowen", "prenom": "Elizabeth Perkins"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Nancy Botwin découvre les affaires risquées du trafic de drogue.",
+              "episodes": [
+                {"numero": 1, "duree": 30},
+                {"numero": 2, "duree": 29}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Golden Globe"}]
+        },
+        {
+          "Id_serie": 126,
+          "titre": "Whitechapel",
+          "date_sortie": "2009-02-02",
+          "description": "Des détectives enquêtent sur des crimes qui imitent des meurtres historiques.",
+          "image": "whitechapel.jpg",
+          "genres": ["Police", "Thriller", "Mystère"],
+          "createurs": [{"nom": "Griffith", "prenom": "Ben Court"}],
+          "realisateurs": [{"nom": "Hawes", "prenom": "S.J. Clarkson"}],
+          "acteurs": [{"nom": "Penry-Jones", "prenom": "Rupert"}, {"nom": "Phil", "prenom": "Steve Pemberton"}, {"nom": "Borthwick", "prenom": "Phil Davis"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "L’inspecteur Chandler enquête sur un tueur imitant Jack l’Éventreur.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 127,
+          "titre": "Women's Murder Club",
+          "date_sortie": "2007-10-12",
+          "description": "Quatre professionnelles féminines se rencontrent pour résoudre des crimes.",
+          "image": "womensmurderclub.jpg",
+          "genres": ["Police", "Drame"],
+          "createurs": [{"nom": "Pogue", "prenom": "Elizabeth Craft"}],
+          "realisateurs": [{"nom": "Dyer", "prenom": "Scott Winant"}],
+          "acteurs": [{"nom": "Angie", "prenom": "Harmon"}, {"nom": "Gina", "prenom": "Ravin"}, {"nom": "Paula", "prenom": "Newsome"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Un groupe de femmes collabore pour résoudre des affaires criminelles.",
+              "episodes": [
+                {"numero": 1, "duree": 44},
+                {"numero": 2, "duree": 45}
+              ]
+            }
+          ],
+          "prix": []
+        },
+        {
+          "Id_serie": 128,
+          "titre": "XFiles",
+          "date_sortie": "1993-09-10",
+          "description": "Deux agents du FBI enquêtent sur des affaires non résolues impliquant le paranormal.",
+          "image": "xfiles.jpg",
+          "genres": ["Science-Fiction", "Mystère", "Thriller"],
+          "createurs": [{"nom": "Carter", "prenom": "Chris"}],
+          "realisateurs": [{"nom": "Bowman", "prenom": "Rob"}],
+          "acteurs": [{"nom": "Anderson", "prenom": "Gillian"}, {"nom": "Duchovny", "prenom": "David"}, {"nom": "Pileggi", "prenom": "Mitch"}],
+          "saisons": [
+            {
+              "numero": 1,
+              "description": "Mulder et Scully enquêtent sur des phénomènes paranormaux.",
+              "episodes": [
+                {"numero": 1, "duree": 45},
+                {"numero": 2, "duree": 46}
+              ]
+            }
+          ],
+          "prix": [{"libelle": "Emmy Award"}]
+        }
+      ]      
+]

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Moteur de Séries</title>
+    <link rel="stylesheet" href="/static/css/PageConnexion.css">
+</head>
+<body>
+
+    <div class="background">
+        <div class="overlay"></div>
+
+        <div class="login-container">
+            <h1 class="login-title">S’identifier</h1>
+
+            <form id="loginForm" class="login-form">
+                <input type="text" id="email" placeholder="Email ou identifiant" required />
+                <input type="password" id="password" placeholder="Mot de passe" required />
+                <button type="submit" class="login-btn">Se connecter</button>
+                <p id="loginMessage" class="message"></p>
+              </form>              
+
+            <div class="help-links">
+                <p>Vous n’avez pas encore de compte ? <a href="/inscription">Inscrivez-vous !</a></p>
+            </div>
+
+            <p id="loginMessage" class="message"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+        
+          const emailOrId = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+          const msg = document.getElementById("loginMessage");
+        
+          try {
+            // Lecture du fichier JSON local
+            const response = await fetch("/static/data/users.json");
+            const users = await response.json();
+        
+            // Recherche d'un utilisateur correspondant
+            const user = users.find(u =>
+              (u.email === emailOrId || u.identifiant === emailOrId) &&
+              u.mdp === password
+            );
+        
+            if (user) {
+              msg.textContent = ` Bienvenue, ${user.identifiant}`;
+              msg.style.color = "lime";
+        
+              // Stocke les infos basiques dans localStorage pour usage futur
+              localStorage.setItem("user", JSON.stringify({
+                identifiant: user.identifiant,
+                type: user.type_utilisateur
+              }));
+        
+              // Redirection après 1,5 seconde
+              setTimeout(() => {
+                window.location.href = "/";
+              }, 1500);
+            } else {
+              msg.textContent = " Identifiants incorrects.";
+              msg.style.color = "red";
+            }
+          } catch (err) {
+            msg.textContent = "Erreur lors du chargement des utilisateurs.";
+            msg.style.color = "orange";
+          }
+        });
+        </script>
+        
+</body>
+</html>

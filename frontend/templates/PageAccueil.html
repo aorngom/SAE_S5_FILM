@@ -5,36 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moteur de Séries</title>
     <link rel="stylesheet" href="/static/css/PageAccueil.css">
+    <link rel="stylesheet" href="/static/css/navbar.css">
 </head>
 <body>
-    <div class="container">
-        <h1><span class="highlight">Moteur de Séries </span></h1>
+    {% include 'components/navbar.html' %}
+
+    <div class="container" style="margin-top: 90px;">
+        <h1><span class="highlight">Moteur de Séries</span></h1>
 
         <h2 class="subtitle">Nos Séries</h2>
-        <div class="series-grid" id="series-container">
-            <!-- Les cartes seront injectées ici via JS -->
-        </div>
+        <div class="series-grid" id="series-container"></div>
     </div>
 
     <script>
         async function loadSeries() {
             try {
-                const response = await fetch("/data/series.json");
+                const response = await fetch("/static/data/series.json");
+                if (!response.ok) throw new Error("Erreur de chargement JSON");
+
                 const series = await response.json();
+                console.log("Séries chargées :", series);
 
                 const container = document.getElementById("series-container");
                 container.innerHTML = "";
 
-                series.forEach((s) => {
+                // Correction : on aplatit le tableau principal (il y a un tableau de tableau au niveau de series.json). On lisait un niveau de trop.
+                series.flat().forEach((s) => {
+                    const titre = s.titre || s.Titre || s.title || "Titre inconnu";
+                    const image = s.image || s.Image || "default.jpg";
+
                     const card = document.createElement("div");
                     card.className = "serie-card fade-in";
 
                     const img = document.createElement("img");
-                    img.src = `/static/images/posters_series/${s.image}`;
-                    img.alt = s.titre;
+                    img.src = `/static/images/posters_series/${image}`;
+                    img.alt = titre;
+
+                    // Image de secours si le fichier n'existe pas
+                    img.onerror = () => (img.src = "/static/images/posters_series/default.jpg");
 
                     const title = document.createElement("h3");
-                    title.textContent = s.titre;
+                    title.textContent = titre;
 
                     card.appendChild(img);
                     card.appendChild(title);
@@ -42,6 +53,8 @@
                 });
             } catch (err) {
                 console.error("Erreur lors du chargement des séries :", err);
+                document.getElementById("series-container").innerHTML =
+                    "<p style='color:white;'>Impossible de charger les séries.</p>";
             }
         }
 

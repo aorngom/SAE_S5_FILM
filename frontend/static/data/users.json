@@ -1,0 +1,39 @@
+[
+    {
+      "identifiant": "admin",
+      "email": "admin@seriesdb.com",
+      "mdp": "hashed_password_admin",
+      "type_utilisateur": "administrateur"
+    },
+    {
+      "identifiant": "john_doe",
+      "email": "john.doe@example.com",
+      "mdp": "hashed_password_1",
+      "type_utilisateur": "utilisateur"
+    },
+    {
+      "identifiant": "jane_smith",
+      "email": "jane.smith@example.com",
+      "mdp": "hashed_password_2",
+      "type_utilisateur": "utilisateur"
+    },
+    {
+      "identifiant": "cinephile_pro",
+      "email": "cinephile@example.com",
+      "mdp": "hashed_password_3",
+      "type_utilisateur": "utilisateur"
+    },
+    {
+      "identifiant": "series_addict",
+      "email": "addict@example.com",
+      "mdp": "hashed_password_4",
+      "type_utilisateur": "utilisateur"
+    },
+    {
+      "identifiant": "tv_lover",
+      "email": "tvlover@example.com",
+      "mdp": "hashed_password_5",
+      "type_utilisateur": "utilisateur"
+    }
+  ]
+  
