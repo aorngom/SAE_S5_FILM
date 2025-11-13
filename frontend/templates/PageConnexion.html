@@ -38,32 +38,34 @@
           const msg = document.getElementById("loginMessage");
         
           try {
-            // Lecture du fichier JSON local
             const response = await fetch("/static/data/users.json");
             const users = await response.json();
         
-            // Recherche d'un utilisateur correspondant
             const user = users.find(u =>
               (u.email === emailOrId || u.identifiant === emailOrId) &&
               u.mdp === password
             );
         
             if (user) {
-              msg.textContent = ` Bienvenue, ${user.identifiant}`;
+              msg.textContent = `Bienvenue, ${user.identifiant}`;
               msg.style.color = "lime";
         
-              // Stocke les infos basiques dans localStorage pour usage futur
-              localStorage.setItem("user", JSON.stringify({
-                identifiant: user.identifiant,
-                type: user.type_utilisateur
-              }));
+              // On stocke toutes les infos nécessaires
+                localStorage.setItem("user_prenom", user.prenom);
+                localStorage.setItem("user_nom", user.nom);
+                localStorage.setItem("user_email", user.email);
+                localStorage.setItem("user_identifiant", user.identifiant);
+                localStorage.setItem("user_adresse", user.adresse);
+                localStorage.setItem("user_telephone", user.telephone);
+                localStorage.setItem("user_type", user.type_utilisateur);
+
         
-              // Redirection après 1,5 seconde
+              // Redirection vers l’accueil ou profil
               setTimeout(() => {
                 window.location.href = "/";
-              }, 1500);
+              }, 1200);
             } else {
-              msg.textContent = " Identifiants incorrects.";
+              msg.textContent = "Identifiants incorrects.";
               msg.style.color = "red";
             }
           } catch (err) {
@@ -72,6 +74,7 @@
           }
         });
         </script>
+        
         
 </body>
 </html>

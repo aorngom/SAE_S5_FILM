@@ -3,37 +3,61 @@
       "identifiant": "admin",
       "email": "admin@seriesdb.com",
       "mdp": "hashed_password_admin",
-      "type_utilisateur": "administrateur"
+      "type_utilisateur": "administrateur",
+      "prenom": "Alice",
+      "nom": "Dupont",
+      "adresse": "12 Rue des Admins, Paris",
+      "telephone": "+33 6 11 22 33 44"
     },
     {
       "identifiant": "john_doe",
       "email": "john.doe@example.com",
       "mdp": "hashed_password_1",
-      "type_utilisateur": "utilisateur"
+      "type_utilisateur": "utilisateur",
+      "prenom": "John",
+      "nom": "Doe",
+      "adresse": "45 Avenue de la République, Lyon",
+      "telephone": "+33 6 45 22 91 10"
     },
     {
       "identifiant": "jane_smith",
       "email": "jane.smith@example.com",
       "mdp": "hashed_password_2",
-      "type_utilisateur": "utilisateur"
+      "type_utilisateur": "utilisateur",
+      "prenom": "Jane",
+      "nom": "Smith",
+      "adresse": "78 Boulevard Victor Hugo, Marseille",
+      "telephone": "+33 7 89 44 11 08"
     },
     {
       "identifiant": "cinephile_pro",
       "email": "cinephile@example.com",
       "mdp": "hashed_password_3",
-      "type_utilisateur": "utilisateur"
+      "type_utilisateur": "utilisateur",
+      "prenom": "Lucas",
+      "nom": "Martinez",
+      "adresse": "9 Rue des Cinéphiles, Bordeaux",
+      "telephone": "+33 7 12 23 34 45"
     },
     {
       "identifiant": "series_addict",
       "email": "addict@example.com",
       "mdp": "hashed_password_4",
-      "type_utilisateur": "utilisateur"
+      "type_utilisateur": "utilisateur",
+      "prenom": "Emma",
+      "nom": "Moreau",
+      "adresse": "33 Rue des Lilas, Toulouse",
+      "telephone": "+33 6 88 44 22 55"
     },
     {
       "identifiant": "tv_lover",
       "email": "tvlover@example.com",
       "mdp": "hashed_password_5",
-      "type_utilisateur": "utilisateur"
+      "type_utilisateur": "utilisateur",
+      "prenom": "Paul",
+      "nom": "Girard",
+      "adresse": "50 Rue des Peupliers, Nice",
+      "telephone": "+33 6 73 81 99 12"
     }
   ]
   

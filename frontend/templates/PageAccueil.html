@@ -22,33 +22,35 @@
             try {
                 const response = await fetch("/static/data/series.json");
                 if (!response.ok) throw new Error("Erreur de chargement JSON");
-
+    
                 const series = await response.json();
                 console.log("Séries chargées :", series);
-
+    
                 const container = document.getElementById("series-container");
                 container.innerHTML = "";
-
-                // Correction : on aplatit le tableau principal (il y a un tableau de tableau au niveau de series.json). On lisait un niveau de trop.
+    
                 series.flat().forEach((s) => {
                     const titre = s.titre || s.Titre || s.title || "Titre inconnu";
                     const image = s.image || s.Image || "default.jpg";
-
+    
                     const card = document.createElement("div");
                     card.className = "serie-card fade-in";
-
+    
                     const img = document.createElement("img");
                     img.src = `/static/images/posters_series/${image}`;
                     img.alt = titre;
-
-                    // Image de secours si le fichier n'existe pas
+    
                     img.onerror = () => (img.src = "/static/images/posters_series/default.jpg");
-
+    
                     const title = document.createElement("h3");
                     title.textContent = titre;
-
+    
                     card.appendChild(img);
                     card.appendChild(title);
+    
+                    // LIEN VERS LA PAGE DÉTAIL
+                    card.onclick = () => window.location.href = `/detail?id=${s.Id_serie}`;
+    
                     container.appendChild(card);
                 });
             } catch (err) {
@@ -57,8 +59,9 @@
                     "<p style='color:white;'>Impossible de charger les séries.</p>";
             }
         }
-
+    
         loadSeries();
     </script>
+    
 </body>
 </html>

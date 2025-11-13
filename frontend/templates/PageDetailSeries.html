@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails Série</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/PageDetailSeries.css">
+</head>
+
+<body>
+
+    {% include 'components/navbar.html' %}
+
+    <div id="detail-page"></div>
+
+    <script>
+        async function loadSeriesDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get("id"));
+
+            const response = await fetch("/static/data/series.json");
+            const allData = await response.json();
+            const series = allData.flat();
+
+            const serie = series.find(s => s.Id_serie === id);
+
+            if (!serie) {
+                document.getElementById("detail-page").innerHTML =
+                    "<p style='color:white;padding:40px;'>Série introuvable.</p>";
+                return;
+            }
+
+            const image = serie.image || "default.jpg";
+
+            document.getElementById("detail-page").innerHTML = `
+                <div class="hero" style="--serie-image: url('/static/images/posters_series/${image}')">
+                    <div class="hero-content">
+                        <h1>${serie.titre}</h1>
+                        <p class="description">${serie.description}</p>
+
+                        <div class="meta">
+                            <span>${serie.genres.join(", ")}</span>
+                            <span>| ${serie.date_sortie.split("-")[0]}</span>
+                            <span>| ${serie.prix.length > 0 ? serie.prix.map(p => p.libelle).join(", ") : "Aucun prix"}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="infos">
+                    <h2>Informations</h2>
+
+                    <div class="info-grid">
+                        <div>
+                            <h3>Créateurs</h3>
+                            <ul>${serie.createurs.map(c => `<li>${c.prenom} ${c.nom}</li>`).join("")}</ul>
+                        </div>
+
+                        <div>
+                            <h3>Réalisateurs</h3>
+                            <ul>${serie.realisateurs.map(r => `<li>${r.prenom} ${r.nom}</li>`).join("")}</ul>
+                        </div>
+
+                        <div>
+                            <h3>Acteurs</h3>
+                            <ul>${serie.acteurs.map(a => `<li>${a.prenom} ${a.nom}</li>`).join("")}</ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION SAISONS/EPISODES STYLE NETFLIX -->
+                <section class="saisons">
+                    <h2>Saisons</h2>
+
+                    <div class="season-selector">
+                        <label for="seasonSelect">Choisir une saison :</label>
+                        <select id="seasonSelect">
+                            ${serie.saisons.map(s => `
+                                <option value="${s.numero}">Saison ${s.numero}</option>
+                            `).join("")}
+                        </select>
+                    </div>
+
+                    <div id="episodesCount" class="episodes-box">
+                        <!-- Contenu dynamique -->
+                    </div>
+                </section>
+
+                <!-- RECOMMANDATIONS -->
+                <section class="recommandations">
+                    <h2>Nous vous recommandons également</h2>
+                    <div class="reco-grid">
+                        ${getRecommandations(series, serie).map(rec => `
+                            <div class="reco-card" onclick="window.location.href='/detail?id=${rec.Id_serie}'">
+                                <img src="/static/images/posters_series/${rec.image}" onerror="this.src='/static/images/posters_series/default.jpg'">
+                                <p>${rec.titre}</p>
+                            </div>
+                        `).join("")}
+                    </div>
+                </section>
+            `;
+
+            // Appelle l'affichage des épisodes
+            setupSeasonEpisodes(serie);
+        }
+
+        // === RECOMMANDATIONS ===
+        function getRecommandations(series, currentSerie) {
+            const genres = new Set(currentSerie.genres);
+            return series.filter(s =>
+                s.Id_serie !== currentSerie.Id_serie &&
+                s.genres.some(g => genres.has(g))
+            ).slice(0, 12);
+        }
+
+        // === DYNAMIQUE AFFICHAGE SAISONS / ÉPISODES ===
+        function setupSeasonEpisodes(serie) {
+            const select = document.getElementById("seasonSelect");
+            const box = document.getElementById("episodesCount");
+
+            function updateEpisodes() {
+                const seasonNum = parseInt(select.value);
+                const season = serie.saisons.find(s => s.numero === seasonNum);
+
+                box.innerHTML = `
+                    <div class="episode-count">
+                        <h3>Saison ${season.numero}</h3>
+                        <p>${season.episodes.length} épisode(s)</p>
+                    </div>
+                `;
+            }
+
+            updateEpisodes();
+            select.addEventListener("change", updateEpisodes);
+        }
+
+        loadSeriesDetail();
+    </script>
+
+</body>
+</html>

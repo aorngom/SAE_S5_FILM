@@ -14,10 +14,19 @@
       <h1 class="login-title">Créer un compte</h1>
 
       <form class="login-form" id="registerForm">
+
         <input type="text" id="identifiant" placeholder="Identifiant" required>
         <input type="email" id="email" placeholder="E-mail" required>
+
+        <input type="text" id="prenom" placeholder="Prénom" required>
+        <input type="text" id="nom" placeholder="Nom" required>
+
+        <input type="text" id="adresse" placeholder="Adresse" required>
+        <input type="text" id="telephone" placeholder="Téléphone" required>
+
         <input type="password" id="password" placeholder="Mot de passe" required>
         <input type="password" id="confirm" placeholder="Confirmer le mot de passe" required>
+
         <button type="submit" class="login-btn">S’inscrire</button>
       </form>
 
@@ -35,8 +44,13 @@
 
       const identifiant = document.getElementById("identifiant").value.trim();
       const email = document.getElementById("email").value.trim();
+      const prenom = document.getElementById("prenom").value.trim();
+      const nom = document.getElementById("nom").value.trim();
+      const adresse = document.getElementById("adresse").value.trim();
+      const telephone = document.getElementById("telephone").value.trim();
       const password = document.getElementById("password").value.trim();
       const confirm = document.getElementById("confirm").value.trim();
+
       const msg = document.getElementById("registerMessage");
 
       if (password !== confirm) {
@@ -54,16 +68,37 @@
         return;
       }
 
-      // Simulation de sauvegarde locale (sans backend)
-      const newUser = { identifiant, email, mdp: password, type_utilisateur: "utilisateur" };
+      if (users.some(u => u.identifiant === identifiant)) {
+        msg.textContent = "Cet identifiant est déjà pris.";
+        msg.style.color = "orange";
+        return;
+      }
+
+      // Simulation : création d’un nouvel utilisateur (en attendant le back)
+      const newUser = {
+        identifiant,
+        email,
+        mdp: password,
+        type_utilisateur: "utilisateur",
+        prenom,
+        nom,
+        adresse,
+        telephone
+      };
+
       users.push(newUser);
 
       msg.textContent = "Compte créé avec succès !";
       msg.style.color = "lime";
-      setTimeout(() => window.location.href = "/connexion", 1500);
+
+      setTimeout(() => {
+        window.location.href = "/connexion";
+      }, 1500);
     }
 
-    document.getElementById("registerForm").addEventListener("submit", handleRegister);
+    document.getElementById("registerForm")
+            .addEventListener("submit", handleRegister);
   </script>
+
 </body>
 </html>

@@ -18,6 +18,14 @@
                 {"numero": 1, "duree": 43},
                 {"numero": 2, "duree": 44}
               ]
+            },
+            {
+              "numero": 2,
+              "description": "Saison 2",
+              "episodes": [
+                {"numero": 1, "duree": 43},
+                {"numero": 2, "duree": 44}
+              ]
             }
           ],
           "prix": [{"libelle": "Golden Globe"}]
@@ -1335,7 +1343,7 @@
           "titre": "Lie To Me",
           "date_sortie": "2009-01-21",
           "description": "Un expert en détection de mensonges aide les autorités à résoudre des crimes.",
-          "image": "lietonme.jpg",
+          "image": "lietome.jpg",
           "genres": ["Drame", "Police", "Psychologique"],
           "createurs": [{"nom": "Baum", "prenom": "Samuel"}, {"nom": "Levenson", "prenom": "Samuel Baum"}],
           "realisateurs": [{"nom": "Gibson", "prenom": "Daniel Sackheim"}],
@@ -1599,7 +1607,7 @@
           "titre": "NCIS Los Angeles",
           "date_sortie": "2009-09-22",
           "description": "L'équipe de l'NCIS basée à Los Angeles.",
-          "image": "ncis losangeles.jpg",
+          "image": "ncislosangeles.jpg",
           "genres": ["Action", "Police"],
           "createurs": [{"nom": "Donovan", "prenom": "Shane Brennan"}],
           "realisateurs": [{"nom": "Freeman", "prenom": "Tony Wharmby"}],
@@ -2375,7 +2383,7 @@
           "titre": "The Nine",
           "date_sortie": "2006-10-04",
           "description": "Neuf survivants d'un braquage de banque tentent de reprendre leur vie.",
-          "image": "thenine.jpg",
+          "image": "thenine.jpeg",
           "genres": ["Drame", "Thriller"],
           "createurs": [{"nom": "McCormack", "prenom": "Hank Steinberg"}],
           "realisateurs": [{"nom": "Levin", "prenom": "Alex Graves"}],

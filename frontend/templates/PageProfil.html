@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil utilisateur</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/PageProfil.css">
+</head>
+
+<body>
+    {% include 'components/navbar.html' %}
+
+    <div class="profile-container">
+
+        <h1>Mon Profil</h1>
+
+        <div class="profile-box">
+            <form id="profile-form">
+
+                <label>Prénom</label>
+                <input type="text" id="prenom">
+
+                <label>Nom</label>
+                <input type="text" id="nom">
+
+                <label>Email</label>
+                <input type="email" id="email">
+
+                <label>Identifiant</label>
+                <input type="text" id="identifiant" disabled>
+
+                <label>Adresse</label>
+                <input type="text" id="adresse">
+
+                <label>Téléphone</label>
+                <input type="text" id="telephone">
+
+                <button type="submit" class="save-btn">Enregistrer les modifications</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        async function loadProfile() {
+            const userId = localStorage.getItem("user_identifiant");
+
+            if (!userId) {
+                window.location.href = "/connexion";
+                return;
+            }
+
+            const response = await fetch("/static/data/users.json");
+            const users = await response.json();
+
+            const user = users.find(u => u.identifiant === userId);
+
+            if (!user) return;
+
+            // Remplissage des champs
+            document.getElementById("prenom").value = localStorage.getItem("user_prenom");
+            document.getElementById("nom").value     = localStorage.getItem("user_nom");
+            document.getElementById("email").value   = localStorage.getItem("user_email");
+            document.getElementById("identifiant").value = localStorage.getItem("user_identifiant");
+            document.getElementById("adresse").value = localStorage.getItem("user_adresse");
+            document.getElementById("telephone").value = localStorage.getItem("user_telephone");
+
+        }
+
+        document.getElementById("profile-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Mise à jour locale (localStorage)
+            const updated = {
+                prenom: document.getElementById("prenom").value,
+                nom: document.getElementById("nom").value,
+                email: document.getElementById("email").value,
+                adresse: document.getElementById("adresse").value,
+                telephone: document.getElementById("telephone").value
+            };
+
+            localStorage.setItem("user_profile_update", JSON.stringify(updated));
+
+            alert("Modifications enregistrées !");
+        });
+
+        loadProfile();
+    </script>
+</body>
+</html>

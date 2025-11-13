@@ -173,3 +173,65 @@
     text-align: center;
   }
 }
+/* === USER DROPDOWN === */
+.nav-user-wrapper {
+  position: relative;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background: #1b1b1b;
+  padding: 12px;
+  border-radius: 8px;
+  width: 160px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.user-dropdown.open {
+  display: block;
+}
+
+.user-dropdown a,
+.user-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 6px;
+  color: white;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-dropdown a:hover,
+.user-dropdown button:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* === ADMIN BUTTON IN NAVBAR === */
+#addSerieBtn {
+  background: #c62828 !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+#addSerieBtn:hover {
+  background: #e53935 !important;
+}
+
+/* === ADMIN LINK IN DRAWER === */
+.drawer-link.admin-link {
+  background: rgba(255, 0, 0, 0.15) !important;
+  border-left: 3px solid #e53935;
+}
+
+.drawer-link.admin-link:hover {
+  background: rgba(255, 0, 0, 0.25) !important;
+}

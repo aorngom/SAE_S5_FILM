@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administration - Séries</title>
+
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/PageAdmin.css">
+</head>
+<body>
+
+    {% include 'components/navbar.html' %}
+
+    <div class="admin-container">
+
+        <h1 class="admin-title">Gestion des séries</h1>
+
+        <!-- TABLEAU DES SERIES -->
+        <table class="series-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Titre</th>
+                    <th>Genres</th>
+                    <th>Réalisateurs</th>
+                    <th>Créateurs</th>
+                    <th>Acteurs</th>
+                    <th>Saisons</th>
+                    <th>Épisodes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="adminSeriesTable"></tbody>
+        </table>
+
+    </div>
+
+    <script src="/static/js/PageAdmin.js"></script>
+</body>
+</html>

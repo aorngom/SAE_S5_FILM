@@ -44,3 +44,15 @@ async def connexion_page(request: Request):
 @app.get("/inscription", response_class=HTMLResponse)
 async def inscription_page(request: Request):
     return templates.TemplateResponse("PageInscription.html", {"request": request})
+
+@app.get("/detail", response_class=HTMLResponse)
+async def detail_page(request: Request):
+    return templates.TemplateResponse("PageDetailSeries.html", {"request": request})
+
+@app.get("/profil", response_class=HTMLResponse)
+async def profil(request: Request):
+    return templates.TemplateResponse("PageProfil.html", {"request": request})
+
+@app.get("/admin", response_class=HTMLResponse)
+async def profil(request: Request):
+    return templates.TemplateResponse("PageAdmin.html", {"request": request})

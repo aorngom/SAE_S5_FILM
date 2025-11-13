@@ -1,48 +1,50 @@
 <nav class="navbar" role="navigation" aria-label="Navigation principale">
+
+  <!-- Menu Burger -->
   <button class="nav-btn nav-burger" aria-label="Menu" id="burger">
     <svg viewBox="0 0 24 24" class="icon">
       <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/>
     </svg>
   </button>
 
+  <!-- MENU LATERAL -->
   <aside class="nav-drawer" id="nav-drawer" aria-hidden="true">
     <ul class="drawer-list">
       <li><a href="/" class="drawer-link">Accueil</a></li>
-      <li><a href="/series" class="drawer-link">Séries</a></li>
+      <li><a href="/recommandation" class="drawer-link">recommandations</a></li>
       <li><a href="/favoris" class="drawer-link">Favoris</a></li>
       <li><a href="/profil" class="drawer-link">Profil</a></li>
     </ul>
   </aside>
 
-    <form class="nav-search" id="nav-search" role="search">
-      <input type="search" name="q" class="nav-input" placeholder="Rechercher une série…" aria-label="Rechercher une série" autocomplete="off" />
-      <button class="nav-btn nav-search-btn" aria-label="Rechercher">
-        <svg viewBox="0 0 24 24" class="icon">
-          <path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 1 0-.71.71l.27.28v.79L20 20.49 21.49 19 15.5 14Zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14Z"/>
-        </svg>
-      </button>
-    </form>
-
-    <button class="nav-btn nav-user" aria-label="Se connecter" onclick="window.location.href='/connexion'">
+  <!-- Barre de recherche -->
+  <form class="nav-search" id="nav-search" role="search">
+    <input type="search" name="q" class="nav-input"
+           placeholder="Rechercher une série…" autocomplete="off" />
+    <button class="nav-btn nav-search-btn" aria-label="Rechercher">
       <svg viewBox="0 0 24 24" class="icon">
+        <path d="M15.5 14h-.79l-.28-.27a6.471 6.471 0 1 0-.71.71l.27.28v.79L20 20.49 21.49 19 15.5 14Zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14Z"/>
+      </svg>
+    </button>
+  </form>
+
+  <!-- Bouton utilisateur -->
+  <div class="nav-user-wrapper">
+    <button class="nav-btn nav-user" id="userBtn">
+      <svg viewBox="0 0 24 24" class="icon" id="userIcon">
         <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-5 0-9 2.5-9 5.5A1.5 1.5 0 0 0 4.5 21h15A1.5 1.5 0 0 0 21 19.5C21 16.5 17 14 12 14Z"/>
       </svg>
-      <span>Connexion</span>
+      <span id="userLabel">Connexion</span>
     </button>
 
-  
-  
+    <!-- DROPDOWN CONNECTÉ -->
+    <div class="user-dropdown" id="userDropdown">
+      <a href="/profil">Mon profil</a>
+      <button id="logoutBtn">Déconnexion</button>
+    </div>
+  </div>
 
-  
+</nav>
 
-  </nav>
-  
-  <script>
-    const burger = document.getElementById('burger');
-    const drawer = document.getElementById('nav-drawer');
-  
-    burger.addEventListener('click', () => {
-      drawer.classList.toggle('open');
-    });
-  </script>
-  
+<!-- SCRIPT NAVBAR -->
+<script src="/static/js/navbar.js"></script>

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Container */
+.admin-container {
+    padding: 120px 40px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Titre */
+.admin-title {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #4fd3ff;
+}
+
+/* Barre en haut */
+.admin-top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background: #4fd3ff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #37b8e3;
+}
+
+/* TABLEAU */
+.series-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.series-table th {
+    background: #222;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #4fd3ff;
+}
+
+.series-table td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    font-size: 0.85rem;
+}
+
+/* Image miniature */
+.thumbnail {
+    width: 80px;
+    height: 120px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* DROPDOWN NOMS */
+.list-dropdown {
+    background: #222;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #eee;
+}
+
+.list-dropdown summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #4fd3ff;
+    list-style: none;
+}
+
+.list-dropdown[open] summary {
+    color: #37b8e3;
+}
+
+.list-dropdown ul {
+    margin-top: 8px;
+    padding-left: 14px;
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.list-dropdown ul li {
+    font-size: 0.85rem;
+    padding: 3px 0;
+}
+
+/* Scroll */
+.list-dropdown ul::-webkit-scrollbar {
+    width: 6px;
+}
+.list-dropdown ul::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 6px;
+}
+
+/* ACTIONS */
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.action-edit {
+    color: #4fd3ff;
+}
+.action-edit:hover {
+    color: #37b8e3;
+}
+
+.action-delete {
+    color: #ff4444;
+}
+.action-delete:hover {
+    color: #ff2222;
+}

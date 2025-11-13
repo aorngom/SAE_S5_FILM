@@ -1,0 +1,64 @@
+/* PAGE PROFIL */
+body {
+    background: #111;
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 20px;
+}
+
+.profile-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.profile-box {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+input:disabled {
+    opacity: 0.6;
+}
+
+.save-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #e50914;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.save-btn:hover {
+    background: #b00610;
+}
