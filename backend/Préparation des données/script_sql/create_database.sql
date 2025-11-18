@@ -2,7 +2,7 @@ CREATE TABLE serie(
    Id_serie SERIAL,
    titre VARCHAR(50),
    date_sortie DATE,
-   description VARCHAR(50),
+   description TEXT,
    PRIMARY KEY(Id_serie)
 );
 
@@ -18,7 +18,7 @@ CREATE TABLE utilisateur(
 CREATE TABLE saison(
    Id_saison SERIAL,
    numero SMALLINT,
-   description VARCHAR(50),
+   description TEXT,
    Id_serie INT NOT NULL,
    PRIMARY KEY(Id_saison),
    FOREIGN KEY(Id_serie) REFERENCES serie(Id_serie)
@@ -42,7 +42,7 @@ CREATE TABLE episode(
 
 CREATE TABLE prix(
    Id_prix SERIAL,
-   libelle VARCHAR(50),
+   libelle TEXT,
    PRIMARY KEY(Id_prix)
 );
 
@@ -132,7 +132,7 @@ CREATE TABLE favori(
 CREATE TABLE noter(
    Id_serie INT,
    Id_utilisateur INT,
-   score SMALLINT,
+   score INT,
    PRIMARY KEY(Id_serie, Id_utilisateur),
    FOREIGN KEY(Id_serie) REFERENCES serie(Id_serie),
    FOREIGN KEY(Id_utilisateur) REFERENCES utilisateur(Id_utilisateur)
