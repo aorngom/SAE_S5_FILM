@@ -24,7 +24,8 @@
               "description": "Saison 2",
               "episodes": [
                 {"numero": 1, "duree": 43},
-                {"numero": 2, "duree": 44}
+                {"numero": 2, "duree": 44},
+                {"numero": 3, "duree": 44}
               ]
             }
           ],

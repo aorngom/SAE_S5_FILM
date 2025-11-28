@@ -26,7 +26,7 @@
   backdrop-filter: blur(10px);
 }
 
-/* === BOUTONS GÉNÉRIQUES === */
+/* === BOUTONS === */
 .nav-btn {
   display: inline-flex;
   align-items: center;
@@ -49,7 +49,6 @@
   width: 22px;
   height: 22px;
   fill: currentColor;
-  display: block;
 }
 
 /* === BURGER === */
@@ -57,9 +56,9 @@
   flex-shrink: 0;
 }
 
-/* === BARRE DE RECHERCHE (centrée) === */
+/* === BARRE DE RECHERCHE === */
 .nav-search {
-  flex: 0 1 420px; /* largeur max */
+  flex: 0 1 420px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 8px;
@@ -68,7 +67,7 @@
   padding: 6px 10px 6px 14px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  margin: 0 auto; /* centrage */
+  margin: 0 auto;
 }
 
 .nav-input {
@@ -88,7 +87,6 @@
   background: rgba(255, 255, 255, 0.08);
   border-radius: 999px;
   padding: 8px 10px;
-  transition: background 0.25s;
 }
 
 .nav-search-btn:hover {
@@ -96,10 +94,8 @@
 }
 
 /* === CONNEXION === */
-.nav-user {
-  flex-shrink: 0;
-  font-weight: 500;
-  color: var(--nav-fg);
+.nav-user-wrapper {
+  position: relative;
 }
 
 .nav-user span {
@@ -107,7 +103,7 @@
   font-weight: 600;
 }
 
-/* === DRAWER === */
+/* === MENU LATERAL === */
 .nav-drawer {
   position: fixed;
   top: 64px;
@@ -121,7 +117,6 @@
   box-shadow: 8px 0 20px rgba(0, 0, 0, 0.5);
   z-index: 999;
   padding: 18px 16px;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-drawer.open {
@@ -130,7 +125,6 @@
 
 .drawer-list {
   list-style: none;
-  margin: 0;
   padding: 6px 0;
   display: grid;
   gap: 8px;
@@ -144,40 +138,14 @@
   text-decoration: none;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.2s ease;
 }
 
 .drawer-link:hover {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.18);
   transform: translateX(2px);
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 12px;
-  }
-
-  .nav-search {
-    flex: 1 1 100%;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav-user {
-    order: 3;
-    width: 100%;
-    text-align: center;
-  }
-}
 /* === USER DROPDOWN === */
-.nav-user-wrapper {
-  position: relative;
-}
-
 .user-dropdown {
   display: none;
   position: absolute;
@@ -188,6 +156,7 @@
   border-radius: 8px;
   width: 160px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  z-index: 1001;
 }
 
 .user-dropdown.open {
@@ -200,9 +169,9 @@
   width: 100%;
   padding: 8px 6px;
   color: white;
-  text-align: left;
   background: none;
   border: none;
+  text-align: left;
   cursor: pointer;
 }
 
@@ -211,22 +180,20 @@
   background: rgba(255,255,255,0.08);
 }
 
-/* === ADMIN BUTTON IN NAVBAR === */
+/* === BOUTON ADMIN === */
 #addSerieBtn {
   background: #c62828 !important;
   color: white !important;
   font-weight: 600;
   border-radius: var(--radius);
   padding: 8px 14px;
-  cursor: pointer;
-  transition: background 0.25s ease;
 }
 
 #addSerieBtn:hover {
   background: #e53935 !important;
 }
 
-/* === ADMIN LINK IN DRAWER === */
+/* === DRAWER ADMIN LINK === */
 .drawer-link.admin-link {
   background: rgba(255, 0, 0, 0.15) !important;
   border-left: 3px solid #e53935;
@@ -234,4 +201,18 @@
 
 .drawer-link.admin-link:hover {
   background: rgba(255, 0, 0, 0.25) !important;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px;
+  }
+
+  .nav-search {
+    flex: 1 1 100%;
+    margin-top: 10px;
+  }
 }

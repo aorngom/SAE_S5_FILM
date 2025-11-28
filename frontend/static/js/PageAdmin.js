@@ -1,79 +1,81 @@
-async function loadAdminTable() {
-    const response = await fetch("/static/data/series.json");
-    const raw = await response.json();
+async function loadAdminSeries() {
+    try {
+        const response = await fetch("/api/admin/series");
+        const data = await response.json();
 
-    // ton JSON est un tableau de tableau → on aplatit
-    const series = raw.flat();
+        // data.series = tableau de tableaux → on aplatit
+        const series = data.series.flat();
 
-    const table = document.getElementById("adminSeriesTable");
-    table.innerHTML = "";
+        console.log("Nombre de séries chargées :", series.length);
 
-    series.forEach(s => {
-        const nbSaisons = s.saisons?.length || 0;
-        const nbEpisodes = s.saisons?.reduce(
-            (total, sa) => total + sa.episodes.length, 0
-        ) || 0;
+        const table = document.getElementById("adminSeriesTable");
+        table.innerHTML = "";
 
-        const tr = document.createElement("tr");
+        series.forEach(s => {
+            const image = s.image || "default.jpg";
 
-        tr.innerHTML = `
-            <td>
-                <img src="/static/images/posters_series/${s.image}" class="thumbnail"
-                     onerror="this.src='/static/images/posters_series/default.jpg'">
-            </td>
+            const row = document.createElement("tr");
 
-            <td>${s.titre}</td>
+            row.innerHTML = `
+                <td>
+                    <img src="/static/images/posters_series/${image}"
+                         class="admin-img"
+                         onerror="this.src='/static/images/posters_series/default.jpg'">
+                </td>
 
-            <td>${s.genres.join(", ")}</td>
+                <td>${s.titre}</td>
 
-            <td>
-                <details class="list-dropdown">
-                    <summary>${s.realisateurs.length} réalisateur(s)</summary>
-                    <ul>
-                        ${s.realisateurs.map(r => `<li>${r.prenom} ${r.nom}</li>`).join("")}
-                    </ul>
-                </details>
-            </td>
+                <td>${s.genres.join(", ")}</td>
 
-            <td>
-                <details class="list-dropdown">
-                    <summary>${s.createurs.length} créateur(s)</summary>
-                    <ul>
-                        ${s.createurs.map(r => `<li>${r.prenom} ${r.nom}</li>`).join("")}
-                    </ul>
-                </details>
-            </td>
+                <td>
+                    <details class="list-dropdown">
+                        <summary>${s.realisateurs[0] ? s.realisateurs[0].prenom + " " + s.realisateurs[0].nom : "Aucun"}</summary>
+                        <ul>
+                            ${s.realisateurs.map(r =>
+                                `<li>${r.prenom} ${r.nom}</li>`
+                            ).join("")}
+                        </ul>
+                    </details>
+                </td>
 
-            <td>
-                <details class="list-dropdown">
-                    <summary>${s.acteurs.length} acteur(s)</summary>
-                    <ul>
-                        ${s.acteurs.map(r => `<li>${r.prenom} ${r.nom}</li>`).join("")}
-                    </ul>
-                </details>
-            </td>
+                <td>
+                    <details class="list-dropdown">
+                        <summary>${s.createurs[0] ? s.createurs[0].prenom + " " + s.createurs[0].nom : "Aucun"}</summary>
+                        <ul>
+                            ${s.createurs.map(c =>
+                                `<li>${c.prenom} ${c.nom}</li>`
+                            ).join("")}
+                        </ul>
+                    </details>
+                </td>
 
-            <td>${nbSaisons}</td>
-            <td>${nbEpisodes}</td>
+                <td>
+                    <details class="list-dropdown">
+                        <summary>${s.acteurs[0] ? s.acteurs[0].prenom + " " + s.acteurs[0].nom : "Aucun"}</summary>
+                        <ul>
+                            ${s.acteurs.map(a =>
+                                `<li>${a.prenom} ${a.nom}</li>`
+                            ).join("")}
+                        </ul>
+                    </details>
+                </td>
 
-            <td>
-                <button class="action-btn action-edit" onclick="editSerie(${s.Id_serie})">✏</button>
-                <button class="action-btn action-delete" onclick="deleteSerie(${s.Id_serie})">🗑</button>
-            </td>
-        `;
+                <td>${s.saisons.length}</td>
 
-        table.appendChild(tr);
-    });
-}
+                <td>${s.saisons.reduce((acc, sa) => acc + sa.episodes.length, 0)}</td>
 
-function editSerie(id) {
-    alert("Modification de la série ID=" + id);
-}
+                <td>
+                    <button class="action-btn action-edit">Modifier</button>
+                    <button class="action-btn action-delete">Supprimer</button>
+                </td>
+            `;
 
-function deleteSerie(id) {
-    if (confirm("Supprimer la série " + id + " ?")) {
-        alert("Suppression simulée (backend non encore relié).");
+            table.appendChild(row);
+        });
+
+    } catch (err) {
+        console.error("Erreur :", err);
     }
 }
 
-loadAdminTable();
+loadAdminSeries();

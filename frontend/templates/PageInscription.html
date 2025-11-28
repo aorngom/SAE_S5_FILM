@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/static/css/PageInscription.css">
 </head>
 <body>
+
   <div class="background">
     <div class="overlay"></div>
 
@@ -38,67 +39,7 @@
     </div>
   </div>
 
-  <script>
-    async function handleRegister(event) {
-      event.preventDefault();
-
-      const identifiant = document.getElementById("identifiant").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const prenom = document.getElementById("prenom").value.trim();
-      const nom = document.getElementById("nom").value.trim();
-      const adresse = document.getElementById("adresse").value.trim();
-      const telephone = document.getElementById("telephone").value.trim();
-      const password = document.getElementById("password").value.trim();
-      const confirm = document.getElementById("confirm").value.trim();
-
-      const msg = document.getElementById("registerMessage");
-
-      if (password !== confirm) {
-        msg.textContent = "Les mots de passe ne correspondent pas.";
-        msg.style.color = "red";
-        return;
-      }
-
-      const response = await fetch("/static/data/users.json");
-      const users = await response.json();
-
-      if (users.some(u => u.email === email)) {
-        msg.textContent = "Cet e-mail est déjà utilisé.";
-        msg.style.color = "orange";
-        return;
-      }
-
-      if (users.some(u => u.identifiant === identifiant)) {
-        msg.textContent = "Cet identifiant est déjà pris.";
-        msg.style.color = "orange";
-        return;
-      }
-
-      // Simulation : création d’un nouvel utilisateur (en attendant le back)
-      const newUser = {
-        identifiant,
-        email,
-        mdp: password,
-        type_utilisateur: "utilisateur",
-        prenom,
-        nom,
-        adresse,
-        telephone
-      };
-
-      users.push(newUser);
-
-      msg.textContent = "Compte créé avec succès !";
-      msg.style.color = "lime";
-
-      setTimeout(() => {
-        window.location.href = "/connexion";
-      }, 1500);
-    }
-
-    document.getElementById("registerForm")
-            .addEventListener("submit", handleRegister);
-  </script>
+  <script src="/static/js/inscription.js"></script>
 
 </body>
 </html>

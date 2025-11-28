@@ -19,62 +19,15 @@
                 <input type="password" id="password" placeholder="Mot de passe" required />
                 <button type="submit" class="login-btn">Se connecter</button>
                 <p id="loginMessage" class="message"></p>
-              </form>              
+            </form>
 
             <div class="help-links">
                 <p>Vous n’avez pas encore de compte ? <a href="/inscription">Inscrivez-vous !</a></p>
             </div>
-
-            <p id="loginMessage" class="message"></p>
         </div>
     </div>
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", async (e) => {
-          e.preventDefault();
-        
-          const emailOrId = document.getElementById("email").value.trim();
-          const password = document.getElementById("password").value.trim();
-          const msg = document.getElementById("loginMessage");
-        
-          try {
-            const response = await fetch("/static/data/users.json");
-            const users = await response.json();
-        
-            const user = users.find(u =>
-              (u.email === emailOrId || u.identifiant === emailOrId) &&
-              u.mdp === password
-            );
-        
-            if (user) {
-              msg.textContent = `Bienvenue, ${user.identifiant}`;
-              msg.style.color = "lime";
-        
-              // On stocke toutes les infos nécessaires
-                localStorage.setItem("user_prenom", user.prenom);
-                localStorage.setItem("user_nom", user.nom);
-                localStorage.setItem("user_email", user.email);
-                localStorage.setItem("user_identifiant", user.identifiant);
-                localStorage.setItem("user_adresse", user.adresse);
-                localStorage.setItem("user_telephone", user.telephone);
-                localStorage.setItem("user_type", user.type_utilisateur);
+    <script src="/static/js/login.js"></script>
 
-        
-              // Redirection vers l’accueil ou profil
-              setTimeout(() => {
-                window.location.href = "/";
-              }, 1200);
-            } else {
-              msg.textContent = "Identifiants incorrects.";
-              msg.style.color = "red";
-            }
-          } catch (err) {
-            msg.textContent = "Erreur lors du chargement des utilisateurs.";
-            msg.style.color = "orange";
-          }
-        });
-        </script>
-        
-        
 </body>
 </html>

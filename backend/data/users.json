@@ -1,0 +1,68 @@
+[
+  {
+    "identifiant": "admin",
+    "email": "admin@seriesdb.com",
+    "mdp": "$2b$12$Ub7LeUkU7MMVuGvHOhuyveDC8FmK79kS/GJDCmxnGx49X.AZ9Uj2W",
+    "mdp_clair": "admin123",
+    "type_utilisateur": "administrateur",
+    "prenom": "Alice",
+    "nom": "Dupont",
+    "adresse": "12 Rue des Admins, Paris",
+    "telephone": "+33 6 11 22 33 44"
+  },
+  {
+    "identifiant": "john_doe",
+    "email": "john.doe@example.com",
+    "mdp": "$2b$12$Nl/Qc6oOr77h/tvRLASkLuGfWq4nfQqughD5FPl0jCPEm9AdfbpXq",
+    "mdp_clair": "johndoe123",
+    "type_utilisateur": "utilisateur",
+    "prenom": "John",
+    "nom": "Doe",
+    "adresse": "45 Avenue de la République, Lyon",
+    "telephone": "+33 6 45 22 91 10"
+  },
+  {
+    "identifiant": "jane_smith",
+    "email": "jane.smith@example.com",
+    "mdp": "$2b$12$8N3qBySqH9.7lOoQWH3L0ukVJHImrsxrEo.JmP3CkqxO95R5m58QK",
+    "mdp_clair": "janesmith123",
+    "type_utilisateur": "utilisateur",
+    "prenom": "Jane",
+    "nom": "Smith",
+    "adresse": "78 Boulevard Victor Hugo, Marseille",
+    "telephone": "+33 7 89 44 11 08"
+  },
+  {
+    "identifiant": "cinephile_pro",
+    "email": "cinephile@example.com",
+    "mdp": "$2b$12$jTHEAE/s26rVxm0UXE8U3.HE.AoOujaODQWbD7j52ym3gi0JxeK6.",
+    "mdp_clair": "cine123",
+    "type_utilisateur": "utilisateur",
+    "prenom": "Lucas",
+    "nom": "Martinez",
+    "adresse": "9 Rue des Cinéphiles, Bordeaux",
+    "telephone": "+33 7 12 23 34 45"
+  },
+  {
+    "identifiant": "series_addict",
+    "email": "addict@example.com",
+    "mdp": "$2b$12$lwVLlSw2YvcdllAYmPq.Ku4MXVCMIWTwpLGiGmT.jY0KlUBNpPDLy",
+    "mdp_clair": "addict123",
+    "type_utilisateur": "utilisateur",
+    "prenom": "Emma",
+    "nom": "Moreau",
+    "adresse": "33 Rue des Lilas, Toulouse",
+    "telephone": "+33 6 88 44 22 55"
+  },
+  {
+    "identifiant": "tv_lover",
+    "email": "tvlover@example.com",
+    "mdp": "$2b$12$fpNWqUrUpf.3hBeja0waEeQZ5e4bk01gDmpDpySMEOBMvK2jbVHjC",
+    "mdp_clair": "lover123",
+    "type_utilisateur": "utilisateur",
+    "prenom": "Paul",
+    "nom": "Girard",
+    "adresse": "50 Rue des Peupliers, Nice",
+    "telephone": "+33 6 73 81 99 12"
+  }
+]

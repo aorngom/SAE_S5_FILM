@@ -1,58 +1,41 @@
-import os
+# backend/app/main.py
+
+from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-app = FastAPI(
-    title="Moteur de Recherche de Séries",
-    description="API de recherche de séries par mots-clés",
-    version="1.0.0"
-)
+# === CALCUL DU DOSSIER RACINE DU PROJET ===
+BASE_DIR = Path(__file__).resolve().parents[2]   # SAE_FILMS/
 
-# Répertoire de base = backend/app/
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FRONTEND_DIR = BASE_DIR / "frontend"
+STATIC_DIR = FRONTEND_DIR / "static"
+TEMPLATES_DIR = FRONTEND_DIR / "templates"
 
-# Dossiers frontend
-FRONTEND_DIR = os.path.abspath(os.path.join(BASE_DIR, "../../frontend"))
-FRONTEND_STATIC_DIR = os.path.join(FRONTEND_DIR, "static")
-FRONTEND_TEMPLATES_DIR = os.path.join(FRONTEND_DIR, "templates")
+print("➡️ BASE_DIR =", BASE_DIR)
+print("➡️ STATIC_DIR =", STATIC_DIR)
+print("➡️ TEMPLATES_DIR =", TEMPLATES_DIR)
 
-# === MONTAGES ===
-#  fichiers statiques (images, CSS, JS)
-app.mount("/static", StaticFiles(directory=FRONTEND_STATIC_DIR), name="static")
+# === APP ===
+app = FastAPI()
 
-#  fichiers JSON dans static/data/
-DATA_DIR = os.path.join(FRONTEND_STATIC_DIR, "data")
+# === STATIC FILES ===
+app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
-# templates HTML
-templates = Jinja2Templates(directory=FRONTEND_TEMPLATES_DIR)
+# === TEMPLATES ===
+templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 
-# === ROUTES ===
+# === ROUTERS ===
+from app.routers import series, auth, detail, users, admin
+
+app.include_router(series.router)
+app.include_router(auth.router)     # pages + API auth
+app.include_router(detail.router)
+app.include_router(users.router)
+app.include_router(admin.router)
+
+# === HOME ===
 @app.get("/", response_class=HTMLResponse)
-async def read_root(request: Request):
+async def home(request: Request):
     return templates.TemplateResponse("PageAccueil.html", {"request": request})
-
-@app.get("/api/health")
-async def health_check():
-    return {"status": "ok", "message": "API opérationnelle"}
-
-@app.get("/connexion", response_class=HTMLResponse)
-async def connexion_page(request: Request):
-    return templates.TemplateResponse("PageConnexion.html", {"request": request})
-
-@app.get("/inscription", response_class=HTMLResponse)
-async def inscription_page(request: Request):
-    return templates.TemplateResponse("PageInscription.html", {"request": request})
-
-@app.get("/detail", response_class=HTMLResponse)
-async def detail_page(request: Request):
-    return templates.TemplateResponse("PageDetailSeries.html", {"request": request})
-
-@app.get("/profil", response_class=HTMLResponse)
-async def profil(request: Request):
-    return templates.TemplateResponse("PageProfil.html", {"request": request})
-
-@app.get("/admin", response_class=HTMLResponse)
-async def profil(request: Request):
-    return templates.TemplateResponse("PageAdmin.html", {"request": request})
