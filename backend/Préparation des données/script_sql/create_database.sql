@@ -28,6 +28,7 @@ CREATE TABLE mot_cle(
    Id_mot_cle SERIAL,
    libelle VARCHAR(50),
    langue CHAR(2),
+   poids DECIMAL,
    PRIMARY KEY(Id_mot_cle)
 );
 

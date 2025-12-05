@@ -27,16 +27,17 @@ for filename in os.listdir(CSV_FOLDER):
         for _, row in df.iterrows():
             mot = str(row["mot"]).replace("'", "''")
             langue = str(row["langue"])
+            poids = row["poids_tfidf"]
             serie_brut = row["serie"]
 
-            # 🔥 CORRECTION DU TITRE DE LA SÉRIE (clé du problème)
+            # CORRECTION DU TITRE DE LA SÉRIE (clé du problème)
             serie = nettoyer_titre_serie(serie_brut)
             serie_sql = serie.replace("'", "''")
 
             # INSERT mot clé
             sql_lines.append(
-                f"INSERT INTO mot_cle (libelle, langue) "
-                f"VALUES ('{mot}', '{langue}');"
+                f"INSERT INTO mot_cle (libelle, langue, poids) "
+                f"VALUES ('{mot}', '{langue}', {poids});"
             )
 
             # INSERT lien série-mot_clé
@@ -57,4 +58,4 @@ for filename in os.listdir(CSV_FOLDER):
 with open(OUTPUT_SQL, "w", encoding="utf-8") as f:
     f.write("\n".join(sql_lines))
 
-print("🎉 SQL généré avec nettoyage automatique des titres !")
+print("SQL généré avec nettoyage automatique des titres !")
