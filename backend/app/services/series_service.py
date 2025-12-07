@@ -1,32 +1,47 @@
-import json
-from pathlib import Path
+# backend/app/services/series_service.py
+from sqlalchemy.orm import Session
+from fastapi import Depends
 from typing import Any, Dict, List, Optional
 
-BASE_DIR = Path(__file__).resolve().parents[2]   # -> backend/
-DATA_DIR = BASE_DIR / "data"
-SERIES_PATH = DATA_DIR / "series.json"
+# ================================================================
+# CHARGE TOUTES LES SERIES (version SQL)
+# ================================================================
+def load_all_series(db: Session) -> List[Dict[str, Any]]:
+    query = """
+        SELECT Id_serie, titre, date_sortie, description
+        FROM serie
+        ORDER BY Id_serie;
+    """
+    rows = db.execute(query).fetchall()
 
-def load_all_series() -> List[Dict[str, Any]]:
-    if not SERIES_PATH.exists():
-        print(" series.json introuvable :", SERIES_PATH)
-        return []
-
-    with open(SERIES_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    # Si c’est déjà une liste de listes -> flatten
-    if len(data) > 0 and isinstance(data[0], list):
-        flat = []
-        for block in data:
-            flat.extend(block)
-        return flat
-    
-    # Sinon c’est une liste simple
-    return data
+    return [
+        {
+            "Id_serie": r.Id_serie,
+            "titre": r.titre,
+            "date_sortie": r.date_sortie,
+            "description": r.description
+        }
+        for r in rows
+    ]
 
 
-def get_series_by_id(series: List[Dict[str, Any]], serie_id: int) -> Optional[Dict[str, Any]]:
-    for s in series:
-        if int(s.get("Id_serie", -1)) == int(serie_id):
-            return s
-    return None
+# ================================================================
+# RECUPERER UNE SERIE PAR ID (version SQL)
+# ================================================================
+def get_series_by_id(db: Session, serie_id: int) -> Optional[Dict[str, Any]]:
+    query = """
+        SELECT Id_serie, titre, date_sortie, description
+        FROM serie
+        WHERE Id_serie = :id;
+    """
+    r = db.execute(query, {"id": serie_id}).fetchone()
+
+    if not r:
+        return None
+
+    return {
+        "Id_serie": r.Id_serie,
+        "titre": r.titre,
+        "date_sortie": r.date_sortie,
+        "description": r.description
+    }

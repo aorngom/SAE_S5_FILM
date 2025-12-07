@@ -1,20 +1,33 @@
-from fastapi import APIRouter, HTTPException
-from app.services.series_service import load_all_series, get_series_by_id
+# backend/app/routers/series.py
+
+from fastapi import APIRouter, Depends
+from app.database.connection import get_db
 
 router = APIRouter()
 
-# ---- LISTER TOUTES LES SERIES ----
+# ================================================================
+# LISTER TOUTES LES SERIES (PageAccueil)
+# ================================================================
 @router.get("/api/series")
-async def api_series_list():
-    return load_all_series()
+def api_series_list(db = Depends(get_db)):
+    query = """
+        SELECT id_serie, titre, date_sortie, description, image
+        FROM serie
+        ORDER BY id_serie;
+    """
 
-# ---- OBTENIR UNE SERIE PAR ID ----
-@router.get("/api/series/{id}")
-async def api_get_series(id: int):
-    series = load_all_series()
-    serie = get_series_by_id(series, id)
+    cur = db.cursor()
+    cur.execute(query)
+    rows = cur.fetchall()
+    cur.close()
 
-    if not serie:
-        raise HTTPException(status_code=404, detail="Série introuvable")
-
-    return serie
+    return [
+        {
+            "id_serie": r["id_serie"],
+            "titre": r["titre"],
+            "date_sortie": r["date_sortie"],
+            "description": r["description"],
+            "image": r["image"] or "default.jpg"
+        }
+        for r in rows
+    ]

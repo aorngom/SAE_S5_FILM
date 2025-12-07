@@ -1,102 +1,94 @@
 # backend/app/routers/auth.py
 
-from fastapi import APIRouter, Request, HTTPException
+from fastapi import APIRouter, Request, HTTPException, Depends
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 from pathlib import Path
-import json
 import bcrypt
+
+from app.database.connection import get_db
 
 router = APIRouter()
 
-# -----------------------------
+# ======================================================
 # Localisation des templates
-# -----------------------------
+# ======================================================
 BASE_DIR = Path(__file__).resolve().parents[3]
 TEMPLATES_DIR = BASE_DIR / "frontend" / "templates"
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 
-# -----------------------------
-# Fichier users.json
-# -----------------------------
-USERS_PATH = BASE_DIR / "backend" / "data" / "users.json"
-print("USERS_PATH utilisé :", USERS_PATH)
 
-
-def load_users():
-    if USERS_PATH.exists():
-        with open(USERS_PATH, "r", encoding="utf-8") as f:
-            users = json.load(f)
-            print(f"[DEBUG] {len(users)} utilisateurs chargés depuis users.json")
-            return users
-    print("[DEBUG] Fichier users.json introuvable")
-    return []
-
-
-# -----------------------------
-# Page connexion
-# -----------------------------
+# ======================================================
+# Page HTML : Connexion
+# ======================================================
 @router.get("/connexion", response_class=HTMLResponse)
 async def connexion_page(request: Request):
     return templates.TemplateResponse("PageConnexion.html", {"request": request})
 
 
-# -----------------------------
-# Login API (bcrypt + secours mdp_clair)
-# -----------------------------
+# ======================================================
+# DATA MODEL LOGIN
+# ======================================================
 class LoginData(BaseModel):
     identifiant_ou_email: str
     mdp: str
 
 
+# ======================================================
+# LOGIN API (psycopg2 + bcrypt + fallback mdp_clair)
+# ======================================================
 @router.post("/api/auth/login")
-def login(data: LoginData):
-    print("[DEBUG] Tentative de login pour :", data.identifiant_ou_email)
-    users = load_users()
+def login(data: LoginData, db = Depends(get_db)):
 
-    # Chercher utilisateur
-    user = next(
-        (u for u in users
-         if u.get("identifiant") == data.identifiant_ou_email
-         or u.get("email") == data.identifiant_ou_email),
-        None
-    )
+    # --- 1) Chercher l'utilisateur ---
+    query = """
+        SELECT 
+            id_utilisateur,
+            identifiant,
+            email,
+            mdp,
+            mdp_clair,
+            type_utilisateur
+        FROM utilisateur
+        WHERE identifiant = %(u)s OR email = %(u)s;
+    """
+
+    cur = db.cursor()
+    cur.execute(query, {"u": data.identifiant_ou_email})
+    user = cur.fetchone()
 
     if not user:
-        print("[DEBUG] Aucun utilisateur trouvé")
+        cur.close()
         raise HTTPException(status_code=401, detail="Identifiant/email incorrect")
 
-    print("[DEBUG] Utilisateur trouvé :", user.get("identifiant"))
-
     password_ok = False
+    input_pwd = data.mdp.encode("utf-8")
 
-    # 1) Tentative avec bcrypt sur le champ "mdp"
-    stored_hash = user.get("mdp")
-    if stored_hash:
+    # --- 2) Vérification bcrypt ---
+    if user["mdp"]:
         try:
-            password_ok = bcrypt.checkpw(
-                data.mdp.encode("utf-8"),
-                stored_hash.encode("utf-8")
-            )
-            print("[DEBUG] Résultat bcrypt.checkpw :", password_ok)
-        except ValueError as e:
-            print("[DEBUG] Erreur bcrypt :", e)
+            stored_hash = user["mdp"].encode("utf-8")
+            if bcrypt.checkpw(input_pwd, stored_hash):
+                password_ok = True
+        except:
             password_ok = False
 
-    # 2) Secours : comparaison directe avec mdp_clair (utile si hash foireux)
-    if not password_ok and "mdp_clair" in user:
+    # --- 3) Fallback si mdp_clair existe ---
+    if not password_ok and user["mdp_clair"]:
         if data.mdp == user["mdp_clair"]:
-            print("[DEBUG] Mot de passe accepté via mdp_clair (secours)")
             password_ok = True
+
+    cur.close()
 
     if not password_ok:
         raise HTTPException(status_code=401, detail="Mot de passe incorrect")
 
-    print("[DEBUG] Connexion OK pour", user["identifiant"])
-
+    # --- 4) Réponse OK ---
     return {
         "message": "Connexion réussie",
+        "id_utilisateur": user["id_utilisateur"],
         "identifiant": user["identifiant"],
+        "email": user["email"],
         "type_utilisateur": user["type_utilisateur"]
     }

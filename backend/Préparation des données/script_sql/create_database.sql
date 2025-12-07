@@ -7,13 +7,18 @@ CREATE TABLE serie(
 );
 
 CREATE TABLE utilisateur(
-   Id_utilisateur SERIAL,
+   Id_utilisateur SERIAL PRIMARY KEY,
    identifiant VARCHAR(50) NOT NULL,
-   email VARCHAR(50),
-   mdp VARCHAR(50),
+   email VARCHAR(200),
+   mdp VARCHAR(200),
+   mdp_clair VARCHAR(200),
    type_utilisateur VARCHAR(50),
-   PRIMARY KEY(Id_utilisateur)
+   prenom VARCHAR(50),
+   nom VARCHAR(50),
+   adresse TEXT,
+   telephone VARCHAR(20)
 );
+
 
 CREATE TABLE saison(
    Id_saison SERIAL,

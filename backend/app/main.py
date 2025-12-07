@@ -27,7 +27,7 @@ app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 
 # === ROUTERS ===
-from app.routers import series, auth, detail, users, admin, recommandation
+from app.routers import series, auth, detail, users, admin, recommandation, auth_register
 
 app.include_router(series.router)
 app.include_router(auth.router)     # pages + API auth
@@ -35,7 +35,7 @@ app.include_router(detail.router)
 app.include_router(users.router)
 app.include_router(admin.router)
 app.include_router(recommandation.router)
-
+app.include_router(auth_register.router)
 # === HOME ===
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):

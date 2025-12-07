@@ -1,28 +1,84 @@
-import json
-from pathlib import Path
+# backend/app/services/user_service.py
 
-USERS_PATH = Path("static/data/users.json")
+from typing import Optional, Dict, Any
+from app.database.connection import get_db
 
-def load_users():
-    with open(USERS_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
 
-def save_users(users):
-    with open(USERS_PATH, "w", encoding="utf-8") as f:
-        json.dump(users, f, indent=4, ensure_ascii=False)
+# ================================================================
+# GET USER BY IDENTIFIANT (PSYCOPG2)
+# ================================================================
+def get_user_by_identifiant(identifiant: str) -> Optional[Dict[str, Any]]:
+    conn = get_db()
+    cur = conn.cursor()
 
-def get_user_by_identifiant(identifiant: str):
-    users = load_users()
-    for u in users:
-        if u["identifiant"] == identifiant:
-            return u
-    return None
+    cur.execute("""
+        SELECT 
+            identifiant, email, mdp, mdp_clair, type_utilisateur,
+            prenom, nom, adresse, telephone
+        FROM utilisateur
+        WHERE identifiant = %s;
+    """, (identifiant,))
 
-def update_user(identifiant: str, new_data: dict):
-    users = load_users()
-    for u in users:
-        if u["identifiant"] == identifiant:
-            u.update(new_data)
-            save_users(users)
-            return True
-    return False
+    row = cur.fetchone()
+    cur.close()
+    conn.close()
+
+    if not row:
+        return None
+
+    return {
+        "identifiant": row["identifiant"],
+        "email": row["email"],
+        "mdp": row["mdp"],
+        "mdp_clair": row["mdp_clair"],
+        "type_utilisateur": row["type_utilisateur"],
+        "prenom": row["prenom"],
+        "nom": row["nom"],
+        "adresse": row["adresse"],
+        "telephone": row["telephone"]
+    }
+
+
+# ================================================================
+# UPDATE USER (PSYCOPG2)
+# ================================================================
+def update_user(identifiant: str, new_data: dict) -> bool:
+    conn = get_db()
+    cur = conn.cursor()
+
+    # Vérifier existence utilisateur
+    cur.execute("SELECT id_utilisateur FROM utilisateur WHERE identifiant = %s;", (identifiant,))
+    exists = cur.fetchone()
+
+    if not exists:
+        cur.close()
+        conn.close()
+        return False
+
+    # Champs modifiables
+    allowed = ["email", "prenom", "nom", "adresse", "telephone", "mdp", "mdp_clair"]
+    data = {k: v for k, v in new_data.items() if k in allowed}
+
+    if not data:
+        cur.close()
+        conn.close()
+        return False
+
+    # Construction dynamique du SET
+    set_clause = ", ".join([f"{key} = %s" for key in data.keys()])
+    values = list(data.values())
+    values.append(identifiant)
+
+    query = f"""
+        UPDATE utilisateur
+        SET {set_clause}
+        WHERE identifiant = %s;
+    """
+
+    cur.execute(query, values)
+    conn.commit()
+
+    cur.close()
+    conn.close()
+
+    return True
