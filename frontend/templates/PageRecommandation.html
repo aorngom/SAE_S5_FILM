@@ -11,9 +11,15 @@
         {% include 'components/navbar.html' %}
 
         <div class="container" style="margin-top: 90px;">
-            <h1><span class="highlight">Recommandations pour vous</span></h1>
 
-            <h2 class="subtitle">Les mieux notées par les utilisateurs</h2>
+            <!-- SECTION UNIQUEMENT POUR UTILISATEUR CONNECTÉ -->
+            <div id="personal-section" style="display:none;">
+                <h2 class="subtitle">Recommandations pour vous</h2>
+                <div class="series-grid" id="personal-container"></div>
+            </div>
+
+            <!-- SECTIONS PUBLIQUES -->
+            <h2 class="subtitle">Les mieux notées</h2>
             <div class="series-grid" id="top-rated-container"></div>
 
             <h2 class="subtitle">Les plus populaires</h2>
@@ -22,7 +28,7 @@
             <h2 class="subtitle">Les meilleurs prix</h2>
             <div class="series-grid" id="awards-container"></div>
         </div>
-        
+
         <script src="/static/js/PageRecommandation.js"></script>
     </body>
 </html>
