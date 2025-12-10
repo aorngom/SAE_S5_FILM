@@ -1,14 +1,10 @@
-# backend/app/services/user_service.py
-
 from typing import Optional, Dict, Any
 from app.database.connection import get_db
 
 
-# ================================================================
-# GET USER BY IDENTIFIANT (PSYCOPG2)
-# ================================================================
+# Récupère un utilisateur
 def get_user_by_identifiant(identifiant: str) -> Optional[Dict[str, Any]]:
-    conn = get_db()
+    conn = next(get_db())
     cur = conn.cursor()
 
     cur.execute("""
@@ -20,61 +16,36 @@ def get_user_by_identifiant(identifiant: str) -> Optional[Dict[str, Any]]:
     """, (identifiant,))
 
     row = cur.fetchone()
+
     cur.close()
     conn.close()
 
-    if not row:
-        return None
-
-    return {
-        "identifiant": row["identifiant"],
-        "email": row["email"],
-        "mdp": row["mdp"],
-        "mdp_clair": row["mdp_clair"],
-        "type_utilisateur": row["type_utilisateur"],
-        "prenom": row["prenom"],
-        "nom": row["nom"],
-        "adresse": row["adresse"],
-        "telephone": row["telephone"]
-    }
+    return dict(row) if row else None
 
 
-# ================================================================
-# UPDATE USER (PSYCOPG2)
-# ================================================================
+# Met à jour un utilisateur
 def update_user(identifiant: str, new_data: dict) -> bool:
-    conn = get_db()
+    conn = next(get_db())
     cur = conn.cursor()
 
-    # Vérifier existence utilisateur
-    cur.execute("SELECT id_utilisateur FROM utilisateur WHERE identifiant = %s;", (identifiant,))
-    exists = cur.fetchone()
-
-    if not exists:
+    cur.execute("SELECT 1 FROM utilisateur WHERE identifiant = %s;", (identifiant,))
+    if not cur.fetchone():
         cur.close()
         conn.close()
         return False
 
-    # Champs modifiables
     allowed = ["email", "prenom", "nom", "adresse", "telephone", "mdp", "mdp_clair"]
-    data = {k: v for k, v in new_data.items() if k in allowed}
+    fields = {k: v for k, v in new_data.items() if k in allowed}
 
-    if not data:
+    if not fields:
         cur.close()
         conn.close()
         return False
 
-    # Construction dynamique du SET
-    set_clause = ", ".join([f"{key} = %s" for key in data.keys()])
-    values = list(data.values())
-    values.append(identifiant)
+    set_clause = ", ".join([f"{k} = %s" for k in fields.keys()])
+    values = list(fields.values()) + [identifiant]
 
-    query = f"""
-        UPDATE utilisateur
-        SET {set_clause}
-        WHERE identifiant = %s;
-    """
-
+    query = f"UPDATE utilisateur SET {set_clause} WHERE identifiant = %s;"
     cur.execute(query, values)
     conn.commit()
 

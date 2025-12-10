@@ -6,6 +6,10 @@
   --radius: 12px;
   --shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
   --glass: rgba(255, 255, 255, 0.05);
+
+  /* 🔥 NOUVELLES COULEURS POUR LE BOUTON AJOUTER SÉRIE */
+  --red-btn: #e53935;
+  --red-btn-hover: #c62828;
 }
 
 /* === NAVBAR STRUCTURE === */
@@ -26,7 +30,7 @@
   backdrop-filter: blur(10px);
 }
 
-/* === BOUTONS === */
+/* === BOUTONS GÉNÉRAUX === */
 .nav-btn {
   display: inline-flex;
   align-items: center;
@@ -45,6 +49,21 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* 🔥 BOUTON AJOUTER UNE SÉRIE (ADMIN) — ROUGE */
+#addSerieBtn.nav-btn {
+  background: var(--red-btn) !important;
+  border: 1px solid var(--red-btn);
+  color: white !important;
+  font-weight: 600;
+}
+
+#addSerieBtn.nav-btn:hover {
+  background: var(--red-btn-hover) !important;
+  border-color: var(--red-btn-hover);
+  transform: translateY(-1px);
+}
+
+/* === ICONES === */
 .icon {
   width: 22px;
   height: 22px;
@@ -58,6 +77,7 @@
 
 /* === BARRE DE RECHERCHE === */
 .nav-search {
+  position: relative;
   flex: 0 1 420px;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -77,6 +97,12 @@
   outline: none;
   color: var(--nav-fg);
   font-size: 0.95rem;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.nav-input::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
 }
 
 .nav-input::placeholder {
@@ -91,6 +117,33 @@
 
 .nav-search-btn:hover {
   background: rgba(255, 255, 255, 0.18);
+}
+
+/* === 🔥 SUGGESTIONS DE RECHERCHE === */
+.nav-suggestions {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 6px 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+  z-index: 1200;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  color: #e0e0e0;
+  transition: background 0.2s;
+}
+
+.suggestion-item:hover {
+  background: rgba(255,255,255,0.12);
 }
 
 /* === CONNEXION === */
@@ -178,29 +231,6 @@
 .user-dropdown a:hover,
 .user-dropdown button:hover {
   background: rgba(255,255,255,0.08);
-}
-
-/* === BOUTON ADMIN === */
-#addSerieBtn {
-  background: #c62828 !important;
-  color: white !important;
-  font-weight: 600;
-  border-radius: var(--radius);
-  padding: 8px 14px;
-}
-
-#addSerieBtn:hover {
-  background: #e53935 !important;
-}
-
-/* === DRAWER ADMIN LINK === */
-.drawer-link.admin-link {
-  background: rgba(255, 0, 0, 0.15) !important;
-  border-left: 3px solid #e53935;
-}
-
-.drawer-link.admin-link:hover {
-  background: rgba(255, 0, 0, 0.25) !important;
 }
 
 /* === RESPONSIVE === */

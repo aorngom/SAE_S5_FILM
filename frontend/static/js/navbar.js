@@ -69,3 +69,87 @@ document.addEventListener("click", (e) => {
         dropdown.classList.remove("open");
     }
 });
+
+
+// =============================================================
+// === 🔍 AUTOCOMPLÉTION & RECHERCHE NAVBAR ===
+// =============================================================
+
+const navInput = document.querySelector(".nav-input");
+const navForm = document.getElementById("nav-search");
+const suggestionsBox = document.getElementById("nav-suggestions");
+
+let typingTimer = null;
+
+
+// === AUTOCOMPLÉTION ===
+navInput.addEventListener("input", () => {
+    const query = navInput.value.trim();
+
+    clearTimeout(typingTimer);
+
+    if (query.length < 2) {
+        suggestionsBox.innerHTML = "";
+        suggestionsBox.style.display = "none";
+        return;
+    }
+
+    typingTimer = setTimeout(() => fetchSuggestions(query), 130);
+});
+
+
+// === API suggestions ===
+async function fetchSuggestions(query) {
+    try {
+        const res = await fetch(`/api/search/suggestions?query=${encodeURIComponent(query)}`);
+        const suggestions = await res.json();
+
+        if (!suggestions || suggestions.length === 0) {
+            suggestionsBox.innerHTML = "";
+            suggestionsBox.style.display = "none";
+            return;
+        }
+
+        suggestionsBox.innerHTML = "";
+        suggestionsBox.style.display = "block";
+
+        suggestions.forEach(word => {
+            const div = document.createElement("div");
+            div.classList.add("suggestion-item");
+            div.textContent = word;
+
+            div.onclick = () => {
+                navInput.value = word;
+                suggestionsBox.style.display = "none";
+                window.location.href = `/recherche?q=${encodeURIComponent(word)}`;
+            };
+
+            suggestionsBox.appendChild(div);
+        });
+
+    } catch (err) {
+        console.error("Erreur suggestions :", err);
+    }
+}
+
+
+// === Recherche via la loupe ===
+navForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const query = navInput.value.trim();
+
+    if (query.length > 0) {
+        suggestionsBox.style.display = "none";
+        window.location.href = `/recherche?q=${encodeURIComponent(query)}`;
+    }
+});
+
+
+// === Fermer les suggestions hors clic ===
+document.addEventListener("click", (e) => {
+    const clickedInsideSearch = navForm.contains(e.target);
+    if (!clickedInsideSearch) {
+        suggestionsBox.style.display = "none";
+    }
+});

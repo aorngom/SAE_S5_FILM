@@ -9,23 +9,29 @@ async function loadProfile() {
         return;
     }
 
-    // Charger infos du backend
-    const response = await fetch(`/api/users/${userId}`);
+    try {
+        // Récupérer les informations utilisateur
+        const response = await fetch(`/api/profil/${userId}`);
 
-    if (!response.ok) {
-        alert("Impossible de charger votre profil.");
-        return;
+        if (!response.ok) {
+            alert("Impossible de charger votre profil.");
+            return;
+        }
+
+        const user = await response.json();
+
+        // Remplissage des champs du formulaire
+        document.getElementById("prenom").value = user.prenom || "";
+        document.getElementById("nom").value = user.nom || "";
+        document.getElementById("email").value = user.email || "";
+        document.getElementById("identifiant").value = user.identifiant || "";
+        document.getElementById("adresse").value = user.adresse || "";
+        document.getElementById("telephone").value = user.telephone || "";
+
+    } catch (err) {
+        console.error("Erreur loadProfile :", err);
+        alert("Erreur interne lors du chargement du profil.");
     }
-
-    const user = await response.json();
-
-    // Remplir les champs
-    document.getElementById("prenom").value = user.prenom;
-    document.getElementById("nom").value = user.nom;
-    document.getElementById("email").value = user.email;
-    document.getElementById("identifiant").value = user.identifiant;
-    document.getElementById("adresse").value = user.adresse;
-    document.getElementById("telephone").value = user.telephone;
 }
 
 
@@ -43,17 +49,22 @@ document.getElementById("profile-form").addEventListener("submit", async (e) => 
         telephone: document.getElementById("telephone").value
     };
 
-    // Envoi au backend
-    const response = await fetch(`/api/users/${userId}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updated)
-    });
+    try {
+        const response = await fetch(`/api/profil/${userId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(updated)
+        });
 
-    if (response.ok) {
-        alert("Modifications enregistrées !");
-    } else {
-        alert("Erreur lors de l'enregistrement.");
+        if (response.ok) {
+            alert("Modifications enregistrées !");
+        } else {
+            alert("Erreur lors de l'enregistrement.");
+        }
+
+    } catch (err) {
+        console.error("Erreur update :", err);
+        alert("Erreur interne lors de la mise à jour.");
     }
 });
 

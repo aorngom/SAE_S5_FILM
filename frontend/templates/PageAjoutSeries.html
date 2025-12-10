@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter une série</title>
+
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/PageAjoutSeries.css">
+</head>
+<body>
+
+{% include 'components/navbar.html' %}
+
+<div class="add-container">
+
+    <h1 class="add-title">Ajouter une nouvelle série</h1>
+
+    <form id="addSeriesForm" enctype="multipart/form-data">
+
+        <!-- Titre -->
+        <label>Titre *</label>
+        <input type="text" id="titre" required>
+
+        <!-- Nom auto image -->
+        <label>Nom du fichier image (auto) *</label>
+        <input type="text" id="imageName" disabled>
+
+        <!-- Image -->
+        <label>Image (.jpg obligatoire) *</label>
+        <input type="file" id="imageFile" accept=".jpg" required>
+
+        <!-- Description -->
+        <label>Description</label>
+        <textarea id="description" rows="5"></textarea>
+
+        <!-- Date de sortie -->
+        <label>Date de sortie</label>
+        <input type="date" id="date_sortie">
+
+        <!-- Genre -->
+        <label>Genres *</label>
+        <select id="genreSelect" required>
+            <option value="">-- choisir un genre --</option>
+        </select>
+
+        <!-- Réalisateurs -->
+        <label>Réalisateurs</label>
+        <div id="realList"></div>
+        <button type="button" class="btn-red" onclick="addRealisateur()">Ajouter réalisateur</button>
+
+        <!-- Créateurs -->
+        <label>Créateurs</label>
+        <div id="creaList"></div>
+        <button type="button" class="btn-red" onclick="addCreateur()">Ajouter créateur</button>
+
+        <!-- Acteurs -->
+        <label>Acteurs</label>
+        <div id="acteurList"></div>
+        <button type="button" class="btn-red" onclick="addActeur()">Ajouter acteur</button>
+
+        <!-- Saisons -->
+        <label>Saisons</label>
+        <div id="saisonList"></div>
+        <button type="button" class="btn-red" onclick="addSaison()">Ajouter saison</button>
+
+        <!-- Bouton submit -->
+        <button type="submit" class="btn-submit">Enregistrer la série</button>
+
+        <p id="message" class="msg"></p>
+
+    </form>
+
+</div>
+
+<script src="/static/js/PageAjoutSeries.js"></script>
+</body>
+</html>

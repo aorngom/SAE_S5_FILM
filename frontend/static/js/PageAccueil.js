@@ -35,7 +35,7 @@ async function loadSeries() {
             card.appendChild(title);
 
             // Redirection vers la page détail
-            card.onclick = () => window.location.href = `/detail?id=${s.Id_serie}`;
+            card.onclick = () => window.location.href = `/detail?id=${s.id_serie}`;
 
             container.appendChild(card);
         });

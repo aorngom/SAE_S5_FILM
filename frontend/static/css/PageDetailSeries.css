@@ -12,25 +12,24 @@ body {
     height: 70vh;
 
     background-image: var(--serie-image);
-    background-size: contain; /* image entière, NON ZOOMÉE */
+    background-size: contain; 
     background-position: center top;
     background-repeat: no-repeat;
-    background-color: #000; /* zones vides */
+    background-color: #000;
 }
 
-/* Voile noir */
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
+    background: linear-gradient(
+        to bottom,
         rgba(0,0,0,0.4),
         rgba(0,0,0,0.7),
         #000 80%
     );
 }
 
-/* Contenu sur l'image */
 .hero-content {
     position: absolute;
     bottom: 60px;
@@ -58,8 +57,7 @@ body {
     color: #bbb;
 }
 
-/* --- INFOS SECTION --- */
-
+/* --- INFOS --- */
 .infos {
     padding: 40px 60px;
 }
@@ -80,8 +78,7 @@ body {
     color: #e50914;
 }
 
-/* --- SAISONS & EPISODES --- */
-
+/* --- SAISONS / EPISODES --- */
 .saisons {
     padding: 40px 60px;
     margin-top: 20px;
@@ -129,50 +126,7 @@ body {
     color: #ccc;
 }
 
-/* --- RECOMMANDATIONS --- */
-
-.recommandations {
-    padding: 40px 60px;
-}
-
-.recommandations h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.reco-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
-}
-
-.reco-card {
-    background: #111;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform .25s;
-    text-align: center;
-}
-
-.reco-card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-.reco-card p {
-    padding: 8px 0;
-    font-size: 0.95rem;
-}
-
-.reco-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
-
 /* --- RESPONSIVE --- */
-
 @media (max-width: 900px) {
     .hero-content {
         max-width: 80%;
@@ -184,8 +138,95 @@ body {
     }
 
     .saisons,
-    .infos,
-    .recommandations {
+    .infos {
         padding: 20px;
+    }
+}
+
+/* ==========================
+   FAVORIS + NOTES
+   (en bas, bien visibles)
+========================== */
+.actions-container {
+    margin: 20px auto 50px;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px 24px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #333;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.actions-title {
+    flex: 1 1 100%;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.actions-left,
+.actions-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Texte labels */
+.actions-label {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Cœur favoris */
+.favorite-btn {
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #888;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.favorite-btn.active {
+    color: #ff3b3b;
+}
+
+/* Zone étoiles */
+.stars {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.star {
+    color: #666;
+    transition: 0.2s;
+    margin-right: 4px;
+}
+
+.star.selected {
+    color: gold;
+}
+
+.star:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive actions */
+@media (max-width: 700px) {
+    .actions-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions-left,
+    .actions-right {
+        width: 100%;
+        align-items: flex-start;
     }
 }

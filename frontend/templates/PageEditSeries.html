@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier une série</title>
+
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/PageEditSeries.css">
+</head>
+
+<body>
+
+    {% include 'components/navbar.html' %}
+
+    <div class="edit-container">
+
+        <h1 class="edit-title">Modifier la série</h1>
+
+        <form id="editForm">
+
+            <div class="edit-section">
+                <label>Titre (non modifiable)</label>
+                <input type="text" id="titre" disabled>
+            </div>
+
+            <div class="edit-section">
+                <label>Description</label>
+                <textarea id="description"></textarea>
+            </div>
+
+            <div class="edit-section">
+                <label>Date de sortie</label>
+                <input type="date" id="date_sortie">
+            </div>
+
+            <div class="edit-section">
+                <label>Image (non modifiable)</label>
+                <input type="text" id="image" disabled>
+            </div>
+
+            <div class="edit-section">
+                <label>Genres</label>
+                <div id="genresBox"></div>
+            </div>
+
+            <div class="edit-section">
+                <label>Réalisateurs (non modifiable)</label>
+                <div id="realisateursBox"></div>
+            </div>
+
+            <div class="edit-section">
+                <label>Créateurs (non modifiable)</label>
+                <div id="createursBox"></div>
+            </div>
+
+            <div class="edit-section">
+                <label>Acteurs</label>
+                <div id="acteursBox"></div>
+
+                <input type="text" id="newActor" placeholder="Ajouter un acteur">
+                <button type="button" class="btn-add">Ajouter acteur</button>
+            </div>
+
+            <div class="edit-section">
+                <label>Saisons</label>
+                <div id="saisonsBox"></div>
+                <button type="button" class="btn-add">Ajouter saison</button>
+            </div>
+
+            <div class="edit-section">
+                <label>Épisodes total</label>
+                <p id="episodesCount"></p>
+                <button type="button" class="btn-add">Ajouter épisode</button>
+            </div>
+
+            <button type="submit" class="btn-save">Enregistrer les modifications</button>
+        </form>
+
+    </div>
+
+    <script src="/static/js/PageEditSeries.js"></script>
+</body>
+</html>

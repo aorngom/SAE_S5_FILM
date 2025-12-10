@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recherche – Moteur de Séries</title>
+  <link rel="stylesheet" href="/static/css/PageRecherche.css">
+  <link rel="stylesheet" href="/static/css/navbar.css">
+
+</head>
+
+<body>
+
+    {% include 'components/navbar.html' %}
+
+  <div class="background">
+    <div class="overlay"></div>
+
+    <div class="search-container">
+
+      <!-- Titre -->
+      <h1 class="search-title">Résultats de recherche</h1>
+
+      <!-- Message d'état -->
+      <p id="search-status" class="search-status"></p>
+
+      <!-- Conteneur des résultats -->
+      <div id="search-results" class="results-grid">
+        <!-- Les cartes seront injectées dynamiquement via PageRecherche.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/static/js/PageRecherche.js"></script>
+
+</body>
+</html>

@@ -9,25 +9,19 @@ from app.database.connection import get_db
 
 router = APIRouter()
 
-# ============================================
 # TEMPLATES
-# ============================================
 BASE_DIR = Path(__file__).resolve().parents[3]
 TEMPLATES_DIR = BASE_DIR / "frontend" / "templates"
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 
 
-# ============================================
 # PAGE HTML ADMIN
-# ============================================
 @router.get("/admin", response_class=HTMLResponse)
 async def admin_page(request: Request):
     return templates.TemplateResponse("PageAdmin.html", {"request": request})
 
 
-# ============================================
 # API ADMIN : LISTE TOUTES LES SERIES
-# ============================================
 @router.get("/api/admin/series")
 async def admin_get_series(db = Depends(get_db)):
 

@@ -5,15 +5,35 @@ from app.database.connection import get_db
 
 router = APIRouter()
 
-# ================================================================
-# LISTER TOUTES LES SERIES (PageAccueil)
-# ================================================================
+# LISTER TOUTES LES SERIES (PageAccueil + PageAdmin)
 @router.get("/api/series")
 def api_series_list(db = Depends(get_db)):
+
     query = """
-        SELECT id_serie, titre, date_sortie, description, image
-        FROM serie
-        ORDER BY id_serie;
+        SELECT
+            s.id_serie,
+            s.titre,
+            s.date_sortie,
+            s.description,
+            s.image,
+
+            -- 🔹 Nombre total d'épisodes
+            (
+                SELECT COUNT(*)
+                FROM episode e
+                JOIN saison sa ON e.id_saison = sa.id_saison
+                WHERE sa.id_serie = s.id_serie
+            ) AS total_episodes,
+
+            -- 🔹 Nombre total de saisons
+            (
+                SELECT COUNT(*)
+                FROM saison sa2
+                WHERE sa2.id_serie = s.id_serie
+            ) AS total_saisons
+
+        FROM serie s
+        ORDER BY s.id_serie;
     """
 
     cur = db.cursor()
@@ -27,7 +47,9 @@ def api_series_list(db = Depends(get_db)):
             "titre": r["titre"],
             "date_sortie": r["date_sortie"],
             "description": r["description"],
-            "image": r["image"] or "default.jpg"
+            "image": r["image"] or "default.jpg",
+            "episodes": r["total_episodes"],
+            "saisons": r["total_saisons"],
         }
         for r in rows
     ]

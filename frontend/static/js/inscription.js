@@ -1,3 +1,5 @@
+// frontend/static/js/inscription.js
+
 async function handleRegister(event) {
     event.preventDefault();
 
@@ -11,6 +13,7 @@ async function handleRegister(event) {
     const confirm = document.getElementById("confirm").value.trim();
     const msg = document.getElementById("registerMessage");
 
+    // Vérifier confirmation du mot de passe
     if (password !== confirm) {
         msg.textContent = "Les mots de passe ne correspondent pas.";
         msg.style.color = "red";
@@ -27,26 +30,34 @@ async function handleRegister(event) {
         telephone
     };
 
-    const response = await fetch("/api/auth/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-    });
+    try {
+        const response = await fetch("/api/auth/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (!response.ok) {
-        msg.textContent = data.detail;
-        msg.style.color = "orange";
-        return;
+        if (!response.ok) {
+            msg.textContent = data.detail || "Erreur lors de l'inscription.";
+            msg.style.color = "orange";
+            return;
+        }
+
+        msg.textContent = "Compte créé avec succès !";
+        msg.style.color = "lime";
+
+        // redirection après 1.5 sec
+        setTimeout(() => {
+            window.location.href = "/connexion";
+        }, 1500);
+
+    } catch (err) {
+        console.error("Erreur serveur :", err);
+        msg.textContent = "Erreur serveur.";
+        msg.style.color = "red";
     }
-
-    msg.textContent = "Compte créé avec succès !";
-    msg.style.color = "lime";
-
-    setTimeout(() => {
-        window.location.href = "/connexion";
-    }, 1500);
 }
 
 document.getElementById("registerForm")
