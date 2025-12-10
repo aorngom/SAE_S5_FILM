@@ -12,17 +12,20 @@ def nettoyer_titre_serie(brut):
     brut = brut.strip()
     return corriger_nom_serie(brut)
 
-CSV_FOLDER = r"C:\Users\adslc\3D Objects\SAE_S5_FILM\backend\data\tfidf_cleaned"
-OUTPUT_SQL = r"C:\Users\adslc\3D Objects\SAE_S5_FILM\backend\Préparation des données\script_sql\insert_mots_cles.sql"
+CSV_FOLDER = r"C:\SAE_S5_FILM\backend\data\tfidf_cleaned"
+OUTPUT_SQL = r"C:\SAE_S5_FILM\backend\Préparation des données\script_sql\insert_mots_cles.sql"
 
 sql_lines = []
+sql_lines.append(f"DELETE FROM decrire;")
+sql_lines.append(f"DELETE FROM mot_cle;")
 
 for filename in os.listdir(CSV_FOLDER):
     if filename.endswith(".csv"):
+        print(filename)
         df = pd.read_csv(os.path.join(CSV_FOLDER, filename))
 
-        # garder top 25 TF-IDF
-        df = df.sort_values(by="poids_tfidf", ascending=False).head(25)
+        # garder top 50 TF-IDF
+        df = df.sort_values(by="poids_tfidf", ascending=False).head(50)
 
         for _, row in df.iterrows():
             mot = str(row["mot"]).replace("'", "''")
@@ -48,7 +51,7 @@ for filename in os.listdir(CSV_FOLDER):
                     SELECT currval(pg_get_serial_sequence('mot_cle','id_mot_cle'))
                 )
                 FROM serie s
-                WHERE s.titre = '{serie_sql}';
+                WHERE s.titre ilike '%{serie_sql}%';
                 """
             )
 
