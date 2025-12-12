@@ -4,15 +4,15 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 
 
-# ===== CONFIGURATION NEON =====
-DB_NAME = "neondb"
-DB_USER = "neondb_owner"
-DB_PASSWORD = "npg_lJTAnHoB83La"
-DB_HOST = "ep-silent-bird-agbjq7ow-pooler.c-2.eu-central-1.aws.neon.tech"
+# ===== CONFIGURATION =====
+DB_NAME = "sae_series"
+DB_USER = "sae_user"
+DB_PASSWORD = "SAESERIES"
+DB_HOST = "localhost"
 DB_PORT = "5432"
 
 
-# ===== FONCTION DE CONNEXION =====
+# ===== FONCTION DE CONNEXION COMPATIBLE FASTAPI =====
 def get_db():
     conn = psycopg2.connect(
         dbname=DB_NAME,
@@ -20,10 +20,11 @@ def get_db():
         password=DB_PASSWORD,
         host=DB_HOST,
         port=DB_PORT,
-        sslmode="require",
         cursor_factory=RealDictCursor
     )
     try:
-        yield conn
+        yield conn                #  FastAPI récupère la connexion ici
     finally:
-        conn.close()
+        conn.close()              #  ferme proprement après la requête
+        
+
