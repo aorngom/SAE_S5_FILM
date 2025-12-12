@@ -21,31 +21,7 @@ async function loadPersonalRecommendations() {
         const container = document.getElementById("personal-container");
         container.innerHTML = "";
 
-        list.forEach((item) => {
-            const titre = item.titre || "Titre inconnu";
-            const titre_transforme = titre.toLowerCase()
-                .normalize("NFD")
-                .replace(/[\u0300-\u036f]/g, "")
-                .replace(/[\s'’‘]/g, "");
-            const image = titre_transforme + ".jpg";
-
-            const card = document.createElement("div");
-            card.className = "serie-card fade-in";
-
-            const img = document.createElement("img");
-            img.src = `/static/images/posters_series/${image}`;
-            img.alt = titre;
-            img.onerror = () => img.src = "/static/images/posters_series/default.jpg";
-
-            const title = document.createElement("h3");
-            title.textContent = titre;
-
-            card.appendChild(img);
-            card.appendChild(title);
-
-            card.onclick = () => window.location.href = `/detail?id=${item.id_serie}`;
-            container.appendChild(card);
-        });
+        list.forEach((item) => createCard(item, container));
 
     } catch (err) {
         console.error("Erreur recommandation utilisateur :", err);
@@ -102,12 +78,7 @@ async function loadTopRated() {
 function createCard(item, container) {
     const titre = item.serie || item.titre || "Titre inconnu";
 
-    const titre_transforme = titre.toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[\s'’‘]/g, "");
-
-    const image = titre_transforme + ".jpg";
+    const image = item.image;
 
     const card = document.createElement("div");
     card.className = "serie-card fade-in";

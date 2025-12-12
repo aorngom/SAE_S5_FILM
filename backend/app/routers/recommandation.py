@@ -43,7 +43,7 @@ def public_reco():
 def top_rated(db = Depends(get_db)):
     cur = db.cursor()
     cur.execute("""
-        SELECT s.id_serie, s.titre, AVG(n.score) AS note_moyenne
+        SELECT s.id_serie, s.titre, s.image, AVG(n.score) AS note_moyenne
         FROM serie s
         JOIN noter n ON s.id_serie = n.id_serie
         GROUP BY s.id_serie, s.titre
@@ -56,9 +56,9 @@ def top_rated(db = Depends(get_db)):
     result = []
     for r in rows:
         if isinstance(r, dict):
-            result.append({"id_serie": r["id_serie"], "serie": r["titre"]})
+            result.append({"id_serie": r["id_serie"], "serie": r["titre"], "image": r["image"]})
         else:
-            result.append({"id_serie": r[0], "serie": r[1]})
+            result.append({"id_serie": r[0], "serie": r[1], "image": r[2]})
     return result
 
 
@@ -67,7 +67,7 @@ def awards(db = Depends(get_db)):
     cur = db.cursor()
     cur.execute("""
         SELECT 
-            s.id_serie, s.titre,
+            s.id_serie, s.titre, s.image,
             SUBSTRING(p.libelle FROM '([0-9]+)\\s*win[s]?')::int AS nb_wins
         FROM prix p
         JOIN recevoir r ON r.id_prix = p.id_prix
@@ -81,9 +81,9 @@ def awards(db = Depends(get_db)):
     result = []
     for r in rows:
         if isinstance(r, dict):
-            result.append({"id_serie": r["id_serie"], "serie": r["titre"]})
+            result.append({"id_serie": r["id_serie"], "serie": r["titre"], "image": r["image"]})
         else:
-            result.append({"id_serie": r[0], "serie": r[1]})
+            result.append({"id_serie": r[0], "serie": r[1], "image": r[2]})
     return result
 
 
@@ -94,6 +94,7 @@ def trending(db = Depends(get_db)):
         SELECT
             s.id_serie, 
             s.titre,
+            s.image,
             SUBSTRING(p.libelle FROM '([0-9]+)\\s*nomination[s]?')::int AS nb_nom
         FROM prix p
         JOIN recevoir r ON r.id_prix = p.id_prix
@@ -107,9 +108,9 @@ def trending(db = Depends(get_db)):
     result = []
     for r in rows:
         if isinstance(r, dict):
-            result.append({"id_serie": r["id_serie"], "serie": r["titre"]})
+            result.append({"id_serie": r["id_serie"], "serie": r["titre"], "image": r["image"]})
         else:
-            result.append({"id_serie": r[0], "serie": r[1]})
+            result.append({"id_serie": r[0], "serie": r[1], "image": r[2]})
     return result
 
 
@@ -342,17 +343,20 @@ def recommend_user(identifiant: str, db = Depends(get_db)):
     cur = db.cursor()
     # Use IN clause safely
     placeholders = ",".join(["%s"] * len(rec_ids))
-    cur.execute(f"SELECT id_serie, titre FROM serie WHERE id_serie IN ({placeholders})", tuple(rec_ids))
+    cur.execute(f"SELECT id_serie, titre, image FROM serie WHERE id_serie IN ({placeholders})", tuple(rec_ids))
     title_rows = cur.fetchall()
     cur.close()
 
     # Map id->titre
     titles = {}
+    images = {}
     for r in title_rows:
         if isinstance(r, dict):
             titles[r["id_serie"]] = r["titre"]
+            images[r["id_serie"]] = r["image"]
         else:
             titles[int(r[0])] = r[1]
+            images[int(r[0])] = r[2]
 
     # prepare result preserving order of recs
     results = []
@@ -360,7 +364,8 @@ def recommend_user(identifiant: str, db = Depends(get_db)):
         results.append({
             "id_serie": sid,
             "similarite": float(score),
-            "titre": titles.get(sid, "Titre inconnu")
+            "titre": titles.get(sid, "Titre inconnu"),
+            "image": images.get(sid, "default.jpg")
         })
 
     elapsed = time.time() - start
