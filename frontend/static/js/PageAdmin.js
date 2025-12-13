@@ -1,7 +1,6 @@
-// Charger la liste des séries dans le tableau admin
 async function loadAdminSeries() {
     try {
-        const response = await fetch("/api/admin/series");
+        const response = await fetch("/api/admin/series/light");
 
         if (!response.ok) {
             console.error("Erreur API :", response.status);
@@ -24,67 +23,17 @@ async function loadAdminSeries() {
                 <td>
                     <img src="/static/images/posters_series/${img}"
                          class="admin-img"
+                         loading="lazy"
                          onerror="this.src='/static/images/posters_series/default.jpg'">
                 </td>
 
                 <td>${s.titre}</td>
+                <td>${s.nb_saisons}</td>
+                <td>${s.nb_episodes}</td>
 
-                <!-- GENRES -->
-                <td>${s.genres.length > 0 ? s.genres.join(", ") : "Aucun"}</td>
-
-                <!-- REALISATEURS -->
-                <td>
-                    <details class="list-dropdown">
-                        <summary>
-                            ${s.realisateurs.length > 0
-                                ? `${s.realisateurs[0].prenom} ${s.realisateurs[0].nom}`
-                                : "Aucun"}
-                        </summary>
-                        <ul>
-                            ${s.realisateurs.length > 0
-                                ? s.realisateurs.map(r => `<li>${r.prenom} ${r.nom}</li>`).join("")
-                                : "<li>Aucun</li>"}
-                        </ul>
-                    </details>
-                </td>
-
-                <!-- CREATEURS -->
-                <td>
-                    <details class="list-dropdown">
-                        <summary>
-                            ${s.createurs.length > 0
-                                ? `${s.createurs[0].prenom} ${s.createurs[0].nom}`
-                                : "Aucun"}
-                        </summary>
-                        <ul>
-                            ${s.createurs.length > 0
-                                ? s.createurs.map(c => `<li>${c.prenom} ${c.nom}</li>`).join("")
-                                : "<li>Aucun</li>"}
-                        </ul>
-                    </details>
-                </td>
-
-                <!-- ACTEURS -->
-                <td>
-                    <details class="list-dropdown">
-                        <summary>
-                            ${s.acteurs.length > 0
-                                ? `${s.acteurs[0].prenom} ${s.acteurs[0].nom}`
-                                : "Aucun"}
-                        </summary>
-                        <ul>
-                            ${s.acteurs.length > 0
-                                ? s.acteurs.map(a => `<li>${a.prenom} ${a.nom}</li>`).join("")
-                                : "<li>Aucun</li>"}
-                        </ul>
-                    </details>
-                </td>
-
-                <!-- SAISONS -->
-                <td>${s.saisons.length}</td>
-
-                <!-- ÉPISODES -->
-                <td>${s.episodes_count}</td>
+                <td>${s.createur ? s.createur : "—"}</td>
+                <td>${s.realisateur ? s.realisateur : "—"}</td>
+                <td>${s.acteur ? s.acteur : "—"}</td>
 
                 <td>
                     <button class="action-btn action-edit" data-id="${s.id_serie}">
@@ -110,11 +59,8 @@ async function loadAdminSeries() {
 loadAdminSeries();
 
 
-// ========= ====
-// ACTIONS ADMIN
-// =============
+// ACTIONS ADMIN (modifier / supprimer)
 
-// Boutons Modifier / Supprimer
 function addAdminActions() {
     document.querySelectorAll(".action-edit").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -126,19 +72,17 @@ function addAdminActions() {
     document.querySelectorAll(".action-delete").forEach(btn => {
         btn.addEventListener("click", async () => {
             const id = btn.dataset.id;
+
             if (confirm("Voulez-vous vraiment supprimer cette série ?")) {
                 await deleteSeries(id);
-                loadAdminSeries(); 
+                loadAdminSeries();
             }
         });
     });
 }
 
 
-// ========= ====
 // Suppression API
-// =============
-
 async function deleteSeries(id) {
     const response = await fetch(`/api/admin/series/${id}`, {
         method: "DELETE"

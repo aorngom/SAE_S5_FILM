@@ -59,22 +59,28 @@
                 <div id="acteursBox"></div>
 
                 <input type="text" id="newActor" placeholder="Ajouter un acteur">
-                <button type="button" class="btn-add">Ajouter acteur</button>
+                <button type="button" id="addActorBtn" class="btn-add">Ajouter acteur</button>
             </div>
 
             <div class="edit-section">
                 <label>Saisons</label>
                 <div id="saisonsBox"></div>
-                <button type="button" class="btn-add">Ajouter saison</button>
+
+                <input type="number" id="newSeason" placeholder="Numéro de saison">
+                <button type="button" id="addSeasonBtn" class="btn-add">Ajouter saison</button>
             </div>
 
             <div class="edit-section">
                 <label>Épisodes total</label>
                 <p id="episodesCount"></p>
-                <button type="button" class="btn-add">Ajouter épisode</button>
+
+                <input type="number" id="episodeSeasonId" placeholder="ID saison">
+                <input type="number" id="newEpisode" placeholder="Numéro épisode">
+                <button type="button" id="addEpisodeBtn" class="btn-add">Ajouter épisode</button>
             </div>
 
             <button type="submit" class="btn-save">Enregistrer les modifications</button>
+
         </form>
 
     </div>

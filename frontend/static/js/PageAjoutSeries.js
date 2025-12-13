@@ -1,98 +1,133 @@
-// ----------------------
-// Génération auto du nom image
-// ----------------------
-document.getElementById("titre").addEventListener("input", () => {
-    const titre = document.getElementById("titre").value.trim().toLowerCase().replace(/ /g, "_");
-    document.getElementById("imageName").value = titre + ".jpg";
-});
+const serieId = window.location.pathname.split("/").pop();
 
-// ----------------------
-// Ajouter des champs dynamiques
-// ----------------------
-function addRealisateur() {
-    document.getElementById("realList").innerHTML += `
-        <input type="text" class="realField" placeholder="Nom Prénom">
-    `;
+// Charger les infos de la série
+async function loadSerie() {
+    try {
+        const response = await fetch(`/api/admin/series/${serieId}`);
+        const s = await response.json();
+
+        // Champs simples
+        document.getElementById("titre").value = s.titre;
+        document.getElementById("description").value = s.description || "";
+        document.getElementById("date_sortie").value = s.date_sortie || "";
+        document.getElementById("image").value = s.image; // 🔥 afficher le vrai nom
+
+        // Genres
+        document.getElementById("genresBox").textContent =
+            s.genres.length ? s.genres.join(", ") : "Aucun";
+
+        // Réalisateurs
+        document.getElementById("realisateursBox").textContent =
+            s.realisateurs.length
+                ? s.realisateurs.map(r => `${r.prenom} ${r.nom}`).join(", ")
+                : "Aucun";
+
+        // Créateurs
+        document.getElementById("createursBox").textContent =
+            s.createurs.length
+                ? s.createurs.map(c => `${c.prenom} ${c.nom}`).join(", ")
+                : "Aucun";
+
+        // Acteurs
+        document.getElementById("acteursBox").innerHTML =
+            s.acteurs.length
+                ? s.acteurs.map(a => `${a.prenom} ${a.nom}`).join(", ")
+                : "Aucun";
+
+        // Saisons
+        document.getElementById("saisonsBox").innerHTML = "";
+        s.saisons.forEach(sa => {
+            document.getElementById("saisonsBox").innerHTML += `
+                <div class="saisonBloc">
+                    <p>Saison <b>${sa.numero}</b></p>
+
+                    <div class="episodeList">
+                        ${sa.episodes.map(e => `<span>Épisode ${e}</span>`).join(" ")}
+                    </div>
+
+                    <button type="button" class="btn-add small" onclick="addEpisodeToExisting(${sa.id_saison})">
+                        + Ajouter épisode
+                    </button>
+                </div>
+            `;
+        });
+
+        document.getElementById("episodesCount").textContent = s.episodes;
+
+    } catch (err) {
+        console.error("Erreur loadSerie():", err);
+    }
 }
 
-function addCreateur() {
-    document.getElementById("creaList").innerHTML += `
-        <input type="text" class="creaField" placeholder="Nom Prénom">
-    `;
-}
 
-function addActeur() {
-    document.getElementById("acteurList").innerHTML += `
-        <input type="text" class="acteurField" placeholder="Nom Prénom">
-    `;
-}
+// Ajouter SAISON
+async function addSaison() {
+    const numero = prompt("Numéro de la nouvelle saison :");
 
-function addSaison() {
-    document.getElementById("saisonList").innerHTML += `
-        <div class="saisonBloc">
-            <input type="number" class="saisonNum" placeholder="Numéro de saison" required>
-            <textarea class="saisonDesc" placeholder="Description"></textarea>
-        </div>
-    `;
-}
+    if (!numero || isNaN(numero)) return;
 
-// ----------------------
-// Charger genres depuis BDD
-// ----------------------
-async function loadGenres() {
-    const req = await fetch("/api/genres");
-    const genres = await req.json();
-    const select = document.getElementById("genreSelect");
-
-    genres.forEach(g => {
-        select.innerHTML += `<option value="${g.id_genre}">${g.libelle}</option>`;
+    const res = await fetch(`/api/admin/series/${serieId}/saisons`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ numero })
     });
-}
-loadGenres();
 
-// ----------------------
-// Soumission du formulaire
-// ----------------------
-document.getElementById("addSeriesForm").addEventListener("submit", async (e) => {
+    if (res.ok) {
+        alert("Saison ajoutée !");
+        loadSerie();
+    } else {
+        alert("Erreur lors de l'ajout de saison.");
+    }
+}
+
+
+// Ajouter ÉPISODE dans une saison existante
+async function addEpisodeToExisting(idSaison) {
+    const numero = prompt("Numéro du nouvel épisode :");
+
+    if (!numero || isNaN(numero)) return;
+
+    const res = await fetch(`/api/admin/saisons/${idSaison}/episodes`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ numero })
+    });
+
+    if (res.ok) {
+        alert("Épisode ajouté !");
+        loadSerie();
+    } else {
+        alert("Erreur lors de l'ajout d'épisode.");
+    }
+}
+
+
+// Enregistrement des MODIFICATIONS
+document.getElementById("editForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
+    const payload = {
+        description: document.getElementById("description").value,
+        date_sortie: document.getElementById("date_sortie").value
+    };
 
-    formData.append("titre", document.getElementById("titre").value);
-    formData.append("description", document.getElementById("description").value);
-    formData.append("date_sortie", document.getElementById("date_sortie").value);
-    formData.append("image", document.getElementById("imageFile").files[0]);
-    formData.append("genre", document.getElementById("genreSelect").value);
-
-    // Réalisateurs / Créateurs / Acteurs
-    formData.append("realisateurs", JSON.stringify(
-        [...document.querySelectorAll(".realField")].map(x => x.value)
-    ));
-    formData.append("createurs", JSON.stringify(
-        [...document.querySelectorAll(".creaField")].map(x => x.value)
-    ));
-    formData.append("acteurs", JSON.stringify(
-        [...document.querySelectorAll(".acteurField")].map(x => x.value)
-    ));
-
-    // Saisons
-    const saisons = [];
-    document.querySelectorAll(".saisonBloc").forEach(bloc => {
-        saisons.push({
-            numero: bloc.querySelector(".saisonNum").value,
-            description: bloc.querySelector(".saisonDesc").value
+    try {
+        const response = await fetch(`/api/admin/series/${serieId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
         });
-    });
-    formData.append("saisons", JSON.stringify(saisons));
 
-    const req = await fetch("/api/admin/series/add", {
-        method: "POST",
-        body: formData
-    });
+        if (response.ok) {
+            alert("Modifications enregistrées !");
+            loadSerie();
+        } else {
+            alert("Erreur lors de l'enregistrement.");
+        }
 
-    const res = await req.json();
-
-    const msg = document.getElementById("message");
-    msg.textContent = res.message || "Erreur";
-    msg.style.color = res.success ? "lightgreen" : "red";
+    } catch (err) {
+        console.error("Erreur update:", err);
+    }
 });
+
+loadSerie();

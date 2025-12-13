@@ -1,5 +1,3 @@
-# backend/app/routers/admin_edit.py
-
 from fastapi import APIRouter, Request, HTTPException, Depends
 from fastapi.responses import HTMLResponse
 from pathlib import Path
@@ -28,7 +26,7 @@ def api_get_one_series(id_serie: int, db=Depends(get_db)):
 
     #  INFO DE BASE 
     cur.execute("""
-        SELECT id_serie, titre, description, date_sortie
+        SELECT id_serie, titre, description, date_sortie, image
         FROM serie
         WHERE id_serie = %s
     """, (id_serie,))
@@ -37,7 +35,7 @@ def api_get_one_series(id_serie: int, db=Depends(get_db)):
     if not serie:
         raise HTTPException(404, "Série introuvable")
 
-    # GENRES 
+    # GENRES
     cur.execute("""
         SELECT g.libelle
         FROM genre g
@@ -46,42 +44,53 @@ def api_get_one_series(id_serie: int, db=Depends(get_db)):
     """, (id_serie,))
     genres = [r["libelle"] for r in cur.fetchall()]
 
-    #  ACTEURS 
+    # ROLES (créateur, réalisateur, acteur)
     cur.execute("""
-        SELECT per.prenom, per.nom
-        FROM personne per
-        JOIN participer pa ON pa.id_personne = per.id_personne
-        JOIN role r ON r.id_role = pa.id_serie  -- ⚠ Selon ton modèle, mais ici il manque une vraie liaison rôle/série
+        SELECT pe.prenom, pe.nom, ro.libelle AS role
+        FROM personne pe
+        JOIN participer pa ON pa.id_personne = pe.id_personne
+        JOIN jouer j ON j.id_personne = pe.id_personne
+        JOIN role ro ON ro.id_role = j.id_role
         WHERE pa.id_serie = %s
     """, (id_serie,))
-    acteurs = [{"prenom": r["prenom"], "nom": r["nom"]} for r in cur.fetchall()]
+    persons = cur.fetchall()
 
+    realisateurs = [p for p in persons if p["role"] == "Réalisateur"]
+    createurs = [p for p in persons if p["role"] == "Créateur"]
+    acteurs = [p for p in persons if p["role"] == "Acteur Principal"]
 
+    # SAISONS + EPISODES
     cur.execute("""
-        SELECT per.prenom, per.nom
-        FROM personne per
-        JOIN participer pa ON pa.id_personne = per.id_personne
-        WHERE pa.id_serie = %s
-    """, (id_serie,))
-    createurs_real = [{"prenom": r["prenom"], "nom": r["nom"]} for r in cur.fetchall()]
-
-    # SAISONS 
-    cur.execute("""
-        SELECT id_saison, numero, description
+        SELECT id_saison, numero
         FROM saison
         WHERE id_serie = %s
         ORDER BY numero
     """, (id_serie,))
-    saisons = cur.fetchall()
+    saisons_db = cur.fetchall()
 
-    #  EPISODES 
+    saisons = []
+    for s in saisons_db:
+        cur.execute("""
+            SELECT numero
+            FROM episode
+            WHERE id_saison = %s
+            ORDER BY numero
+        """, (s["id_saison"],))
+        episodes = [e["numero"] for e in cur.fetchall()]
+
+        saisons.append({
+            "id_saison": s["id_saison"],
+            "numero": s["numero"],
+            "episodes": episodes
+        })
+
     cur.execute("""
         SELECT COUNT(*) AS total
         FROM episode e
         JOIN saison s ON e.id_saison = s.id_saison
         WHERE s.id_serie = %s
     """, (id_serie,))
-    episodes = cur.fetchone()["total"]
+    total_episodes = cur.fetchone()["total"]
 
     cur.close()
 
@@ -90,10 +99,57 @@ def api_get_one_series(id_serie: int, db=Depends(get_db)):
         "titre": serie["titre"],
         "description": serie["description"],
         "date_sortie": serie["date_sortie"],
+        "image": serie["image"],
         "genres": genres,
-        "createurs": createurs_real,
-        "realisateurs": createurs_real,
+        "realisateurs": realisateurs,
+        "createurs": createurs,
         "acteurs": acteurs,
         "saisons": saisons,
-        "episodes": episodes
+        "episodes": total_episodes
     }
+
+
+# AJOUT SAISON
+@router.post("/api/admin/series/{id_serie}/saisons")
+def add_saison(id_serie: int, data: dict, db=Depends(get_db)):
+    cur = db.cursor()
+    cur.execute("""
+        INSERT INTO saison (numero, id_serie)
+        VALUES (%s, %s)
+    """, (data["numero"], id_serie))
+
+    db.commit()
+    cur.close()
+    return {"success": True}
+
+
+# AJOUT EPISODE
+@router.post("/api/admin/saisons/{id_saison}/episodes")
+def add_episode(id_saison: int, data: dict, db=Depends(get_db)):
+    cur = db.cursor()
+    cur.execute("""
+        INSERT INTO episode (numero, id_saison)
+        VALUES (%s, %s)
+    """, (data["numero"], id_saison))
+
+    db.commit()
+    cur.close()
+    return {"success": True}
+
+
+# MODIFICATION
+@router.put("/api/admin/series/{id_serie}")
+def update_series(id_serie: int, data: dict, db=Depends(get_db)):
+    cur = db.cursor()
+
+    cur.execute("""
+        UPDATE serie
+        SET description = %s,
+            date_sortie = %s
+        WHERE id_serie = %s
+    """, (data["description"], data["date_sortie"], id_serie))
+
+    db.commit()
+    cur.close()
+
+    return {"success": True}

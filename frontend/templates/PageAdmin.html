@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/static/css/navbar.css">
     <link rel="stylesheet" href="/static/css/PageAdmin.css">
 </head>
+
 <body>
 
     {% include 'components/navbar.html' %}
@@ -22,12 +23,11 @@
                 <tr>
                     <th>Image</th>
                     <th>Titre</th>
-                    <th>Genres</th>
-                    <th>Réalisateurs</th>
-                    <th>Créateurs</th>
-                    <th>Acteurs</th>
                     <th>Saisons</th>
                     <th>Épisodes</th>
+                    <th>Créateur</th>
+                    <th>Réalisateur</th>
+                    <th>Acteur</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -37,7 +37,8 @@
 
     </div>
 
-    <!-- Script externalisé : chargera les séries via l’API FastAPI -->
+    <!-- Script externalisé : chargement rapide -->
     <script src="/static/js/PageAdmin.js"></script>
+
 </body>
 </html>

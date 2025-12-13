@@ -37,7 +37,7 @@ async function loadSerie() {
         // --- Saisons ---
         document.getElementById("saisonsBox").innerHTML =
             s.saisons.length
-                ? s.saisons.map(sa => `Saison ${sa.numero_saison}`).join(", ")
+                ? s.saisons.map(sa => `Saison ${sa.numero} (ID: ${sa.id_saison})`).join("<br>")
                 : "Aucune";
 
         // --- Episodes ---
@@ -48,7 +48,40 @@ async function loadSerie() {
     }
 }
 
-// Soumission du formulaire → mise à jour
+// Ajouter une saison
+document.getElementById("addSeasonBtn").addEventListener("click", async () => {
+    const numero = document.getElementById("newSeason").value;
+
+    if (!numero) return alert("Numéro de saison obligatoire.");
+
+    await fetch(`/api/admin/series/${serieId}/saisons`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ numero })
+    });
+
+    alert("Saison ajoutée !");
+    loadSerie();
+});
+
+// Ajouter un épisode
+document.getElementById("addEpisodeBtn").addEventListener("click", async () => {
+    const saisonId = document.getElementById("episodeSeasonId").value;
+    const numero = document.getElementById("newEpisode").value;
+
+    if (!saisonId || !numero) return alert("ID saison + numéro épisode obligatoires");
+
+    await fetch(`/api/admin/saisons/${saisonId}/episodes`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ numero })
+    });
+
+    alert("Épisode ajouté !");
+    loadSerie();
+});
+
+// Mettre à jour description + date
 document.getElementById("editForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -57,21 +90,16 @@ document.getElementById("editForm").addEventListener("submit", async (e) => {
         date_sortie: document.getElementById("date_sortie").value
     };
 
-    try {
-        const response = await fetch(`/api/admin/series/${serieId}`, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-        });
+    const response = await fetch(`/api/admin/series/${serieId}`, {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+    });
 
-        if (response.ok) {
-            alert("Modifications enregistrées !");
-        } else {
-            alert("Erreur lors de l'enregistrement.");
-        }
-
-    } catch (err) {
-        console.error("Erreur update:", err);
+    if (response.ok) {
+        alert("Modifications enregistrées !");
+    } else {
+        alert("Erreur lors de l'enregistrement.");
     }
 });
 
