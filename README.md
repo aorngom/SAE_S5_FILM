@@ -1,8 +1,8 @@
-Tsinjo Mirantsoa RANDRIANARISON RATSIANDAVANA
-Aminata OUMOU RASSOUL NGOM
-Groupe 7
-BUT Informatique
-S5 - Parcours C
+Tsinjo Mirantsoa RANDRIANARISON RATSIANDAVANA <br>
+Aminata OUMOU RASSOUL NGOM <br>
+Groupe 7 <br>
+BUT Informatique <br>
+S5 - Parcours C <br>
 Non-alternantes
 
 PRÉSENTATION DU PROJET
