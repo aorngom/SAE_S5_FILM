@@ -4,7 +4,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 
 
-# ===== CONFIGURATION NEON =====
+# ===== CONFIGURATION NEON: BDD HEBERGÉ=====
 DB_NAME = "neondb"
 DB_USER = "neondb_owner"
 DB_PASSWORD = "npg_lJTAnHoB83La"

@@ -1,5 +1,8 @@
 # backend/app/database/connection.py
 
+# Ce fichier n'est pas utilisé dans le projet. il contient juste la connexion vers la base de données local. Si j'ai besoin de tester quelque chose dessus 
+# avant de faire la requête au niveau de la bdd hebergé par exemple, je vais juste mettre ce code dans connection.py pour les tests.
+
 import psycopg2
 from psycopg2.extras import RealDictCursor
 
@@ -27,4 +30,3 @@ def get_db():
     finally:
         conn.close()              #  ferme proprement après la requête
         
-
