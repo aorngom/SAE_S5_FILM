@@ -1,3 +1,10 @@
+Tsinjo Mirantsoa RANDRIANARISON RATSIANDAVANA
+Aminata OUMOU RASSOUL NGOM
+Groupe 7
+BUT Informatique
+S5 - Parcours C
+Non-alternantes
+
 PRÉSENTATION DU PROJET
 
 Ce projet est une application web composée de :
